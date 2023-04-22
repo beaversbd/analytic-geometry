@@ -9,15 +9,15 @@
   </docinfo>
 
   <book xml:id="my-great-book">
-    <title>Analytic Geometry: A Precalculus Course</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Analytic Geometry</title>
+    <subtitle>A Precalculus Course</subtitle>
 
     <frontmatter xml:id="frontmatter">
       <titlepage>
         <author>
-          <personname>You</personname>
-          <department>Your department</department>
-          <institution>Your institution</institution>
+          <personname>Brian Beavers</personname>
+          <department>Department of Mathematics and Statistics</department>
+          <institution>Stephen F. Austin State University</institution>
         </author>
         <date>
           <today />
@@ -28,9 +28,9 @@
 
         <website>
           <name>
-            <c>example.org</c>
+            <c>faculty.sfasu.edu/beaversbd</c>
           </name>
-          <address>https://example.org</address>
+          <address>http://faculty.sfasu.edu/beaversbd</address>
         </website>
 
         <copyright>
