@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
 <meta xmlns:pf="https://prefigure.org" property="book:title" content="My Great Book">
-<meta xmlns:pf="https://prefigure.org" property="book:author" content="You">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Brian Beavers">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -89,13 +89,22 @@ window.MathJax = {
 <link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <style>
+#sec-section-name-7-1 { counter-set: sec-section-name-7-1 0; }
+#sec-section-name-7-1 > li::marker { content: ""counter(sec-section-name-7-1,decimal)"."; }
+#sec-section-name-7-1 > li { counter-increment: sec-section-name-7-1; }
+#sec-section-name-24-1 { counter-set: sec-section-name-24-1 0; }
+#sec-section-name-24-1 > li::marker { content: ""counter(sec-section-name-24-1,decimal)"."; }
+#sec-section-name-24-1 > li { counter-increment: sec-section-name-24-1; }
+#sec-section-name-24-1-6-1-1 { counter-set: sec-section-name-24-1-6-1-1 0; }
+#sec-section-name-24-1-6-1-1 > li::marker { content: "("counter(sec-section-name-24-1-6-1-1,lower-alpha)")"; }
+#sec-section-name-24-1-6-1-1 > li { counter-increment: sec-section-name-24-1-6-1-1; }
 </style>
 </head>
-<body id="changeme" class="pretext book ignore-math">
+<body id="Analytic Geometry: An Opinionated Precalculus Course" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="my-great-book.html"><span class="title">My Great Book:</span> <span class="subtitle">An example to get you started</span></a></h1>
-<p class="byline">You</p>
+<p class="byline">Brian Beavers</p>
 </div>
 </div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
@@ -127,7 +136,73 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec-section-name"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Section Title</span>
 </h2>
-<div class="para" id="sec-section-name-2">Text of section.</div></section></div>
+<div class="para" id="sec-section-name-2">
+<em class="emphasis">Analytic geometry</em> is fundamentally about thinking of geometric shapes as collections of points, each of which has numerical coordinates in the space in which we are working, and then using the techniques of algebra to solve geometric problems.</div>
+<div class="para" id="sec-section-name-3">The simplest space to be working in is when the world is just a single point. The next simplest is when all that exists is on a single line. The next simplest is when all that exists is in a single plane. The "size" of a space is measured by a counting number called the <em class="emphasis">dimension</em> which indicates how many fundamental "directions" are available in your space. On a line, you can only go back and forth (one fundamental direction with its backwards direction), but in a plane, you can go north and south or east and west (two fundamental direction) or a partial combination of two fundamental directions. "Space" is considered three-dimensional because we get the two fundamental directions of the plane, plus the up/down direction. Physicists and mathematicians also work in spaces of dimension higher than three for some problems.</div>
+<div class="para" id="sec-section-name-4">In this class, we will focus on two-dimensional space - "the plane." Before we do that, it’s useful to work in one-dimensional space - "the line" - first.</div>
+<div class="para" id="sec-section-name-5">We model one-dimensional space as a single straight line as follows:</div>
+<div class="para" id="sec-section-name-6">Axioms for One-Dimensional Analytic Geometry ("The Line")</div>
+<div class="para logical" id="sec-section-name-7"><ol class="decimal" id="sec-section-name-7-1">
+<li id="sec-section-name-7-1-1"><div class="para" id="p-derived-sec-section-name-7-1-1">Each point on the line corresponds to a unique real number</div></li>
+<li id="sec-section-name-7-1-2"><div class="para" id="p-derived-sec-section-name-7-1-2">The distance between points corresponding to the real numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is <span class="process-math">\(|x-y|.\)</span>
+</div></li>
+<li id="sec-section-name-7-1-3"><div class="para" id="p-derived-sec-section-name-7-1-3">The point corresponding to the real number <span class="process-math">\(x\)</span> is to the left of the point corresponding to the real number <span class="process-math">\(y\)</span> if and only if <span class="process-math">\(x\lt y.\)</span>
+</div></li>
+</ol></div>
+<div class="para" id="sec-section-name-8">The three axioms above tell us how to <em class="emphasis">coordinatize</em> a line to make a <em class="emphasis">number</em> line. Each point gets paired with exactly one number, and we want this pairing to behave in a way that doesn’t conflict with our usual way of thinking about real numbers: moving one way gives us bigger numbers, moving the other way gives us smaller numbers, and the distance between two numbers is the difference of the larger minus the smaller (or the negative of the smaller minus the larger - hence the need for absolute value bars if we don’t actually know which number is larger when they are represented by variables).</div>
+<div class="para" id="sec-section-name-9">Once we assign points to the real numbers <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{,}\)</span> the assignment of points to all other numbers is set automatically.</div>
+<div class="para" id="sec-section-name-10">When we have two points on a line, we often want to find the <em class="emphasis">midpoint</em> between the two points:</div>
+<div class="para" id="sec-section-name-11">Definition of Midpoint (on "The Line")</div>
+<div class="para" id="sec-section-name-12">Geometric definition: the <em class="emphasis">midpoint</em> of two distinct points with coordinates <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is a point <span class="process-math">\(z\)</span> between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the same as the distance from <span class="process-math">\(y\)</span> to <span class="process-math">\(z.\)</span> Symbolically, the midpoint is the point with coordinate <span class="process-math">\(z\)</span> such that <span class="process-math">\(|x-z|=|y-z|.\)</span>
+</div>
+<div class="para" id="sec-section-name-13">Algebraic definition: the <em class="emphasis">midpoint</em> of two distinct points with coordinates <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is a point <span class="process-math">\(z\)</span> with coordinate <span class="process-math">\(\frac{x+y}{2}.\)</span>
+</div>
+<div class="para" id="sec-section-name-14">Notice that I have given two definitions of midpoint! One is from a geometric perspective: it talks about distances between certain points being equal. The other is given by an algebraic formula involving the coordinates for the two points. This is often the case in analytic geometry! We are bridging the world where we think of things geometrically with the world where we think of things algebraically.</div>
+<div class="para" id="sec-section-name-15">How do we know for sure, without exception, that these two definitions are really describing the same point? That’s where the idea of mathematical proof comes in. You probably encountered two-column geometric proof in high school. Here, we will start to use algebraic proof as well to make sure the geometry and algebra ideas really do correspond to one another...</div>Theorem: Given two points <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> on a coordinate line, there is a point with coordinate <span class="process-math">\(z\)</span> between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(|x-z|=|y-z|\)</span> if and only if <span class="process-math">\(z=\frac{x+y}{2}.\)</span><div class="para" id="sec-section-name-17">Proof: First, we must make sure that if there is a point <span class="process-math">\(z\)</span> where <span class="process-math">\(|x-z|=|y-z|,\)</span> then <span class="process-math">\(z\)</span> is indeed the number we get from the formula <span class="process-math">\(\frac{x+y}{2}.\)</span> Since the points corresponding to <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are distinct, one of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> must be greater than the other. Suppose <span class="process-math">\(x\lt  y.\)</span> Since <span class="process-math">\(z\)</span> is between <span class="process-math">\(x\)</span> and <span class="process-math">\(y,\)</span> we know that <span class="process-math">\(x\lt  z\lt  y.\)</span> Let <span class="process-math">\(d\)</span> be the distance between <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> (that is, let <span class="process-math">\(d=|x-z|\)</span>) and between <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> (that is, let <span class="process-math">\(d=|y-z|\)</span>), which we know to be equal. Then <span class="process-math">\(z=x+d\)</span> and <span class="process-math">\(y=x+2d.\)</span> Moreover, <span class="process-math">\(\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.\)</span> A similar result occurs if we were to let <span class="process-math">\(y\)</span> be less than <span class="process-math">\(x.\)</span> Thus we have shown that if <span class="process-math">\(z\)</span> is a point between the two points <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> with <span class="process-math">\(|x-z|=|y-z|,\)</span> then <span class="process-math">\(z=\frac{x+y}{2}.\)</span>
+</div>
+<div class="para logical" id="sec-section-name-18">
+<div class="para">Next, we must make sure that if <span class="process-math">\(z=\frac{x+y}{2},\)</span> then <span class="process-math">\(|x-z|=|y-z|.\)</span> Hence,</div>
+<div class="displaymath process-math" id="sec-section-name-18-3">
+\begin{align*}
+|x-z|\amp=\left|x-\frac{x+y}{2}\right| \\
+\amp=\left|x-\frac{x}{2}-\frac{y}{2}\right| \\
+\amp=\left|\frac{x}{2}-\frac{y}{2}\right| \\
+\amp=\left|\frac{y}{2}-\frac{x}{2}\right| \\
+\amp=\left|y-\frac{y}{2}-\frac{x}{2}\right| \\
+\amp=\left|y-\frac{y+x}{2}\right| \\
+\amp=\left|y-\frac{x+y}{2}\right| \\
+\amp=|y-z|.
+\end{align*}
+</div>
+<div class="para">Thus we have shown that if <span class="process-math">\(z=\frac{x+y}{2},\)</span> then the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the same as the distance from <span class="process-math">\(y\)</span> to <span class="process-math">\(z.\)</span>
+</div>
+</div>
+<div class="para" id="sec-section-name-19">We have checked both directions of this "if and only if" statement, so the statement is true. QED</div>
+<div class="para" id="sec-section-name-20">Notice that we used property of absolute value that has not been mentioned yet: <span class="process-math">\(|x-y|=|y-x|.\)</span> This is because of how absolute values work! If you compare <span class="process-math">\(5-2\)</span> and <span class="process-math">\(2-5,\)</span> the only difference is the negative sign (one is <span class="process-math">\(3\)</span> and the other is <span class="process-math">\(-3\)</span>). So when we take the absolute value, that negative sign gets "eaten" and the result is the same if we do <span class="process-math">\(|5-2|\)</span> or if we do <span class="process-math">\(|2-5|.\)</span> This is an example of a prerequisite property that should make sense to you, and if it doesn’t, you should review it from outside materials or ask me or a tutor about it.</div>
+<div class="para" id="sec-section-name-21">Now that we have the axioms and the definition of midpoint, let’s apply them to some problems!</div>
+<div class="para" id="sec-section-name-22">Homework</div>
+<div class="para" id="sec-section-name-23">Complete the following homework problems for Wednesday, January 24. These should essentially be review from previous courses. Where appropriate, show work that justifies your answers for full credit.</div>
+<div class="para logical" id="sec-section-name-24"><ol class="decimal" id="sec-section-name-24-1">
+<li id="sec-section-name-24-1-1"><div class="para" id="p-derived-sec-section-name-24-1-1">Draw a number line and label points with <span class="process-math">\(0,\)</span> <span class="process-math">\(1,\)</span> and three other points of your choosing.</div></li>
+<li id="sec-section-name-24-1-2"><div class="para" id="p-derived-sec-section-name-24-1-2">Is the point on a number line corresponding to the real number <span class="process-math">\(\frac{1}{2}\)</span> to the left of the point on the number line corresponding to the real number <span class="process-math">\(\frac{\pi}{6}\text{?}\)</span> Explain why or why not.</div></li>
+<li id="sec-section-name-24-1-3"><div class="para" id="p-derived-sec-section-name-24-1-3">Find the distance between the points associated with the real numbers <span class="process-math">\(8\)</span> and <span class="process-math">\(-3.\)</span>
+</div></li>
+<li id="sec-section-name-24-1-4"><div class="para" id="p-derived-sec-section-name-24-1-4">What real numbers correspond to points that are a distance of <span class="process-math">\(3\)</span> units from the point that corresponds to <span class="process-math">\(1\text{?}\)</span>
+</div></li>
+<li id="sec-section-name-24-1-5"><div class="para" id="p-derived-sec-section-name-24-1-5">Find the distance on a number line between the point whose coordinate is <span class="process-math">\(3\)</span> and the point whose coordinate is <span class="process-math">\(-1.\)</span>
+</div></li>
+<li id="sec-section-name-24-1-6"><div class="para logical" id="sec-section-name-24-1-6-1"><ol class="lower-alpha" id="sec-section-name-24-1-6-1-1">
+<li id="sec-section-name-24-1-6-1-1-1"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-1"><span class="process-math">\(\displaystyle |x|=2\)</span></div></li>
+<li id="sec-section-name-24-1-6-1-1-2"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-2"><span class="process-math">\(\displaystyle |x-1|=3\)</span></div></li>
+<li id="sec-section-name-24-1-6-1-1-3"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-3"><span class="process-math">\(\displaystyle |1+x|=2\)</span></div></li>
+<li id="sec-section-name-24-1-6-1-1-4"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-4"><span class="process-math">\(\displaystyle 3|2+x|+1=2\)</span></div></li>
+<li id="sec-section-name-24-1-6-1-1-5"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-5"><span class="process-math">\(\displaystyle \left|\frac{x-1}{x+1}\right|=3\)</span></div></li>
+<li id="sec-section-name-24-1-6-1-1-6"><div class="para" id="p-derived-sec-section-name-24-1-6-1-1-6"><span class="process-math">\(\displaystyle |x+3|+|x+4|=9\)</span></div></li>
+</ol></div></li>
+<li id="sec-section-name-24-1-7"><div class="para" id="p-derived-sec-section-name-24-1-7">Find the coordinate of the midpoint between the point with coordinate <span class="process-math">\(4\)</span> and the point with coordinate <span class="process-math">\(7.\)</span>
+</div></li>
+<li id="sec-section-name-24-1-8"><div class="para" id="p-derived-sec-section-name-24-1-8">If the midpoint is <span class="process-math">\(\frac{1}{3}\)</span> between a point with coordinate <span class="process-math">\(4\)</span> and some other point, what is the coordinate of the other point?</div></li>
+</ol></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
