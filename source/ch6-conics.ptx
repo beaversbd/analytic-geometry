@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch6-conics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Conics</title>
+
+  <introduction>
+    <p><strong><em>Analytic geometry</em></strong> is fundamentally about thinking of geometric shapes as collections of points, each of which has numerical coordinates in the space in which we are working, and then using the techniques of algebra to solve geometric problems.</p>
+
+    <p>The simplest space to be working in is when the world is just a single point. The next simplest is when all that exists is on a single line. The next simplest is when all that exists is in a single plane. The "size" of a space is measured by a counting number called the <strong><em>dimension</em></strong> which indicates how many fundamental "directions" are available in your space. On a line, you can only go back and forth (one fundamental direction with its backwards direction), but in a plane, you can go north and south or east and west (two fundamental direction) or a partial combination of two fundamental directions. "Space" is considered three-dimensional because we get the two fundamental directions of the plane, plus the up/down direction. Physicists and mathematicians also work in spaces of dimension higher than three for some problems.</p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec61-circle.ptx" />
+  <xi:include href="sec62-ellipse_parabola.ptx" />
+  <xi:include href="sec63-hyperbola.ptx" />
+  <xi:include href="sec64-translation.ptx" />
+  <xi:include href="sec65-general_noB.ptx" />
+  <xi:include href="sec66-rotation.ptx" />
+  <xi:include href="sec67-general.ptx" />
+  <xi:include href="sec68-parametric.ptx" />
+  <xi:include href="sec69-polar.ptx" />
+
+</chapter>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec45-polar" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Polar Equations of Lines</title>
+
+  <p>In this class, we will focus on two-dimensional space - "the plane." Before we do that, it's useful to work in one-dimensional space - "the line" - first.</p>
+
+  <p>We model one-dimensional space as a single straight line as follows:</p>
+
+  <p>Axioms for One-Dimensional Analytic Geometry ("The Line")</p>
+        
+  <p><ol>
+    <li>Each point on the line corresponds to a unique real number</li>
+    <li>The distance between points corresponding to the real numbers <m>x</m> and <m>y</m> is <m>|x-y|.</m></li>
+    <li>The point corresponding to the real number <m>x</m> is to the left of the point corresponding to the real number <m>y</m> if and only if <m>x\lt y.</m></li>
+  </ol></p>
+
+  <p>The three axioms above tell us how to <em>coordinatize</em> a line to make a <em>number</em> line. Each point gets paired with exactly one number, and we want this pairing to behave in a way that doesn't conflict with our usual way of thinking about real numbers: moving one way gives us bigger numbers, moving the other way gives us smaller numbers, and the distance between two numbers is the difference of the larger minus the smaller (or the negative of the smaller minus the larger - hence the need for absolute value bars if we don't actually know which number is larger when they are represented by variables).</p>
+
+  <p>Once we assign points to the real numbers <m>0</m> and <m>1</m>, the assignment of points to all other numbers is set automatically.</p>
+
+  <p>When we have two points on a line, we often want to find the <em>midpoint</em> between the two points:</p>
+
+  <p>Definition of Midpoint (on "The Line")</p>
+
+  <p><strong>Geometric definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> between <m>x</m> and <m>y</m> such that the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m> Symbolically, the midpoint is the point with coordinate <m>z</m> such that <m>|x-z|=|y-z|.</m></p>
+  
+  <p><strong>Algebraic definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> with coordinate <m>\frac{x+y}{2}.</m></p>
+
+  <p>Notice that I have given two definitions of midpoint! One is from a geometric perspective: it talks about distances between certain points being equal. The other is given by an algebraic formula involving the coordinates for the two points. This is often the case in analytic geometry! We are bridging the world where we think of things geometrically with the world where we think of things algebraically.</p>
+
+  <p>How do we know for sure, without exception, that these two definitions are really describing the same point? That's where the idea of mathematical proof comes in. You probably encountered two-column geometric proof in high school. Here, we will start to use algebraic proof as well to make sure the geometry and algebra ideas really do correspond to one another...</p>
+
+  <h4>Theorem: Given two points <m>x</m> and <m>y</m> on a coordinate line, there is a point with coordinate <m>z</m> between <m>x</m> and <m>y</m> such that <m>|x-z|=|y-z|</m> if and only if <m>z=\frac{x+y}{2}.</m></h4>
+
+  <p>Proof: First, we must make sure that if there is a point <m>z</m> where <m>|x-z|=|y-z|,</m> then <m>z</m> is indeed the number we get from the formula <m>\frac{x+y}{2}.</m> Since the points corresponding to <m>x</m> and <m>y</m> are distinct, one of <m>x</m> and <m>y</m> must be greater than the other. Suppose <m>x\lt  y.</m> Since <m>z</m> is between <m>x</m> and <m>y,</m> we know that <m>x\lt  z\lt  y.</m> Let <m>d</m> be the distance between <m>x</m> and <m>z</m> (that is, let <m>d=|x-z|</m>) and between <m>y</m> and <m>z</m> (that is, let <m>d=|y-z|</m>), which we know to be equal. Then <m>z=x+d</m> and <m>y=x+2d.</m> Moreover, <m>\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.</m> A similar result occurs if we were to let <m>y</m> be less than <m>x.</m> Thus we have shown that <strong>if</strong> <m>z</m> is a point between the two points <m>x</m> and <m>y</m> with <m>|x-z|=|y-z|,</m> <strong>then</strong> <m>z=\frac{x+y}{2}.</m></p>
+  
+  <p>Next, we must make sure that if <m>z=\frac{x+y}{2},</m> then <m>|x-z|=|y-z|.</m> Hence,
+        <md>
+          <mrow>|x-z|\amp=\left|x-\frac{x+y}{2}\right| </mrow>
+          <mrow>\amp=\left|x-\frac{x}{2}-\frac{y}{2}\right| </mrow>
+          <mrow>\amp=\left|\frac{x}{2}-\frac{y}{2}\right| </mrow>
+          <mrow>\amp=\left|\frac{y}{2}-\frac{x}{2}\right| </mrow>
+          <mrow>\amp=\left|y-\frac{y}{2}-\frac{x}{2}\right| </mrow>
+          <mrow>\amp=\left|y-\frac{y+x}{2}\right| </mrow>
+          <mrow>\amp=\left|y-\frac{x+y}{2}\right| </mrow>
+          <mrow>\amp=|y-z|.</mrow>
+        </md>
+    Thus we have shown that <strong>if </strong> <m>z=\frac{x+y}{2},</m> <strong>then</strong> the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m></p>
+      
+  <p>We have checked both directions of this "if and only if" statement, so the statement is true. QED</p>
+
+  <p>Notice that we used property of absolute value that has not been mentioned yet: <m>|x-y|=|y-x|.</m> This is because of how absolute values work! If you compare <m>5-2</m> and <m>2-5,</m> the only difference is the negative sign (one is <m>3</m> and the other is <m>-3</m>). So when we take the absolute value, that negative sign gets "eaten" and the result is the same if we do <m>|5-2|</m> or if we do <m>|2-5|.</m> This is an example of a prerequisite property that should make sense to you, and if it doesn't, you should review it from outside materials or ask me or a tutor about it.</p>
+
+  <p>Now that we have the axioms and the definition of midpoint, let's apply them to some problems!</p>
+  
+  <p>Homework</p>
+
+  <p>Complete the following homework problems for Wednesday, January 24. These should essentially be review from previous courses. Where appropriate, show work that justifies your answers for full credit.</p>
+
+  <p><ol>
+    <li>Draw a number line and label points with <m>0,</m> <m>1,</m> and three other points of your choosing.</li>
+    <li>Is the point on a number line corresponding to the real number <m>\frac{1}{2}</m> to the left of the point on the number line corresponding to the real number <m>\frac{\pi}{6}</m>? Explain why or why not.</li>
+    <li>Find the distance between the points associated with the real numbers <m>8</m> and <m>-3.</m></li>
+    <li>What real numbers correspond to points that are a distance of <m>3</m> units from the point that corresponds to <m>1</m>?</li>
+    <li>Find the distance on a number line between the point whose coordinate is <m>3</m> and the point whose coordinate is <m>-1.</m></li>
+    <li>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.</li>
+    <li>Find the coordinate of the midpoint between the point with coordinate <m>4</m> and the point with coordinate <m>7.</m></li>
+    <li>If the midpoint is <m>\frac{1}{3}</m> between a point with coordinate <m>4</m> and some other point, what is the coordinate of the other point?</li>
+  </ol></p>
+
+</section>
