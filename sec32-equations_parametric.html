@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Parametric Equations and their Graphs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Analytic Geometry">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Brian Beavers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec11-the_line-5-1 { counter-set: sec11-the_line-5-1 0; }
+#sec11-the_line-5-1 > li::marker { content: ""counter(sec11-the_line-5-1,decimal)"."; }
+#sec11-the_line-5-1 > li { counter-increment: sec11-the_line-5-1; }
+#sec11-the_line-22-1 { counter-set: sec11-the_line-22-1 0; }
+#sec11-the_line-22-1 > li::marker { content: ""counter(sec11-the_line-22-1,decimal)"."; }
+#sec11-the_line-22-1 > li { counter-increment: sec11-the_line-22-1; }
+#sec12-intervals-5-1 { counter-set: sec12-intervals-5-1 0; }
+#sec12-intervals-5-1 > li::marker { content: ""counter(sec12-intervals-5-1,decimal)"."; }
+#sec12-intervals-5-1 > li { counter-increment: sec12-intervals-5-1; }
+#sec12-intervals-22-1 { counter-set: sec12-intervals-22-1 0; }
+#sec12-intervals-22-1 > li::marker { content: ""counter(sec12-intervals-22-1,decimal)"."; }
+#sec12-intervals-22-1 > li { counter-increment: sec12-intervals-22-1; }
+#sec21-the_plane-5-1 { counter-set: sec21-the_plane-5-1 0; }
+#sec21-the_plane-5-1 > li::marker { content: ""counter(sec21-the_plane-5-1,decimal)"."; }
+#sec21-the_plane-5-1 > li { counter-increment: sec21-the_plane-5-1; }
+#sec21-the_plane-22-1 { counter-set: sec21-the_plane-22-1 0; }
+#sec21-the_plane-22-1 > li::marker { content: ""counter(sec21-the_plane-22-1,decimal)"."; }
+#sec21-the_plane-22-1 > li { counter-increment: sec21-the_plane-22-1; }
+#sec22-geometry_terms-5-1 { counter-set: sec22-geometry_terms-5-1 0; }
+#sec22-geometry_terms-5-1 > li::marker { content: ""counter(sec22-geometry_terms-5-1,decimal)"."; }
+#sec22-geometry_terms-5-1 > li { counter-increment: sec22-geometry_terms-5-1; }
+#sec22-geometry_terms-22-1 { counter-set: sec22-geometry_terms-22-1 0; }
+#sec22-geometry_terms-22-1 > li::marker { content: ""counter(sec22-geometry_terms-22-1,decimal)"."; }
+#sec22-geometry_terms-22-1 > li { counter-increment: sec22-geometry_terms-22-1; }
+#sec23-polar_coordinates-5-1 { counter-set: sec23-polar_coordinates-5-1 0; }
+#sec23-polar_coordinates-5-1 > li::marker { content: ""counter(sec23-polar_coordinates-5-1,decimal)"."; }
+#sec23-polar_coordinates-5-1 > li { counter-increment: sec23-polar_coordinates-5-1; }
+#sec23-polar_coordinates-22-1 { counter-set: sec23-polar_coordinates-22-1 0; }
+#sec23-polar_coordinates-22-1 > li::marker { content: ""counter(sec23-polar_coordinates-22-1,decimal)"."; }
+#sec23-polar_coordinates-22-1 > li { counter-increment: sec23-polar_coordinates-22-1; }
+#sec24-rect_polar_conversion-5-1 { counter-set: sec24-rect_polar_conversion-5-1 0; }
+#sec24-rect_polar_conversion-5-1 > li::marker { content: ""counter(sec24-rect_polar_conversion-5-1,decimal)"."; }
+#sec24-rect_polar_conversion-5-1 > li { counter-increment: sec24-rect_polar_conversion-5-1; }
+#sec24-rect_polar_conversion-22-1 { counter-set: sec24-rect_polar_conversion-22-1 0; }
+#sec24-rect_polar_conversion-22-1 > li::marker { content: ""counter(sec24-rect_polar_conversion-22-1,decimal)"."; }
+#sec24-rect_polar_conversion-22-1 > li { counter-increment: sec24-rect_polar_conversion-22-1; }
+#sec31-equations_functions-5-1 { counter-set: sec31-equations_functions-5-1 0; }
+#sec31-equations_functions-5-1 > li::marker { content: ""counter(sec31-equations_functions-5-1,decimal)"."; }
+#sec31-equations_functions-5-1 > li { counter-increment: sec31-equations_functions-5-1; }
+#sec31-equations_functions-22-1 { counter-set: sec31-equations_functions-22-1 0; }
+#sec31-equations_functions-22-1 > li::marker { content: ""counter(sec31-equations_functions-22-1,decimal)"."; }
+#sec31-equations_functions-22-1 > li { counter-increment: sec31-equations_functions-22-1; }
+#sec32-equations_parametric-5-1 { counter-set: sec32-equations_parametric-5-1 0; }
+#sec32-equations_parametric-5-1 > li::marker { content: ""counter(sec32-equations_parametric-5-1,decimal)"."; }
+#sec32-equations_parametric-5-1 > li { counter-increment: sec32-equations_parametric-5-1; }
+#sec32-equations_parametric-22-1 { counter-set: sec32-equations_parametric-22-1 0; }
+#sec32-equations_parametric-22-1 > li::marker { content: ""counter(sec32-equations_parametric-22-1,decimal)"."; }
+#sec32-equations_parametric-22-1 > li { counter-increment: sec32-equations_parametric-22-1; }
+#sec33-equations_polar-5-1 { counter-set: sec33-equations_polar-5-1 0; }
+#sec33-equations_polar-5-1 > li::marker { content: ""counter(sec33-equations_polar-5-1,decimal)"."; }
+#sec33-equations_polar-5-1 > li { counter-increment: sec33-equations_polar-5-1; }
+#sec33-equations_polar-22-1 { counter-set: sec33-equations_polar-22-1 0; }
+#sec33-equations_polar-22-1 > li::marker { content: ""counter(sec33-equations_polar-22-1,decimal)"."; }
+#sec33-equations_polar-22-1 > li { counter-increment: sec33-equations_polar-22-1; }
+#sec41-rectangular_part1-5-1 { counter-set: sec41-rectangular_part1-5-1 0; }
+#sec41-rectangular_part1-5-1 > li::marker { content: ""counter(sec41-rectangular_part1-5-1,decimal)"."; }
+#sec41-rectangular_part1-5-1 > li { counter-increment: sec41-rectangular_part1-5-1; }
+#sec41-rectangular_part1-22-1 { counter-set: sec41-rectangular_part1-22-1 0; }
+#sec41-rectangular_part1-22-1 > li::marker { content: ""counter(sec41-rectangular_part1-22-1,decimal)"."; }
+#sec41-rectangular_part1-22-1 > li { counter-increment: sec41-rectangular_part1-22-1; }
+#sec42-rectangular_part2-5-1 { counter-set: sec42-rectangular_part2-5-1 0; }
+#sec42-rectangular_part2-5-1 > li::marker { content: ""counter(sec42-rectangular_part2-5-1,decimal)"."; }
+#sec42-rectangular_part2-5-1 > li { counter-increment: sec42-rectangular_part2-5-1; }
+#sec42-rectangular_part2-22-1 { counter-set: sec42-rectangular_part2-22-1 0; }
+#sec42-rectangular_part2-22-1 > li::marker { content: ""counter(sec42-rectangular_part2-22-1,decimal)"."; }
+#sec42-rectangular_part2-22-1 > li { counter-increment: sec42-rectangular_part2-22-1; }
+#sec43-parametric_part1-5-1 { counter-set: sec43-parametric_part1-5-1 0; }
+#sec43-parametric_part1-5-1 > li::marker { content: ""counter(sec43-parametric_part1-5-1,decimal)"."; }
+#sec43-parametric_part1-5-1 > li { counter-increment: sec43-parametric_part1-5-1; }
+#sec43-parametric_part1-22-1 { counter-set: sec43-parametric_part1-22-1 0; }
+#sec43-parametric_part1-22-1 > li::marker { content: ""counter(sec43-parametric_part1-22-1,decimal)"."; }
+#sec43-parametric_part1-22-1 > li { counter-increment: sec43-parametric_part1-22-1; }
+#sec44-parametric_part2-5-1 { counter-set: sec44-parametric_part2-5-1 0; }
+#sec44-parametric_part2-5-1 > li::marker { content: ""counter(sec44-parametric_part2-5-1,decimal)"."; }
+#sec44-parametric_part2-5-1 > li { counter-increment: sec44-parametric_part2-5-1; }
+#sec44-parametric_part2-22-1 { counter-set: sec44-parametric_part2-22-1 0; }
+#sec44-parametric_part2-22-1 > li::marker { content: ""counter(sec44-parametric_part2-22-1,decimal)"."; }
+#sec44-parametric_part2-22-1 > li { counter-increment: sec44-parametric_part2-22-1; }
+#sec45-polar-5-1 { counter-set: sec45-polar-5-1 0; }
+#sec45-polar-5-1 > li::marker { content: ""counter(sec45-polar-5-1,decimal)"."; }
+#sec45-polar-5-1 > li { counter-increment: sec45-polar-5-1; }
+#sec45-polar-22-1 { counter-set: sec45-polar-22-1 0; }
+#sec45-polar-22-1 > li::marker { content: ""counter(sec45-polar-22-1,decimal)"."; }
+#sec45-polar-22-1 > li { counter-increment: sec45-polar-22-1; }
+#sec46-parallel-5-1 { counter-set: sec46-parallel-5-1 0; }
+#sec46-parallel-5-1 > li::marker { content: ""counter(sec46-parallel-5-1,decimal)"."; }
+#sec46-parallel-5-1 > li { counter-increment: sec46-parallel-5-1; }
+#sec46-parallel-22-1 { counter-set: sec46-parallel-22-1 0; }
+#sec46-parallel-22-1 > li::marker { content: ""counter(sec46-parallel-22-1,decimal)"."; }
+#sec46-parallel-22-1 > li { counter-increment: sec46-parallel-22-1; }
+#sec47-perpendicular-5-1 { counter-set: sec47-perpendicular-5-1 0; }
+#sec47-perpendicular-5-1 > li::marker { content: ""counter(sec47-perpendicular-5-1,decimal)"."; }
+#sec47-perpendicular-5-1 > li { counter-increment: sec47-perpendicular-5-1; }
+#sec47-perpendicular-22-1 { counter-set: sec47-perpendicular-22-1 0; }
+#sec47-perpendicular-22-1 > li::marker { content: ""counter(sec47-perpendicular-22-1,decimal)"."; }
+#sec47-perpendicular-22-1 > li { counter-increment: sec47-perpendicular-22-1; }
+#sec48-angles-5-1 { counter-set: sec48-angles-5-1 0; }
+#sec48-angles-5-1 > li::marker { content: ""counter(sec48-angles-5-1,decimal)"."; }
+#sec48-angles-5-1 > li { counter-increment: sec48-angles-5-1; }
+#sec48-angles-22-1 { counter-set: sec48-angles-22-1 0; }
+#sec48-angles-22-1 > li::marker { content: ""counter(sec48-angles-22-1,decimal)"."; }
+#sec48-angles-22-1 > li { counter-increment: sec48-angles-22-1; }
+#sec49-distance_to_point-5-1 { counter-set: sec49-distance_to_point-5-1 0; }
+#sec49-distance_to_point-5-1 > li::marker { content: ""counter(sec49-distance_to_point-5-1,decimal)"."; }
+#sec49-distance_to_point-5-1 > li { counter-increment: sec49-distance_to_point-5-1; }
+#sec49-distance_to_point-22-1 { counter-set: sec49-distance_to_point-22-1 0; }
+#sec49-distance_to_point-22-1 > li::marker { content: ""counter(sec49-distance_to_point-22-1,decimal)"."; }
+#sec49-distance_to_point-22-1 > li { counter-increment: sec49-distance_to_point-22-1; }
+#sec51-geometric-5-1 { counter-set: sec51-geometric-5-1 0; }
+#sec51-geometric-5-1 > li::marker { content: ""counter(sec51-geometric-5-1,decimal)"."; }
+#sec51-geometric-5-1 > li { counter-increment: sec51-geometric-5-1; }
+#sec51-geometric-22-1 { counter-set: sec51-geometric-22-1 0; }
+#sec51-geometric-22-1 > li::marker { content: ""counter(sec51-geometric-22-1,decimal)"."; }
+#sec51-geometric-22-1 > li { counter-increment: sec51-geometric-22-1; }
+#sec52-component-5-1 { counter-set: sec52-component-5-1 0; }
+#sec52-component-5-1 > li::marker { content: ""counter(sec52-component-5-1,decimal)"."; }
+#sec52-component-5-1 > li { counter-increment: sec52-component-5-1; }
+#sec52-component-22-1 { counter-set: sec52-component-22-1 0; }
+#sec52-component-22-1 > li::marker { content: ""counter(sec52-component-22-1,decimal)"."; }
+#sec52-component-22-1 > li { counter-increment: sec52-component-22-1; }
+#sec53-dot_product-5-1 { counter-set: sec53-dot_product-5-1 0; }
+#sec53-dot_product-5-1 > li::marker { content: ""counter(sec53-dot_product-5-1,decimal)"."; }
+#sec53-dot_product-5-1 > li { counter-increment: sec53-dot_product-5-1; }
+#sec53-dot_product-22-1 { counter-set: sec53-dot_product-22-1 0; }
+#sec53-dot_product-22-1 > li::marker { content: ""counter(sec53-dot_product-22-1,decimal)"."; }
+#sec53-dot_product-22-1 > li { counter-increment: sec53-dot_product-22-1; }
+#sec54-lines-5-1 { counter-set: sec54-lines-5-1 0; }
+#sec54-lines-5-1 > li::marker { content: ""counter(sec54-lines-5-1,decimal)"."; }
+#sec54-lines-5-1 > li { counter-increment: sec54-lines-5-1; }
+#sec54-lines-22-1 { counter-set: sec54-lines-22-1 0; }
+#sec54-lines-22-1 > li::marker { content: ""counter(sec54-lines-22-1,decimal)"."; }
+#sec54-lines-22-1 > li { counter-increment: sec54-lines-22-1; }
+#sec55-projection-5-1 { counter-set: sec55-projection-5-1 0; }
+#sec55-projection-5-1 > li::marker { content: ""counter(sec55-projection-5-1,decimal)"."; }
+#sec55-projection-5-1 > li { counter-increment: sec55-projection-5-1; }
+#sec55-projection-22-1 { counter-set: sec55-projection-22-1 0; }
+#sec55-projection-22-1 > li::marker { content: ""counter(sec55-projection-22-1,decimal)"."; }
+#sec55-projection-22-1 > li { counter-increment: sec55-projection-22-1; }
+#sec61-circle-5-1 { counter-set: sec61-circle-5-1 0; }
+#sec61-circle-5-1 > li::marker { content: ""counter(sec61-circle-5-1,decimal)"."; }
+#sec61-circle-5-1 > li { counter-increment: sec61-circle-5-1; }
+#sec61-circle-22-1 { counter-set: sec61-circle-22-1 0; }
+#sec61-circle-22-1 > li::marker { content: ""counter(sec61-circle-22-1,decimal)"."; }
+#sec61-circle-22-1 > li { counter-increment: sec61-circle-22-1; }
+#sec62-ellipse_parabola-5-1 { counter-set: sec62-ellipse_parabola-5-1 0; }
+#sec62-ellipse_parabola-5-1 > li::marker { content: ""counter(sec62-ellipse_parabola-5-1,decimal)"."; }
+#sec62-ellipse_parabola-5-1 > li { counter-increment: sec62-ellipse_parabola-5-1; }
+#sec62-ellipse_parabola-22-1 { counter-set: sec62-ellipse_parabola-22-1 0; }
+#sec62-ellipse_parabola-22-1 > li::marker { content: ""counter(sec62-ellipse_parabola-22-1,decimal)"."; }
+#sec62-ellipse_parabola-22-1 > li { counter-increment: sec62-ellipse_parabola-22-1; }
+#sec63-hyperbola-5-1 { counter-set: sec63-hyperbola-5-1 0; }
+#sec63-hyperbola-5-1 > li::marker { content: ""counter(sec63-hyperbola-5-1,decimal)"."; }
+#sec63-hyperbola-5-1 > li { counter-increment: sec63-hyperbola-5-1; }
+#sec63-hyperbola-22-1 { counter-set: sec63-hyperbola-22-1 0; }
+#sec63-hyperbola-22-1 > li::marker { content: ""counter(sec63-hyperbola-22-1,decimal)"."; }
+#sec63-hyperbola-22-1 > li { counter-increment: sec63-hyperbola-22-1; }
+#sec64-translation-5-1 { counter-set: sec64-translation-5-1 0; }
+#sec64-translation-5-1 > li::marker { content: ""counter(sec64-translation-5-1,decimal)"."; }
+#sec64-translation-5-1 > li { counter-increment: sec64-translation-5-1; }
+#sec64-translation-22-1 { counter-set: sec64-translation-22-1 0; }
+#sec64-translation-22-1 > li::marker { content: ""counter(sec64-translation-22-1,decimal)"."; }
+#sec64-translation-22-1 > li { counter-increment: sec64-translation-22-1; }
+#sec65-general_noB-5-1 { counter-set: sec65-general_noB-5-1 0; }
+#sec65-general_noB-5-1 > li::marker { content: ""counter(sec65-general_noB-5-1,decimal)"."; }
+#sec65-general_noB-5-1 > li { counter-increment: sec65-general_noB-5-1; }
+#sec65-general_noB-22-1 { counter-set: sec65-general_noB-22-1 0; }
+#sec65-general_noB-22-1 > li::marker { content: ""counter(sec65-general_noB-22-1,decimal)"."; }
+#sec65-general_noB-22-1 > li { counter-increment: sec65-general_noB-22-1; }
+#sec66-rotation-5-1 { counter-set: sec66-rotation-5-1 0; }
+#sec66-rotation-5-1 > li::marker { content: ""counter(sec66-rotation-5-1,decimal)"."; }
+#sec66-rotation-5-1 > li { counter-increment: sec66-rotation-5-1; }
+#sec66-rotation-22-1 { counter-set: sec66-rotation-22-1 0; }
+#sec66-rotation-22-1 > li::marker { content: ""counter(sec66-rotation-22-1,decimal)"."; }
+#sec66-rotation-22-1 > li { counter-increment: sec66-rotation-22-1; }
+#sec67-general-5-1 { counter-set: sec67-general-5-1 0; }
+#sec67-general-5-1 > li::marker { content: ""counter(sec67-general-5-1,decimal)"."; }
+#sec67-general-5-1 > li { counter-increment: sec67-general-5-1; }
+#sec67-general-22-1 { counter-set: sec67-general-22-1 0; }
+#sec67-general-22-1 > li::marker { content: ""counter(sec67-general-22-1,decimal)"."; }
+#sec67-general-22-1 > li { counter-increment: sec67-general-22-1; }
+#sec68-parametric-5-1 { counter-set: sec68-parametric-5-1 0; }
+#sec68-parametric-5-1 > li::marker { content: ""counter(sec68-parametric-5-1,decimal)"."; }
+#sec68-parametric-5-1 > li { counter-increment: sec68-parametric-5-1; }
+#sec68-parametric-22-1 { counter-set: sec68-parametric-22-1 0; }
+#sec68-parametric-22-1 > li::marker { content: ""counter(sec68-parametric-22-1,decimal)"."; }
+#sec68-parametric-22-1 > li { counter-increment: sec68-parametric-22-1; }
+#sec69-polar-5-1 { counter-set: sec69-polar-5-1 0; }
+#sec69-polar-5-1 > li::marker { content: ""counter(sec69-polar-5-1,decimal)"."; }
+#sec69-polar-5-1 > li { counter-increment: sec69-polar-5-1; }
+#sec69-polar-22-1 { counter-set: sec69-polar-22-1 0; }
+#sec69-polar-22-1 > li::marker { content: ""counter(sec69-polar-22-1,decimal)"."; }
+#sec69-polar-22-1 > li { counter-increment: sec69-polar-22-1; }
+</style>
+</head>
+<body id="Analytic Geometry: An Opinionated Precalculus Course" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Analytic Geometry:</span> <span class="subtitle">An Opinionated Precalculus Course</span></a></h1>
+<p class="byline">Brian Beavers</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec31-equations_functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec33-equations_polar.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-the_line.html" class="internal"><span class="codenumber">1</span> <span class="title">Analytic Geometry on the Real Line</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec11-the_line.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Coordinatizing a Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec12-intervals.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Intervals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-the_plane.html" class="internal"><span class="codenumber">2</span> <span class="title">Analytic Geometry in the Real Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec21-the_plane.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Coordinatizing the Plane</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec22-geometry_terms.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Review of Plane Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec23-polar_coordinates.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec24-rect_polar_conversion.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Converting between Polar and Rectangular</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch3-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations and Graphs</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec31-equations_functions.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Equations, Functions, and their Graphs</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec32-equations_parametric.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Parametric Equations and their Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec33-equations_polar.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Polar Equations and their Graphs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-lines.html" class="internal"><span class="codenumber">4</span> <span class="title">Lines</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec41-rectangular_part1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Rectangular Equations of Lines - Part 1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec42-rectangular_part2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rectangular Equations of Lines - Part 2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec43-parametric_part1.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Basic Parametric Equations of Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec44-parametric_part2.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Advanced Parametric Equations of Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec45-polar.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Polar Equations of Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec46-parallel.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Parallel Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec47-perpendicular.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Perpendicular Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec48-angles.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Angles between Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec49-distance_to_point.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Distance from a Point to a Line</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-vectors.html" class="internal"><span class="codenumber">5</span> <span class="title">Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec51-geometric.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Vectors from a Geometric Perspective</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-component.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Components of Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec53-dot_product.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Dot Product and Angles between Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec54-lines.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Vector Equations of Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec55-projection.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Vector Projection</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch6-conics.html" class="internal"><span class="codenumber">6</span> <span class="title">Conics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec61-circle.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec62-ellipse_parabola.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ellipses and Parabolas</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-hyperbola.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Hyperbolas</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-translation.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Translation of Conics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec65-general_noB.html" class="internal"><span class="codenumber">6.5</span> <span class="title">General 2nd Degree Equations with no B Term</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec66-rotation.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Rotations of Conics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec67-general.html" class="internal"><span class="codenumber">6.7</span> <span class="title">The General 2nd Degree Equation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec68-parametric.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Parametric Equations of Conics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec69-polar.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Polar Equations of Conics</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec32-equations_parametric"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Parametric Equations and their Graphs</span>
+</h2>
+<div class="para" id="sec32-equations_parametric-2">In this class, we will focus on two-dimensional space - "the plane." Before we do that, it’s useful to work in one-dimensional space - "the line" - first.</div>
+<div class="para" id="sec32-equations_parametric-3">We model one-dimensional space as a single straight line as follows:</div>
+<div class="para" id="sec32-equations_parametric-4">Axioms for One-Dimensional Analytic Geometry ("The Line")</div>
+<div class="para logical" id="sec32-equations_parametric-5"><ol class="decimal" id="sec32-equations_parametric-5-1">
+<li id="sec32-equations_parametric-5-1-1"><div class="para" id="p-derived-sec32-equations_parametric-5-1-1">Each point on the line corresponds to a unique real number</div></li>
+<li id="sec32-equations_parametric-5-1-2"><div class="para" id="p-derived-sec32-equations_parametric-5-1-2">The distance between points corresponding to the real numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is <span class="process-math">\(|x-y|.\)</span>
+</div></li>
+<li id="sec32-equations_parametric-5-1-3"><div class="para" id="p-derived-sec32-equations_parametric-5-1-3">The point corresponding to the real number <span class="process-math">\(x\)</span> is to the left of the point corresponding to the real number <span class="process-math">\(y\)</span> if and only if <span class="process-math">\(x\lt y.\)</span>
+</div></li>
+</ol></div>
+<div class="para" id="sec32-equations_parametric-6">The three axioms above tell us how to <em class="emphasis">coordinatize</em> a line to make a <em class="emphasis">number</em> line. Each point gets paired with exactly one number, and we want this pairing to behave in a way that doesn’t conflict with our usual way of thinking about real numbers: moving one way gives us bigger numbers, moving the other way gives us smaller numbers, and the distance between two numbers is the difference of the larger minus the smaller (or the negative of the smaller minus the larger - hence the need for absolute value bars if we don’t actually know which number is larger when they are represented by variables).</div>
+<div class="para" id="sec32-equations_parametric-7">Once we assign points to the real numbers <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{,}\)</span> the assignment of points to all other numbers is set automatically.</div>
+<div class="para" id="sec32-equations_parametric-8">When we have two points on a line, we often want to find the <em class="emphasis">midpoint</em> between the two points:</div>
+<div class="para" id="sec32-equations_parametric-9">Definition of Midpoint (on "The Line")</div>
+<div class="para" id="sec32-equations_parametric-10">Geometric definition: the <em class="emphasis">midpoint</em> of two distinct points with coordinates <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is a point <span class="process-math">\(z\)</span> between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the same as the distance from <span class="process-math">\(y\)</span> to <span class="process-math">\(z.\)</span> Symbolically, the midpoint is the point with coordinate <span class="process-math">\(z\)</span> such that <span class="process-math">\(|x-z|=|y-z|.\)</span>
+</div>
+<div class="para" id="sec32-equations_parametric-11">Algebraic definition: the <em class="emphasis">midpoint</em> of two distinct points with coordinates <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is a point <span class="process-math">\(z\)</span> with coordinate <span class="process-math">\(\frac{x+y}{2}.\)</span>
+</div>
+<div class="para" id="sec32-equations_parametric-12">Notice that I have given two definitions of midpoint! One is from a geometric perspective: it talks about distances between certain points being equal. The other is given by an algebraic formula involving the coordinates for the two points. This is often the case in analytic geometry! We are bridging the world where we think of things geometrically with the world where we think of things algebraically.</div>
+<div class="para" id="sec32-equations_parametric-13">How do we know for sure, without exception, that these two definitions are really describing the same point? That’s where the idea of mathematical proof comes in. You probably encountered two-column geometric proof in high school. Here, we will start to use algebraic proof as well to make sure the geometry and algebra ideas really do correspond to one another...</div>Theorem: Given two points <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> on a coordinate line, there is a point with coordinate <span class="process-math">\(z\)</span> between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(|x-z|=|y-z|\)</span> if and only if <span class="process-math">\(z=\frac{x+y}{2}.\)</span><div class="para" id="sec32-equations_parametric-15">Proof: First, we must make sure that if there is a point <span class="process-math">\(z\)</span> where <span class="process-math">\(|x-z|=|y-z|,\)</span> then <span class="process-math">\(z\)</span> is indeed the number we get from the formula <span class="process-math">\(\frac{x+y}{2}.\)</span> Since the points corresponding to <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are distinct, one of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> must be greater than the other. Suppose <span class="process-math">\(x\lt  y.\)</span> Since <span class="process-math">\(z\)</span> is between <span class="process-math">\(x\)</span> and <span class="process-math">\(y,\)</span> we know that <span class="process-math">\(x\lt  z\lt  y.\)</span> Let <span class="process-math">\(d\)</span> be the distance between <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> (that is, let <span class="process-math">\(d=|x-z|\)</span>) and between <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> (that is, let <span class="process-math">\(d=|y-z|\)</span>), which we know to be equal. Then <span class="process-math">\(z=x+d\)</span> and <span class="process-math">\(y=x+2d.\)</span> Moreover, <span class="process-math">\(\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.\)</span> A similar result occurs if we were to let <span class="process-math">\(y\)</span> be less than <span class="process-math">\(x.\)</span> Thus we have shown that if <span class="process-math">\(z\)</span> is a point between the two points <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> with <span class="process-math">\(|x-z|=|y-z|,\)</span> then <span class="process-math">\(z=\frac{x+y}{2}.\)</span>
+</div>
+<div class="para logical" id="sec32-equations_parametric-16">
+<div class="para">Next, we must make sure that if <span class="process-math">\(z=\frac{x+y}{2},\)</span> then <span class="process-math">\(|x-z|=|y-z|.\)</span> Hence,</div>
+<div class="displaymath process-math" id="sec32-equations_parametric-16-3">
+\begin{align*}
+|x-z|\amp=\left|x-\frac{x+y}{2}\right| \\
+\amp=\left|x-\frac{x}{2}-\frac{y}{2}\right| \\
+\amp=\left|\frac{x}{2}-\frac{y}{2}\right| \\
+\amp=\left|\frac{y}{2}-\frac{x}{2}\right| \\
+\amp=\left|y-\frac{y}{2}-\frac{x}{2}\right| \\
+\amp=\left|y-\frac{y+x}{2}\right| \\
+\amp=\left|y-\frac{x+y}{2}\right| \\
+\amp=|y-z|.
+\end{align*}
+</div>
+<div class="para">Thus we have shown that if <span class="process-math">\(z=\frac{x+y}{2},\)</span> then the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the same as the distance from <span class="process-math">\(y\)</span> to <span class="process-math">\(z.\)</span>
+</div>
+</div>
+<div class="para" id="sec32-equations_parametric-17">We have checked both directions of this "if and only if" statement, so the statement is true. QED</div>
+<div class="para" id="sec32-equations_parametric-18">Notice that we used property of absolute value that has not been mentioned yet: <span class="process-math">\(|x-y|=|y-x|.\)</span> This is because of how absolute values work! If you compare <span class="process-math">\(5-2\)</span> and <span class="process-math">\(2-5,\)</span> the only difference is the negative sign (one is <span class="process-math">\(3\)</span> and the other is <span class="process-math">\(-3\)</span>). So when we take the absolute value, that negative sign gets "eaten" and the result is the same if we do <span class="process-math">\(|5-2|\)</span> or if we do <span class="process-math">\(|2-5|.\)</span> This is an example of a prerequisite property that should make sense to you, and if it doesn’t, you should review it from outside materials or ask me or a tutor about it.</div>
+<div class="para" id="sec32-equations_parametric-19">Now that we have the axioms and the definition of midpoint, let’s apply them to some problems!</div>
+<div class="para" id="sec32-equations_parametric-20">Homework</div>
+<div class="para" id="sec32-equations_parametric-21">Complete the following homework problems for Wednesday, January 24. These should essentially be review from previous courses. Where appropriate, show work that justifies your answers for full credit.</div>
+<div class="para logical" id="sec32-equations_parametric-22"><ol class="decimal" id="sec32-equations_parametric-22-1">
+<li id="sec32-equations_parametric-22-1-1"><div class="para" id="p-derived-sec32-equations_parametric-22-1-1">Draw a number line and label points with <span class="process-math">\(0,\)</span> <span class="process-math">\(1,\)</span> and three other points of your choosing.</div></li>
+<li id="sec32-equations_parametric-22-1-2"><div class="para" id="p-derived-sec32-equations_parametric-22-1-2">Is the point on a number line corresponding to the real number <span class="process-math">\(\frac{1}{2}\)</span> to the left of the point on the number line corresponding to the real number <span class="process-math">\(\frac{\pi}{6}\text{?}\)</span> Explain why or why not.</div></li>
+<li id="sec32-equations_parametric-22-1-3"><div class="para" id="p-derived-sec32-equations_parametric-22-1-3">Find the distance between the points associated with the real numbers <span class="process-math">\(8\)</span> and <span class="process-math">\(-3.\)</span>
+</div></li>
+<li id="sec32-equations_parametric-22-1-4"><div class="para" id="p-derived-sec32-equations_parametric-22-1-4">What real numbers correspond to points that are a distance of <span class="process-math">\(3\)</span> units from the point that corresponds to <span class="process-math">\(1\text{?}\)</span>
+</div></li>
+<li id="sec32-equations_parametric-22-1-5"><div class="para" id="p-derived-sec32-equations_parametric-22-1-5">Find the distance on a number line between the point whose coordinate is <span class="process-math">\(3\)</span> and the point whose coordinate is <span class="process-math">\(-1.\)</span>
+</div></li>
+<li id="sec32-equations_parametric-22-1-6"><div class="para" id="p-derived-sec32-equations_parametric-22-1-6">Plot the points on a number line whose coordinates satisfy the following equations using only exact values.</div></li>
+<li id="sec32-equations_parametric-22-1-7"><div class="para" id="p-derived-sec32-equations_parametric-22-1-7">Find the coordinate of the midpoint between the point with coordinate <span class="process-math">\(4\)</span> and the point with coordinate <span class="process-math">\(7.\)</span>
+</div></li>
+<li id="sec32-equations_parametric-22-1-8"><div class="para" id="p-derived-sec32-equations_parametric-22-1-8">If the midpoint is <span class="process-math">\(\frac{1}{3}\)</span> between a point with coordinate <span class="process-math">\(4\)</span> and some other point, what is the coordinate of the other point?</div></li>
+</ol></div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec31-equations_functions.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec33-equations_polar.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
