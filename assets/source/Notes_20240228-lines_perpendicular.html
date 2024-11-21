@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Perpendicular Lines</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+<p>We have already seen that we can use the converse of the Pythagorean theorem to check to see if two line segments are perpendicular since the legs in a right triangle are perpendicular. We can also use that tool to help us relate the property of being perpendicular to the slopes of lines.</p>
+
+<p>Recall that we have three types of lines: horizontal, vertical, and oblique. Oblique lines come in two subcategories: positive slope/acute inclination lines and negative slope/obtuse inclination lines. Our goal is to explain why the only way for two distinct lines to be perpendicular is either for one to be vertical and the other to be horizontal, or for the two lines to be oblique with opposite reciprocal slopes.</p>
+
+<p>First, let's ask when a line can be perpendicular to a horizontal line. A horizontal line has an inclination of \(0^\circ\), so the only way another line could be perpendicular to our horizontal line would be if its inclination were \(90^\circ,\) and that only happens when the line is vertical. So a line is perpendicular to a horizontal line if and only if it is vertical.</p>
+
+<p>Second, let's ask when a line can be perpendicular to a vertical line. A vertical line has an inclination of \(90^\circ\), so the only way another line could be perpendicular to our vertical line would be if its inclination were \(0^\circ,\) and that only happens when the line is horizontal. So a line is perpendicular to a vertical line if and only if it is vertical.</p>
+
+<p>Finally, let's ask when a line can be perpendicular to an oblique line. We already know that the other line can't be vertical or horizontal, so the other line must be oblique. Thinking further about this, we have only two possibilities: the two oblique lines under consideration could have slopes of the same sign (both positive or both negative) or opposite sign (one positive and one negative). If both lines have slopes of the same sign, then both have acute inclination or both have obtuse inclination. In either case, the smallest angle between the two lines must be acute, not exactly \(90^\circ.\)</p>
+
+<p>Thus it only remains to consider what happens when one line, \(y=m_1x+b_1\) has positive slope and the other line \(y=m_2x+b_2\) has negative slope. Since the two lines have slopes of opposite sign, their slopes cannot be equal. Thus the lines must intersect at the point (as we discovered in the last class). What must be true about these two lines to see when they are perpendicular, and what must be true about the lines to know they are not perpendicular?</p>
+
+<p>Suppose our two lines \(y=m_1x+b_1\) and \(y=m_2x+b_2\) are perpendicular and have slopes of opposite sign. For convenience, assume \(m_1\) is positive and \(m_2\) is negative. Let \(A\) be their intersection point, and go one unit directly right of the intersection point to get to the point \(C.\) Because the slope \(m_1\) is positive, we can go up \(m_1\) units from \(C\) to get to another point \(B\) on the line \(y=m_1x+b_1.\) Because the slope \(m_2\) is negative, we can go down \(-m_2\) units from \(C\) to get to another point \(D\) on \(y=m_2x+b_2.\) This is illustrated below:</p>
+
+<p><img src="img/0228_01.png" class="w3-image" /></p>
+
+<p>Since the two lines are perpendicular, \(\angle BAD\) is exactly \(90^\circ.\) The line through \(B,\) \(C,\) and \(D\) is vertical while the line through \(A\) and \(C\) is horizontal, making \(\angle BCA\) and \(\angle ACD\) both right angles. So we have three right triangles here: \(\Delta ABD,\) \(\Delta ABC,\) and \(\Delta ADC.\) Side \(\overline{AB}\) is the hypotenuse of \(\Delta ABC\), and so, by the Pythagorean Theorem, \(AB=\sqrt{1+m_1^2}.\) Side \(\overline{AD}\) is the hypotenuse of \(\Delta ADC\), and so, by the Pythagorean Theorem, \(AB=\sqrt{1+m_2^2}.\)</p>
+
+<p>Now when we look at triangle \(\Delta ABC\), we know it is a right triangle and we know its leg lengths are \(\sqrt{1+m_1^2}\) and \(\sqrt{1+m_2^2},\) and its hypotenuse length is \(m_1-m_2.\) By the Pythagorean theorem, then we know that \[\left(\sqrt{1+m_1^2}\right)^2+\left(\sqrt{1+m_2^2}\right)^2=(m_1-m_2)^2.\] Thus, \[1+m_1^2+1+m_2^2=m_1^2-2m_1m_2+m_2^2.\] Then, \[2=-2m_1m_2.\] This tells us that \(-1=m_1m_2,\) or equivalently, \(m_2=-1/m_1.\) Thus \(m_1\) and \(m_2\) are <em>opposite reciprocal slopes</em>.</p>
+
+<p>What we have just shown is that when we have two oblique lines that are perpendicular, we can then conclude that their slopes are opposite reciprocals. However, is it possible for any lines with opposite reciprocal slopes to not be perpendicular? Let's check this reverse situation. Let's start with knowing that our lines have opposite reciprocal slopes and prove that the lines then must be guaranteed to be perpendicular.</p>
+
+<p>We can start with <em>almost</em> the same setup as before. We know our lines have opposite reciprocal slopes so one, say \(m_1\) must be positive and one, say \(m_2\) must be negative. The two lines must intersect because the slopes are not equal. From the intersection point \(A\), go one unit to the right to the point \(C.\) Then go up \(m_1\) units up to point \(C\) and \(-m_2\) units down to point \(D.\) Again, here's the picture:</p>
+
+<p><img src="img/0228_01.png" class="w3-image" /></p>
+
+<p>But now what we don't know for sure is that angle \(\angle BAD\) is a right angle; we must prove that. However, since \(\overline{AC}\) is horizontal and \(\overline{BD}\) is vertical, we do still know that \(\angle BCA\) and \(\angle DCA\) are right angles, and so \(AB=\sqrt{1+m_1^2}\) and \(AD=\sqrt{1+m_2^2}\). Moreover, side \(BD\) is still \(m_1-m_2.\) What we can do at this point is use the <em>Converse of the Pythagorean Theorem</em> to show that the sides of this triangle are indeed those of a right triangle, which would then tell us that \(\angle BAC\) is a right angle.</p>
+
+<p>Let's start with our supposed legs \(\sqrt{1+m_1^2}\) and \(\sqrt{1+m_2^2}\): 
+  \[\begin{align} 
+    &\left(\sqrt{1+m_1^2}\right)^2+\left(\sqrt{1+m_2^2}\right)^2 \\
+    &= 1+m_1^2+1+m_2^2 \\
+    &= m_1^2+2+m_2^2 \\
+    &= m_1^2+2(-m_1m_2)+m_2^2 \\
+    &= m_1^2-2m_1m_2+m_2^2 \\
+    &=(m_1-m_2)^2.
+  \end{align}\]</p>
+
+<p>Thus our three side lengths <em>do</em> work in the Pythagorean Theorem equation. Thus by the Converse of the Pythagorean Theorem, we know this is a right triangle with \(m_1-m_2\) as its hypotenuse. Thus, \(\angle BAC\) is a right angle. Therefore, our lines are perpendicular.</p>
+
+<p>Whew! Now let's look back over what we have done. We asked the question "When are two lines parallel?" We found that the only way for two lines to be perpendicular is for one to be vertical and the other horizontal, or for both lines to be oblique with opposite reciprocal slopes. In all other cases the two lines are not perpendicular.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Slopes and Perpendicular Lines</h4>
+    </header>
+    <div class="w3-container"><p>Two distinct lines are perpendicular if and only if (1) one is vertical and the other is horizontal, or (2) their slopes are opposite reciprocals of each other.</p>
+    
+    <p>To clarify: if two lines have slope \(m_1\) and \(m_2\) and those slopes are opposite reciprocals, that means that \(m_2=-\frac{1}{m_1}\), or equivalently, \(m_1\cdot m_2=-1\).</p></div>
+  </div>
+
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, March 1. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Determine whether the lines are perpendicular or not.
+          <ol type="a">
+            <li>\(y=2x+3\) and \(y=3x+2\)</li>
+            <li>\(y=2x+4\) and \(y=2x+5\)</li>
+            <li>\(3x+2y=6\) and \(2x-3y=4\)</li>
+            <li>\(x=2\) and \(y=3\)</li>
+            <li>\(0x+3y=6\) and \(0x+y=2\)</li>
+            <li>\(y-1=2(x+3)\) and \(y-1=-\frac{1}{2}(x+3)\)</li>
+            <li>\(2x+4y=8\) and \(y=-\frac{1}{2}x+2\)</li>
+          </ol>
+        </li>
+        <li>Give an equation for the line through \((1,2)\) that is perpendicular to \(y=3x+5\).</li>
+        <li>Use slopes to give an equation for the perpendicular bisector of the line segment with endpoints \((-2,3)\) and \((3,5)\).</li>
+        <li>If the line through \((a,5)\) and \((4,3)\) is perpendicular to a line with slope 3, the value of \(a\).</li>
+        <li>Are the points \((9,6)\), \((-5,4)\), and \((7,10)\) the vertices of a right triangle or not? Use slopes to decide. Explain how you know.</li>    
+        <li>Are the points \((-2,1)\), \((-1,-5)\), and \((2,-3)\) the vertices of a right triangle or not? Use slopes to decide. Explain how you know.</li>
+        <li>Use slopes to show that \((1,2)\), \((4,7)\), \((-6,13)\) and \((-9,8)\) are the vertices of a rectangle.</li>
+        <li>Use slopes to show that \((3,3)\), \((0,2)\), \(\left(\frac{9}{5},-\frac{3}{5}\right)\), and \(\left(\frac{24}{5},\frac{2}{5}\right)\) are the vertices of a rhombus. The easiest way to do this is to use the fact that a shape is a rhombus if and only if it is a parallelogram with perpendicular diagonals.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

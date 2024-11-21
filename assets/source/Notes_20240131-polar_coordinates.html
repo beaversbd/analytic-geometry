@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Polar Coordinates</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Polar Coordinates in the plane</h2>
+
+  <p>The coordinate system we created last time is based on vertical and horizontal lines through the axes. We can imagine the system as a giant grid of squares and rectangles.</p>
+  
+  <p>Thanks to trigonometry, there is another way to create coordinates for points. The <em>polar</em> coordinate system is built from circles and rays. To create the polar coordinate system for the plane, we take a point and call it the <em>pole</em>. From the pole, we extend a ray, which we call the <em>polar axis</em>.</p>
+
+<p><img src="img/10_1_img3.png" class="w3-image" /></p>
+
+<p>A point in the polar coordinate system has two coordinates: the \(r\)-coordinate and the \(\theta\) coordinate. We express a point using an ordered pair with the \(r\)-coordinate first: \((r,\theta)\).</p>
+
+<p>To plot a point on the polar axis, draw the circle of radius \(|r|\) centered at the pole and draw the terminal side of an angle of measure \(\theta\) whose initial side is the polar axis. As is our standard, positive angles are counterclockwise and negative angles are clockwise.</p>
+
+<p><img src="img/10_1_img4.png" class="w3-image" /></p>
+
+<p>Thus our polar "grid" looks like concentric circles and radiating rays:</p>
+
+<p><img src="img/10_1_img5.png" class="w3-image" /></p>
+
+<p>Let's graph the point \((2,30^\circ)\) as an example. Draw the circle of radius \(2\) centered at the pole and draw the ray for \(30^\circ\). Then the polar point \((2,30^\circ)\) is the intersection of those two shapes:</p>
+
+<p><img src="img/10_1_img6.png" class="w3-image" /></p>
+
+<p>If you've got a good grasp of angles from trigonometry, these basic points shouldn't be to difficult to draw. However, there are a few issues to discuss that make this system a bit more complicated than the rectangular (Cartesian) coordinate system. First, we must deal with the case when the \(r\) coordinate is negative.</p>
+
+<h2>Plotting Polar Points when \(r&lt;0\)</h2>
+
+<p>It makes a lot of sense to plot one of these polar points when \(r\) is positive. When \(r\) is zero, we just get the pole. But what if \(r\) is negative?</p>
+
+<p>Recall how plotting values work on the real number line. On the real number line, we have point for \(0\) and all the positive values are on one side of the point for \(0\) and all the negative values are on the other side of the point for \(0\). With polar coordinates, instead of drawing just the ray for the terminal side of \(\theta\), draw the entire line through the pole. The half of the line that conforms to the angle \(\theta\) contain the points with positive \(r\) values, and the other half will contain the points with negative \(r\) values, as in the picture below:</p>
+
+<p><img src="img/10_1_img7.png" class="w3-image" /></p>
+
+<p>So all the points with the same second coordinate are on the same line through the pole. But this brings up a problem. Polar points can be represented by more than one set of coordinates!</p>
+
+<h2>Nonuniqueness of Polar Coordinates</h2>
+
+<p>One issue with polar coordinates that rectangular coordinates don't have is that the same polar point can be described by more than one set of coordinates. With rectangular coordinates, if we have two sets of coordinates for the same point, then the x-values and the y-values have to be the same. But with polar coordinates, there are three issues that can cause a point to have more than one set of coordinates.</p>
+
+<p><strong>Problem of the pole</strong>: the pole can be represented by coordinates \((0,\theta)\) where \(\theta\) can be any angle. Thus there are infinitely many different ways to describe the pole: \((0,0^\circ)\) is the same as \((0,30^\circ)\) and the same as \((0,120^\circ)\).</p>
+
+<p><strong>Problem of coterminal angles</strong>: in trigonometry, we saw that coterminal angles have the same terminal side. Thus the terminal side of angle \(30^\circ\) is the same set of points as the terminal side of angles \(390^\circ, -330^\circ\), and so on. Thus \((r,\theta)\) is the same point as \((r,\theta+n\cdot 360^\circ)\), where \(n\) can be any integer. For a specific example, consider \((1,30^\circ)\) vs. \((1,390^\circ)\).</p>
+
+<p><strong>Problem of negative \(r\)</strong>: we just defined how to interpret points where \(r\) is negative by drawing not just the ray for the angle \(\theta\), but the entire line. Then the "negative" half of that line is where the points with negative \(r\) values go. But the "negative" half of the line is the terminal side of \(\theta+180^\circ\)! Thus \((-r,\theta)\) is the same point as \((r,\theta+180^\circ)\) and \((r,\theta-180^\circ)\). For a specific example, compare \((1,30^\circ)\) to \((-1,-210^\circ)\).</p>
+
+<p>One strange consequence of all this is that any polar point (besides the pole) has four different sets of coordinates with the same \(|r|\) and with angles between \(-360^\circ\) and \(360^\circ\). For example, \((2,30^\circ)\) is the same point as \((2,-330^\circ)\), \((-2,210^\circ)\), and \((-2,-150^\circ)\).</p>
+
+<h2>Components of the Polar Grid</h2>
+
+<p>When comparing the polar and rectangular coordinate systems, one is struck by how different the "grids" of the system look. The "grid" of the rectangular coordinate system is made up of two types of lines: (1) vertical lines of the form \(x=a\) and (2) horizontal lines of the form \(y=b\). The polar "grid" is made out of circles and lines. First, the grid contains the circles with center at the pole of radius \(r_0\); the equations of these circles look like \(r=r_0\). The second kind of shapes are the lines through the pole that make an angle \(\theta_0\) with the polar axis; the equations of these lines look like \(\theta=\theta_0\).</p>
+
+</div>
+
+</body>
+</html>

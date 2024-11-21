@@ -1,0 +1,134 @@
+<div class="w3-container">
+<p>To get polar equations for our conic sections, we need to discuss the
+concept of <em>eccentricity</em> and discover a way to have directrices
+for hyperbolas and ellipses as well as parabolas.</p>
+<h3
+id="eccentricityfocusdirectrix-definition-of-the-conics">Eccentricity/Focus/Directrix
+Definition of the Conics</h3>
+<p>Earlier in the semester we used two ways to define our nondegenerate
+conic sections. For hyperbolas and ellipses, we defined them using a
+fixed sum or difference between a point and the two vertices. However,
+for parabolas, which have only one focus, we defined its points as
+having the same distance from the focus as the directrix. It turns out
+that we can use a focus/directrix definition for ellipses and hyperbolas
+as well!</p>
+<p>First, note that for the parabola, we said that the distance from
+each point on the graph to the focus is equal to the distance from that
+point to the directrix. In other words, the ratio of these distances
+must be exactly \(1\). For the ellipse and hyperbola, we will identify
+two directrices and fix the ratio of the distances from a point to the a
+focus and the point to a directrix. This ratio is called the
+<strong><em>eccentricity</em></strong> \(e\) of the conic section.</p>
+Focus/Directrix Definition of the Ellipse
+<p>Consider the ellipse centered at the origin with equation
+\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) and let \(e=\frac{a}{c}\). It can
+be proved that this ratio \(e\) is the eccentricity as described above.
+If we rearrange the equation \(e=\frac{a}{c}\), we get \(c=ae\). Since
+\(c&lt; a\), it must be the case that \(e&lt; 1\). Since
+\(a^2=b^2+c^2\), we can also prove that \(b^2=a^2(1-e^2)\). So when
+\(e=0\), we have that \(a=b\) and the ellipse degenerates to a circle.
+Thus we go forward with the assumption that \(0&lt; e&lt; 1\) for
+ellipses.</p>
+<p>Let us now define the <strong><em>directrices of an
+ellipse</em></strong> to be the two lines perpendicular to the major
+axis at a distance of \(a/e\) from the center of the ellipse. Recall
+also that \(c=ae\). Thus we get two foci \((\pm ae,0)\) and two
+directrices \(x=\pm\frac{a}{e}\) for our ellipse with a horizontal major
+axis.</p>
+Focus/Directrix Definition of the Hyperbola
+<p>Consider the hyperbola centered at the origin with equation
+\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\) and let \(e=\frac{a}{c}\). It can
+be proved that this ratio \(e\) is the eccentricity as described above.
+If we rearrange the equation \(e=\frac{a}{c}\), we get \(c=ae\). Since
+\(a&lt; c\), it must be the case that \(e&gt; 1\) for hyperbolas. Since
+\(c^2=a^2+b^2\), we can also prove that \(b^2=a^2(e^2-1)\).</p>
+<p>Let us now define the <strong><em>directrices of a
+hyperbola</em></strong> to be the two lines perpendicular to the major
+axis at a distance of \(a/e\) from the center of the ellipse. Recall
+also that \(c=ae\). Thus we get two foci \((\pm ae,0)\) and two
+directrices \(x=\pm\frac{a}{e}\) for our hyperbola with a horizontal
+transverse axis.</p>
+Focus/Directrix Definition of the Parabola, Revisited
+<p>Earlier we defined the parabola to be the shape where the distance
+from any point to the focus is equal to the distance from that point to
+the directrix. Thus the ratio of these distances, is \(1\), which we
+also take to be the eccentricity. We identified a parameter \(c\) as the
+distance from the vertex to the focus and to the directrix. For the
+parabola, \(a=c\) and the vertex also serves as the center. Thus for the
+parabola, the focus and directrix are at a distance of \(c=ae\) from the
+vertex/center on the axis of symmetry.</p>
+<h4
+id="eccentricities-for-the-three-nondegenerate-conics">Eccentricities
+for the Three Nondegenerate Conics</h4>
+<p>Notice that the eccentricity determines our conic: we have an ellipse
+when \(0&lt; e&lt; 1\), we have a parabola when \(e=1\) and we have a
+hyperbola when \(e&gt; 1\). Parabolas only have one directrix, while
+ellipses and hyperbolas have two.</p>
+<h3 id="deriving-the-polar-equations-for-conic-sections">Deriving the
+Polar Equations for Conic Sections</h3>
+<p>To derive an equation for conic sections using polar coordinates, we
+set a focus to be at the pole \((0,0^\circ)\). First, let's assume our
+major axis/transverse axis/axis of symmetry is the polar axis
+\(r=0^\circ\). Thus one of our directrices is a vertical line to the
+left of the pole; let's say that the distance is \(q\) from the pole to
+the directrix. For a point \(P=(r,\theta)\) on the conic with
+eccentricity \(e\), the ratio of the distance from \(P\) to the focus to
+the distance from \(P\) to the directrix. The distance from \(P\) to the
+focus is just \(r\) and the distance from \(P\) to the focus is just
+\(q+r\cos\theta\). Thus \[e=\frac{r}{q+r\cos\theta}.\]</p>
+<p>Solving this equation for \(r\) gives us
+\[r=\frac{eq}{1-e\cos\theta}.\]</p>
+<p>What if we wanted a vertical ellipse or hyperbola, or a parabola that
+opens left, up, or down? In that case, we can adjust our assumptions and
+derive some other forms. Let's summarize all the options:</p>
+<div class="w3-card-4">
+<section id="polar-equations-for-conic-sections"
+class="w3-container w3-dark-gray">
+<h3>Polar Equations for Conic Sections</h3>
+</section>
+<div class="w3-container">
+<p>For a conic section with a focus at the pole, with eccentricity
+\(e\), and with distance \(q\) from the focus at the pole to the nearest
+directrix,</p>
+<ul>
+<li>\(r=\frac{eq}{1-e\cos\theta}\) is the graph of a conic with the
+directrix perpendicular to the polar axis and to the left of the
+pole.</li>
+<li>\(r=\frac{eq}{1+e\cos\theta}\) is the graph of a conic with the
+directrix perpendicular to the polar axis and to the right of the
+pole.</li>
+<li>\(r=\frac{eq}{1-e\sin\theta}\) is the graph of a conic with the
+directrix parallel to the polar axis and below the pole.</li>
+<li>\(r=\frac{eq}{1+e\sin\theta}\) is the graph of a conic with the
+directrix parallel to the polar axis and above the pole.</li>
+</ul>
+</div>
+</div>
+<hr />
+<div class="w3-card-4">
+<section id="homework" class="w3-container w3-2019-galaxy-blue">
+<h3>Homework</h3>
+</section>
+<div class="w3-container">
+<p>Complete these for Friday, April 19. Show work that justifies your
+answers for full credit.</p>
+<ol type="1">
+<li>Rotate axes to eliminate the \(xy\)-term and then put in standard
+form where possible. Then sketch, showing both sets of axes.
+<ol type="a">
+<li>\(x^2+4xy-2y^2-6=0\)</li>
+<li>\(2x^2-xy+2y^2-2=0\)</li>
+<li>\(21x^2+50xy-99y^2+6\sqrt{26}x-82\sqrt{26}y-494=0\)</li>
+<li>\(4x^2+12xy+9y^2+8\sqrt{13}x+12\sqrt{13}y-65=0\)</li>
+<li>\(9x^2-6xy+y^2-12\sqrt{10}x-36\sqrt{10}y=0\)</li>
+</ol></li>
+</ol>
+<p>HINT - Equations: 1a: \(\frac{(x')^2}{3}-\frac{(y')^2}{2}=1\)
+(hyperbola), 1b: \(\frac{(x')^2}{4/3}+\frac{(y')^2}{4/5}=1\) (ellipse),
+1c: \(\frac{(x'-1)^2}{4}-\frac{(y'+2)^2}{1}=1\) (hyperbola), 1d:
+\((x')^2+4x'-5=0\) (degenerate parabola), 1e: \((y')^2=12x'\)
+(parabola).</p>
+</div>
+</div>
+<hr />
+</div>

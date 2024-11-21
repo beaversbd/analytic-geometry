@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Polar/Rectangular Conversion</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Converting from rectangular to polar</h2>
+  
+  <p>Since the rectangular and polar coordinate systems are descriptions of the same underlying plane, we can superimpose the two systems on each other. In doing so, we let the rectangular system origin and the polar system pole be the same point. We let the polar system polar axis be the same as the right, or positive, half of the \(x\)-axis. Consider what should be a familiar drawing that relates \(x\) and \(y\) to \(r\) and \(\theta\):</p>
+  
+  <p><img src="img/0202_01.png" class="w3-image" /></p>
+  
+  <p>To convert from rectangular coordinates \((x,y)\) to polar coordinates \((r,\theta)\), we use the Pythagorean theorem, \(r^2=x^2+y^2,\) and the definition of tangent, \(\tan\theta=\frac{y}{x}.\) Be careful to use your knowledge about the quadrant of your point to help you compute the correct angle.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example: converting from rectangular to polar coordinates</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Convert \((-3,4)\) to polar coordinates.</p>
+      <p>We can compute \(r\) using \(\sqrt{x^2+y^2}\). Thus \(r=\sqrt{9+16}=5\).  To find the angle \(\theta\), we use \(\tan\theta=-\frac{4}{3}\). Notice that \((-3,4)\) is in Quadrant II, and so our answer for \(\theta\) must be a second quadrant angle. So \(\theta=180^\circ+\tan^{-1}(-4/3)\approx 127^\circ\).</p>
+      <p>Thus the point with rectangular coordinates \((-3,4)\) can be represented approximately by \((5,127^\circ)\) in polar coordinates.</p>
+    </div>
+  </div>
+
+  <h2>Converting from polar to rectangular</h2>
+  
+  <p>Similarly, we can use what we already know to convert from polar coordinates \((r,\theta)\) to rectangular coordinates \((x,y)\).
+  
+    <p><img src="img/0202_01.png" class="w3-image" /></p>
+  
+  <p>To convert from polar to rectangular, we use the definitions of sine and cosine to write the equations \(x=r\cos\theta\) and \(y=r\sin\theta\). These formulas are true even when \(r\) is negative because of the way we deal with negative \(r\) values!</p>
+
+  <p>If you want a more detailed explanation of why these formulas work when \(r\) is negative, consider the fact that \((r,\theta)=(-r,\theta+180^\circ)\). Assume \(r\) is negative. Then \(-r\) is positive. So we can convert to rectangular: \(x=-r\cos(\theta+180^\circ)=-r(-\cos\theta)=r\cos\theta\) and \(y=-r\sin(\theta+180^\circ)=-r(-\sin\theta)=r\sin\theta\), where \(\cos(\theta+180^\circ)=-\cos\theta\) and \(\sin(\theta+180^\circ)=-\sin\theta\) by the sum identities from trigonometry. So regardless of whether \(r\) is positive or negative, the formulas \(x=r\cos\theta\) and \(y=r\sin\theta\) work to convert from polar to rectangular.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example: converting from polar to rectangular</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Convert \((12,-45^\circ)\) to rectangular coordinates.</p>
+      <p>We can compute \(x\) using \(r\cos\theta\) and \(y\) using \(r\sin\theta\). Thus \(x=12\cdot\cos(-45^\circ)=12\cdot\frac{\sqrt{2}}{2}=6\sqrt{2}\) and \(y=12\cdot\sin (-45^\circ)=12\cdot-\frac{\sqrt{2}}{2}=-6\sqrt{2}\)</p>
+      <p>Thus the point with polar coordinates \((12,-45^\circ)\) can be represented approximately by \((6\sqrt{2},-6\sqrt{2})\) in rectangular coordinates.</p>
+    </div>
+  </div>
+
+  <p>To summarize, we use the Pythagorean theorem and the definition of the trig functions to convert between polar and rectangular coordinates:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Conversion Equations Between Polar and Rectangular Coordinates</h3>
+    </header>
+      
+    <div class="w3-container">
+        <p>When converting from polar \((r,\theta)\) to rectangular \((x,y)\), use \(x=r\cos\theta\) and \(y=r\sin\theta\).</p>
+        <p>When converting from rectangular \((x,y)\) to polar \((r,\theta)\), use \(x^2+y^2=r^2\) and \(\tan\theta=\frac{y}{x}\). Take care to make sure your angle is in the correct Quadrant.</p>
+    </div>
+  </div>
+
+  <hr />
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, February 5. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Plot each point and give two other sets of polar coordinates for each point:
+          <ol type="a">
+            <li>\((1,45^\circ)\)</li>
+            <li>\((3,120^\circ)\)</li>
+            <li>\((-2,30^\circ)\)</li>
+            <li>\((4,\frac{5\pi}{2})\)</li>
+            <li>\((-1,-120^\circ)\)</li>
+          </ol>
+        </li>
+        <li>Considering the polar point \((r,\theta)=(3,\frac{\pi}{3})\), give the three other equivalent polar coordinates for this point such that \(|r|=3\) and \(0&lt;|\theta|&lt;2\pi\).</li>
+        <li>Convert the following polar coordinates to rectangular coordinates. Give exact coordinates only (no rounded decimals).
+          <ol type="a">
+            <li>\((2,\frac{\pi}{6})\)</li>
+            <li>\((3,\frac{3\pi}{4})\)</li>
+            <li>\((-2,45^\circ)\)</li>
+            <li>\((-1,-\frac{7\pi}{6})\)</li>
+          </ol>
+        </li>
+        <li>Convert the following rectangular coordinates to polar coordinates. Give exact \(r\)-coordinates and give \(\theta\) coordinates rounded to the nearest degree.
+          <ol type="a">
+            <li>\((1,2)\)</li>
+            <li>\((-3,0)\)</li>
+            <li>\((-3,4)\)</li>
+            <li>\((-2,-5)\)</li>
+            <li>\((2,-5)\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0226 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0226)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, February 26. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Convert the following rectangular equations of lines to polar equations.
+            <ol type="a">
+                <li><p>\(y=\frac{1}{2}x\)</p>
+                    <p>\(r\sin\theta=\frac{1}{2} r\cos\theta,\) or since this is a line through the pole/origin: \(\theta=\tan^{-1}(1/2)\) or \(\tan\theta=\frac{1}{2}\)</p></li>
+                <li><p>\(2x+3y=6\)</p>
+                    <p>\(2r\cos\theta+3r\sin\theta=6,\) or solved for \(r\): \(r=\frac{6}{2\cos\theta+3\sin\theta}\)</p></li>
+                <li><p>\(y=-3x+5\)</p>
+                    <p>\(r\sin\theta=-3r\cos\theta+5,\) or solved for \(r\): \(r=\frac{5}{\sin\theta+3\cos\theta}\) </p></li>
+                <li><p>\(y=-x\)</p>
+                    <p>This is a line through the pole, whose tangent is \(-1\), so \(\theta=-45^\circ\) or \(\theta=135^\circ\) are correct answers. Another correct answer is \(r\sin\theta=-r\cos\theta\)</p></li>                
+                <li><p>\(\frac{x}{4}+\frac{y}{-3}=1\)</p>
+                    <p>\(\frac{r\cos\theta}{4}+\frac{r\sin\theta}{-3}=1,\) or solved for \(r\): \(r=\frac{-12}{-3\cos\theta+4\sin\theta}\)</p></li>
+            </ol>
+        </li>
+        <li>Convert the following polar equations of lines to rectangular equations. Find the slope and any intercepts.
+          <ol type="a">
+            <li><p>\(\theta = 45^\circ\)</p>
+                <p>This is the line through the origin with inclination \(45^\circ\). So its slope is \(\tan(45^\circ)=1.\) Thus \(y=1x+0\) is the line (or just \(y=x\)). The point \((0,0)\) is both an \(x\)-intercept and \(y\)-intercept, and is the only intercept.</p></li>
+            <li><p>\(r=2\sec\theta\)</p>
+                <p>Thus \(r=\frac{2}{\cos\theta}.\) Thus \(r\cos\theta=2.\) Therefore \(x=2.\) There is no slope, and \((2,0)\), an \(x\)-intercept, is the only intercept.</p></li>
+            <li><p>\(r=-3\csc\theta\)</p>
+                <p>Thus \(r=\frac{-3}{\sin\theta}.\) Thus \(r\sin\theta=-3.\) Therefore \(y=-3.\) The slope is zero and \((0,-3)\), a \(y\)-intercept, is the only intercept.</p></li>
+            <li><p>\(r=\frac{4}{3\cos\theta+2\sin\theta}\)</p>
+                <p>Multiplying both sides to eliminate the fraction, we get \(r(3\cos\theta+2\sin\theta)=4.\) Thus \(3r\cos\theta + 2r\sin\theta=4.\) Therefore \(3x+2y=4.\) Solving for \(y\), we get \(y=-\frac{3}{2}x+2\). Thus the slope is \(-3/2\), the \(y\)-intercept is \((0,2)\), and the \(x\)-intercept is \((4/3,0).\)</p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

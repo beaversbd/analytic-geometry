@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: Parametric Equations</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>We have seen how to describe and express the conic sections using rectangular equations. Next we will see how to express the conic sections using parametric equations.</p>
+
+  <h3>Circles</h3>
+
+  <p>We have already seen circles from a parametric point of view. When we think of the unit circle \(x^2+y^2=1\), recall that we define the cosine of an angle \(\theta\) to be the \(x\)-coordinate of the point on the unit circle corresponding to the standard position angle \(\theta\) and define the sine of the angle \(\theta\) to be the \(y\)-coordinate of that point.</p>
+
+  <p><img class="w3-image" src="img/unit_circle.png" /></p>
+
+  <p>Rather than using the variable \(\theta\), let us use the variable \(t\). Then the points on the unit circle can be expressed using the parametric equation(s) \((x,y)=(\cos t,\sin t)\).</p>
+
+  <p>What if we wanted parametric equations for the circle centered at the origin, but with radius \(r\)? Then \((x,y)=(r\cos t,r\sin t)\) is just what we need:
+    \[x^2+y^2=(r\cos t)^2+(r\sin t)^2 = r^2(\cos^2 t+\sin^2 t)=r^2.\]
+  </p>
+
+  <p>What if we want to shift to a different center \((h,k)\)? Just shift the \(x\)-coordinate by \(h\) and the \(y\)-coordinate by \(k\): \((x,y)=(h+r\cos t,k+r\sin t)\). Notice that
+    \[(x-h)^2+(y-k)^2=(r\cos t)^2+(r\sin t)^2=r^2.\]
+  </p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Parametric Equations for a Circle</h3></header>
+    <div class="w3-container">
+        <p>The circle with center \((h,k)\) and radius \(r\) can be expressed using parametric equations as follows:
+          \[(x,y)=(h+r\cos t,k+r\sin t)\text{ with } 0\leq t\leq 2\pi.\]</p>
+    </div>
+  </div>
+
+  <h3>Ellipses</h3>
+
+  <p>Ellipses are not very difficult either. For the ellipse \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\), suppose we let \((x,y)=(a\cos t,b\sin t)\). Then
+    \[\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{(a\cos t)^2}{a^2}+\frac{(b\sin t)^2}{b^2}=\cos^2 t + \sin^2 t = 1.\]
+    This is exactly what we need!
+  </p>
+
+  <p>We can also do a similar trick as we did with circles to shift the center of an ellipse.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Parametric Equations for an Ellipse</h3></header>
+    <div class="w3-container">
+        <p>The ellipse with standard equation \(\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\) can be can be expressed using parametric equations as follows:
+          \[(x,y)=(h+a\cos t,k+b\sin t)\text{ with } 0\leq t\leq 2\pi.\]</p>
+          <p>The ellipse with standard equation \(\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1\) can be can be expressed using parametric equations as follows:
+            \[(x,y)=(h+b\cos t,k+a\sin t)\text{ with } 0\leq t\leq 2\pi.\]</p>
+    </div>
+  </div>
+
+  <h3>Hyperbolas</h3>
+
+  <p>Hyperbolas are more difficult. We have basically used up our trick that \(\cos^2 t+\sin^2 t=1\) for the functions \(x=\cos t\) and \(y=\sin t\) to get parametric equations for circles and ellipses. To get parametric equations for hyperbolas, we need to find functions where \(x^2-y^2=1\).</p>
+
+  <p>Consider the functions \(h_1(x)=\frac{e^x+e^{-x}}{2}\) and \(h_2=\frac{e^x-e^{-x}}{2}\). Notice that \[ (h_1(x))^2-(h_2(x))^2=\left(\frac{e^x+e^{-x}}{2}\right)^2-\left(\frac{e^x-e^{-x}}{2}\right)^2=\left(\frac{e^{2x}}{4}+\frac{1}{2}+\frac{e^{-2x}}{4}\right)-\left(\frac{e^{2x}}{4}-\frac{1}{2}+\frac{e^{-2x}}{4}\right)=1.\]</p>
+
+  <p>So if we were to let \(x=\frac{e^t+e^{-t}}{2}\) and \(y=\frac{e^t-e^{-t}}{2}\), then we would have parametric equations where \(x^2-y^2=1\), which is exactly what we need to parametrize hyperbolas!.</p>
+
+  <p>These functions have special names. We call \(\frac{e^t+e^{-t}}{2}\) the <em>hyperbolic cosine</em> and denote it by \(\cosh(t)\). We call \(\frac{e^t+e^{-t}}{2}\) the <em>hyperbolic sine</em> and denote it by \(\sinh(t)\). These two functions have other bizarro-world similarities to sine and cosine, with just a difference in sign in places.</p>
+
+  <p>But what is important to us is that \((x,y)=(a\cosh(t),b\sinh(t))\) is a parametrization of \(\frac{x^2}{a^2}-{y^2}{b^2}=1\) as follows: \[\frac{x^2}{a^2}-\frac{y^2}{b^2}=\frac{a^2\cosh^2(t)}{a^2}+\frac{b^2\sinh^2(t)}{b^2}=\cosh^2(t)-\sinh^2(t)=1.\] This gives us the right branch of the hyperbola. Notice that since it is a graph with infinite length, we will let \(t\) range over all real numbers.</p>
+
+  <p>Now we have parametric equations for hyperbolas:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Parametric Equations for the Right Branch of a Horizontal Hyperbola</h3></header>
+    <div class="w3-container">
+        <p>The hyperbola with standard equation \(\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\) can be can be expressed using parametric equations as follows:
+          \[(x,y)=(h+a\cosh t,k+b\sinh t).\]</p>
+    </div>
+  </div>
+
+  <h3>Parabolas</h3>
+
+  <p>Parabolas are the second easy parametrization other than circles. While there are more complicated ways to do it: we can let \(x\) or \(y\) be \(t\) and solve the standard or general equation for the other variable.</p>
+
+  <p>For example, with the parabola \((x-2)^2=12(y-3)\), we may let \(x=t\) and the solve \((t-2)^2=12(y-3)\) for \(y\) to get \(y=3+\frac{(t-2)^2}{12}\). Thus our parametrization is \((x,y)=\left(t,3+\frac{(t-2)^2}{12}\right)\).</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Parametric Equations for Parabolas</h3></header>
+    <div class="w3-container">
+        <p>The parabola with standard equation \((x-h)^2=\pm 4c(y-k)\) can be can be expressed using parametric equations as follows:
+          \[(x,y)=\left(t,k\pm\frac{(t-h)^2}{4c}\right).\]</p>
+          <p>The parabola with standard equation \((y-k)^2=\pm 4c(x-h)\) can be can be expressed using parametric equations as follows:
+            \[(x,y)=\left(h\pm\frac{(t-k)^2}{4c},t\right).\]</p>
+    </div>
+  </div>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, April 29. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Give parametric equations for the following conic sections (right branches for any hyperbolas):
+          <ol type="a">
+            <li>\(x^2-y^2=15\)</li>
+            <li>\((x-3)^2+(y+2)^2=100\)</li>
+            <li>\(\frac{x^2}{25}+\frac{y^2}{16}=1\)</li>
+            <li>\(\frac{(x+1)^2}{36}+\frac{(y+1)^2}{64}=1\)</li>
+            <li>\(\frac{x^2}{4}-\frac{y^2}{9}=1\)</li>
+            <li>\((x+2)^2-\frac{y^2}{4}=1\)</li>
+            <li>\(x^2=4y\)</li>
+            <li>\((x-3)^2 = 2(y-4)\)</li>
+            <li>\(y^2=12(x-3)\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

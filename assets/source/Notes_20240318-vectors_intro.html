@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Vectors: Geometry and ComponentsAngles Between Lines</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Definition of Vector</h2>
+
+  <p>There are many things in real life that have more to them than just an amount. One natural example of this is the concept of <em>velocity</em> in physics. As an object moves, it has more than just a <em>speed</em>. This motion also also has a <em>direction</em> associated with the motion. You end up at a different place if you are driving at 50mph to the south versus. 50mph to the north. A box will move differently if you exert a force to one direction versus another. As a result of this need, we define a <em>vector quantity</em> (or just <em>vector</em>) as a quantity that has both a <em>magnitude</em>, a number part, and a <em>direction</em>. With the example of velocity, the number representing speed, as separate from the direction, is the magnitude of the vector. Two vectors are equal when have the same magnitude and direction.</p>
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Definition of Vector</h3></header>
+    <div class="w3-container">
+        <p>A <em><strong>vector</strong></em> is a quantity that has both <em>magnitude</em> and <em>direction</em>.</p>
+    </div>
+  </div>
+  
+  <p>The easiest way to conceive of a vector is to think of a vector as an arrow, or a line segment with a pointer on one end to indicate direction, as in the following picture:</p>
+  
+  <p><img src="img/7_3_img1.png" class="w3-image" /></p>
+  
+  <p>A line segment drawn this way is also called a <em>directed line segment</em>. The length of the line segment - the length of the arrow from the tail to the tip - is considered to be the magnitude. It's a little harder to describe the direction. Often this direction is described by the angle the vector makes with respect to the horizontal. In the picture above, the arrow appears to be making an approximately \(45^\circ\) angle with the horizontal.</p>
+  
+  <p>Generally, vectors are denoted by lower-case letters either with an arrow on top, like \(\overrightarrow{v},\) or in bold, like \(\mathbf{v}.\)</p>
+
+  <p>When our context includes vectors, then we distinguish between vector quantities and plain numbers. In this case, we call plain real numbers <em>scalars</em>.</p>
+  
+  <h3>Geometric Vector Operations</h3>
+  
+  <h4>Scalar Multiplication</h4>
+  
+  <p>When we have a vector, it makes sense to be able to draw a vector that has the same direction but twice the magnitude. In the picture below, the vector on the right is twice as long as the vector on the left, but both have the same direction:</p>
+  
+  <p><img src="img/7_3_img2.png" class="w3-image" /></p>
+  
+  <p>In this case, if \(\overrightarrow{v}\) is the left vector, then we can write \(2\overrightarrow{v}\) to describe the vector on the right.</p>
+  
+  <p>If we swap the initial and terminal points of the vector to "turn the arrow around," it makes sense to call the resulting vector the negative of the original:</p>
+  
+  <p><img src="img/7_3_img3.png" class="w3-image" /></p>
+  
+  <p>In this case, if \(\overrightarrow{v}\) is the left vector, then we can write \(-\overrightarrow{v}\) to describe the right vector.</p>
+  
+  <p>We can combine these ideas. If we reverse the direction of the vector and stretch it twice as long, we get the following:</p>
+  
+  <p><img src="img/7_3_img4.png" class="w3-image" /></p>
+  
+  <p>In this case, if \(\overrightarrow{v}\) is the left vector, then we can write \(-2\overrightarrow{v}\) to describe the right vector.</p>
+  
+  <p>This process of multiplying a vector by a real number, or scalar, is called <em>scalar multiplication</em>. Multiplying a vector by a number \(r\) yields a vector whose magnitude is \(|r|\) times that of the original. If \(r\) is negative, it also reverses the direction of the vector.</p>
+  
+  <h4>Vector Addition and Subtraction</h4>
+  
+  <p>When you think of a vector as a force or motion, it makes sense that we can combine the effects of two such forces. This leads to the concept of <em>vector addition</em>. To add two vectors, put the tail of one vector at the tip of the other and create a vector from the overall beginning to the overall end.</p>
+  
+  <p>The picture below shows how this works. The vector \(\overrightarrow{v}+\overrightarrow{u}\) is the vector whose tail is the tail of vector \(\overrightarrow{v}\) and whose tip is the tip of vector \(\overrightarrow{u}\)</p>
+  
+  <p><img src="img/7_3_img5.png" class="w3-image" /></p>
+  
+  <p>We define subtraction of two vectors, \(\overrightarrow{v}-\overrightarrow{u},\) to be \(\overrightarrow{v}+(-\overrightarrow{u}).\) An example is in the picture below:</p>
+  
+  <p><img src="img/7_3_img6.png" class="w3-image" /></p>
+  
+  <p>So far, we have only dealt with vectors as a pure geometric object. Next, we will break a vector down into components with which we can perform computations.</p>
+
+  <h2>Defining the Components of a Vector</h2>
+
+  <p>To make it easier to describing and compute with vectors, we often put the vector, like we do with angles, in a standard way. Every vector that we draw in the cartesian plane has a <em>initial point</em> (tail) and then we draw the vector toward its other end, the end with the arrow, called the <em>terminal point</em> (tip). Shifting the vector around the plane does not change the vector in any way, because it does not change the vector's length or direction. If we draw a vector in the cartesian plane with the initial point at \((0,0),\) we say the vector is in <em>standard position</em>, as in the picture below. In that picture, the point \(A\) is the initial point (at the origin), the point \(B\) is the terminal point, and the vector is the directed line segment.</p>
+
+  <p><img src="img/7_3_img7.png" class="w3-image" /></p>
+  
+  <p>It is often easier to describe a vector not by its magnitude and direction, but by breaking up the arrow into a combination of a horizontal amount plus a vertical amount, as shown in the picture below:</p>
+
+  <p><img src="img/7_3_img8.png" class="w3-image" /></p>
+
+  <p>The direction of this vector is included in the idea that the vector is made up of two units of horizontal motion followed by three units of vertical motion. We say these two numbers are the <em>components</em> of the vector, and write it as \(\langle 2,3\rangle.\)</p>
+
+  <p>We can still find the components even if the vector is not in standard position. If the initial point of the vector is \((x_1, y_1)\) and the terminal point of the vector is \((x_2,y_2),\) then the components of vector are the <em>horizontal component</em> \(x_2-x_1\) and the <em>vertical component</em> \(y_2-y_1.\) Then the <em>component form</em> of the vector is \(\langle x_2-x_1,y_2-y_1\rangle.\)</p>
+
+  <p>The component form of vectors is much easier to use than the geometric forms we have been using. For instance, we can tell of two vectors are the same by comparing components. Assuming \(\overrightarrow{v}=\langle v_1,v_2\rangle\) and \(\overrightarrow{u}=\langle u_1,u_2\rangle,\) then \(\overrightarrow{v}=\overrightarrow{u}\) if, and only if, \(v_1=u_1\) and \(v_2=u_2.\)</p>
+
+  <p>How can we get the magnitude and direction from the components of a vector? By definition of components, the vector is the hypotenuse of a right triangle whose legs represent the components. Then the length of the hypotenuse can be found from the legs by using our old friend, the Pythagorean theorem!</p>
+
+  <div class="w3-card-4">
+      <header class="w3-container w3-dark-gray"><h3>Magnitude of a Vector</h3></header>
+      <div class="w3-container">
+          <p>For a vector \(\overrightarrow{v}=\langle v_1,v_2\rangle,\) the magnitude, denoted \(\lVert\overrightarrow{v}\rVert,\) is computed by the equation \(\lVert\overrightarrow{v}\rVert=\sqrt{v_1^2+v_2^2}.\)</p>
+    </div>
+  </div>
+
+<p>To obtain an angle to describe the direction, we can use our old friend, the tangent function!</p>
+
+<div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Direction Angle of a Vector</h3></header>
+    <div class="w3-container">
+        <p>For a vector \(\overrightarrow{v}=\langle v_1,v_2\rangle,\) the direction angle \(\theta\) of the vector is the angle formed by a counterclockwise rotation of a ray from the positive \(x\)-axis to the standard position vector. The angle \(\theta\) satisfies the equation \(\tan\theta=\frac{v_2}{v_1}.\)</p>
+    </div>
+  </div>
+
+<p>An easy mental shortcut here is to think of the horizontal component \(v_1\) as the <em>run</em>, the vertical component \(v_2\) as the <em>rise</em>, and the direction as either the slope \(m=\frac{v_2}{v_1}\) (rise over run) or the inclination \(\theta\) (with \(m=\tan\theta\) relating the slope to the inclination).</p>
+
+<h2>Component Vector Operations</h2>
+
+<h3>Scalar Multiplication</h3>
+
+<p>Geometrically, the scalar multiple of a vector is a vector that has been stretched and/or reversed by the real number \(k.\) It is easy to compute the components of the scalar multiple of vector \(\overrightarrow{v}\) by the real number \(k\) when we have components:</p>
+
+<div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Scalar Multiplication</h3></header>
+    <div class="w3-container">
+        <p>Given a vector \(\overrightarrow{v}=\langle v_1,v_2\rangle\) and a real number \(k,\) then \(k\overrightarrow{v}=\langle kv_1,kv_2\rangle.\)</p>
+    </div>
+  </div>
+
+<p>In other words, we "distribute" the scalar \(k\) to the two components.</p>
+
+<h3>Vector Addition and Subtraction</h3>
+
+<p>Vector addition and subtraction is easier with components, too!</p>
+
+<div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Vector Addition and Subtraction</h3></header>
+    <div class="w3-container">
+        <p>If \(\overrightarrow{v}=\langle v_1,v_2\rangle\) and \(\overrightarrow{u}=\langle u_1,u_2\rangle,\) then \(\overrightarrow{v}+\overrightarrow{u}=\langle v_1+u_1,v_2+u_2\rangle\) and \(\overrightarrow{v}-\overrightarrow{u}=\langle v_1-u_1,v_2-u_2\rangle.\)</p>
+    </div>
+  </div>
+
+<h3>Some Special Vectors</h3>
+
+<h4>Zero Vector</h4>
+
+<p>The vector \(\overrightarrow{0}\) has components \(\langle 0,0\rangle.\) This vector has a magnitude of zero, but it has the unusual feature that it is the only vector that doesn't really have a direction. Alternatively, it could be considered to have every direction, but since the length is zero, it doesn't really matter.</p>
+
+<h4>Unit Vectors</h4>
+
+<p>Often we want to describe the direction of a vector without using an angle, but still with components. That's where a unit vector comes into play. A vector whose magnitude is \(1\) is called a <em>unit vector</em>. If you divide a vector \(\overrightarrow{v}\) by its length \(\lVert\overrightarrow{v}\rVert,\) the result is a unit vector that has the same direction as your original vector \(\overrightarrow{v}.\)</p>
+
+<div class="w3-card-4">
+  <header class="w3-container w3-dark-gray"><h3>Unit Vector in the Same Direction as \(\overrightarrow{v}\)</h3></header>
+  <div class="w3-container">
+      <p>The unit vector in the same direction as the nonzero vector \(\overrightarrow{v}\) is \[\frac{\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert}.\]</p>
+  </div>
+</div>
+  
+<p>If \(\theta\) is the direction angle of the vector \(\overrightarrow{v},\) then the components of \(\overrightarrow{v}\) can also be expressed as \(\langle \lVert\overrightarrow{v}\rVert\cos\theta, \lVert\overrightarrow{v}\rVert\sin\theta\rangle.\) </p>
+
+<p>An easy way to think of this is as rectangular vs. polar coordinates. The rectangular components \(v_1\) and \(v_2\) of a vector relate to the "polar coordinates" of a vector \(\lVert\overrightarrow{v}\rVert\) (playing the role of \(r\)) and \(\theta.\) Via the formulas \(v_1=\lVert\overrightarrow{v}\rVert\cos\theta\) (compare to \(x=r\cos\theta\)) and \(v_2=\lVert\overrightarrow{v}\rVert\sin\theta\) (compare to \(y=r\sin\theta\)).
+</p>
+
+<h4>Standard Unit Vectors</h4>
+
+<p>We define the standard unit vectors \(\overrightarrow{i}\) and \(\overrightarrow{j}\) as follows: \(\overrightarrow{i}=\langle 1,0\rangle\) and \(\overrightarrow{j}=\langle 0,1\rangle.\)</p>
+
+<p>Any vector can be written as a sum of scalar multiples of the standard unit vectors: if \(\overrightarrow{v}=\langle v_1,v_2\rangle,\) then \(\overrightarrow{v}=v_1\overrightarrow{i}+v_2\overrightarrow{j}.\)</p>
+
+<p>Using our discussion about how to use magnitudes, unit vectors, and the standard unit vectors, we can write any vector \(\overrightarrow{v}\) using a combination of its magnitude and its direction angle: \(\overrightarrow{v}=(\lVert\overrightarrow{v}\rVert\cos\theta)\overrightarrow{i}+(\lVert\overrightarrow{v}\rVert\sin\theta)\overrightarrow{j}.\)</p>
+
+<p>Now we have come full circle. We started by defining vectors as quantities that had both a magnitude and direction. We found that we could work with those quantities more efficiently using components. After developing a lot of notation and sprinkling in our trig knowledge, we can express our vector in terms of its magnitude and direction while keeping the benefits of having components. We'll extend these ideas in the next class.</p>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, March 20. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Give in component form the vector represented by the directed line segment \(\overrightarrow{AB}\):
+          <ol type="a">
+            <li>\(A=(4,3)\) and \(B=(-2,1)\)</li>
+            <li>\(A=(2,5)\) and \(B=(0,1)\)</li>
+            <li>\(A=(-2,4)\) and \(B=(0,4)\)</li>
+            <li>\(A=(3,2)\) and \(B=(3,-5)\)</li>
+          </ol>
+        </li>
+        <li>Give the magnitude, direction angle, and unit vector in the direction of \(\overrightarrow{v}.\) Give approximate answers rounded to a reasonable number of decimal places:
+          <ol type="a">
+            <li>\(\overrightarrow{v}=\langle 2,4\rangle\)</li>
+            <li>\(\overrightarrow{v}=\langle -3,1\rangle\)</li>
+            <li>\(\overrightarrow{v}=\langle 0,3\rangle\)</li>
+            <li>\(\overrightarrow{v}=\langle -2,0\rangle\)</li>
+            <li>\(\overrightarrow{v}=\langle 4,-3\rangle\)</li>
+          </ol>
+        </li>
+        <li>Suppose \(\overrightarrow{v}=\langle 2,3\rangle\) and \(\overrightarrow{u}=\langle -1,4\rangle.\) Use component arithmetic to perform the following computations:
+          <ol type="a">
+            <li>\(3\overrightarrow{v}\)</li>
+            <li>\(\overrightarrow{v}+\overrightarrow{u}\)</li>
+            <li>\(\overrightarrow{v}-\overrightarrow{u}\)</li>
+            <li>\(2\overrightarrow{v}+3\overrightarrow{u}\)</li>
+            <li>\(3\overrightarrow{v}-2\overrightarrow{u}\)</li>
+            <li>\(3(\overrightarrow{v}-\overrightarrow{u})\)</li>
+            <li>\(\lVert\overrightarrow{v}\rVert+\lVert\overrightarrow{u}\rVert\)</li>
+            <li>\(\lVert\overrightarrow{v}+\overrightarrow{u}\rVert\)</li>
+            <li>\(\frac{\lVert\overrightarrow{v}\rVert}{2}\)</li></li>
+            <li>\(\frac{\overrightarrow{v}+\overrightarrow{u}}{2}\)</li>
+            <li>\(\frac{\lVert\overrightarrow{v}\rVert+\lVert\overrightarrow{u}\rVert}{2}\)</li>
+            <li>\(\frac{\lVert\overrightarrow{v}+\overrightarrow{u}\rVert}{2}\)</li>
+            <li>\(\frac{\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert}\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

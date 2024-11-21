@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0320 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0320)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, March 20. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Give in component form the vector represented by the directed line segment \(\overrightarrow{AB}\):
+          <ol type="a">
+            <li><p>\(A=(4,3)\) and \(B=(-2,1)\)</p>
+                <p>The vector components are computed as follows: \(\langle -2-4,1-3\rangle\), which simplifies to \(\langle -6,-2\rangle.\)</p></li>
+            <li><p>\(A=(2,5)\) and \(B=(0,1)\)</p>
+                <p>The vector components are computed as follows: \(\langle 0-2,1-5\rangle\), which simplifies to \(\langle -2,-4\rangle.\)</p></li>
+            <li><p>\(A=(-2,4)\) and \(B=(0,4)\)</p>
+                <p>The vector components are computed as follows: \(\langle 0--2,4-4\rangle\), which simplifies to \(\langle 2,0\rangle.\)</p></li>
+            <li><p>\(A=(3,2)\) and \(B=(3,-5)\)</p>
+                <p>The vector components are computed as follows: \(\langle 3-3,-5-2\rangle\), which simplifies to \(\langle -7,0\rangle.\)</p></li>
+          </ol>
+        </li>
+        <li>Give the magnitude, direction angle, and unit vector in the direction of \(\overrightarrow{v}.\) Give approximate answers rounded to a reasonable number of decimal places:
+          <ol type="a">
+            <li><p>\(\overrightarrow{v}=\langle 2,4\rangle\)</p>
+                <p>The magnitude is \(\Vert\overrightarrow{v}\Vert=\sqrt{(2)^2+(4)^2}=\sqrt{20}\approx 4.47.\) This vector's direction angle is between \(0^\circ\) and \(90^\circ\), and so the direction angle is \(\tan^{-1}(\frac{4}{2})\approx 63^\circ.\) The unit vector in the direction of \(\overrightarrow{v}\) is \(\frac{\overrightarrow{v}}{\Vert\overrightarrow{v}\Vert}=\frac{\langle 2,4\rangle}{\sqrt{20}}=\langle \frac{2}{\sqrt{20}},\frac{4}{\sqrt{20}}\rangle\approx \langle 0.45,0.89\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}=\langle -3,1\rangle\)</p>
+              <p>The magnitude is \(\Vert\overrightarrow{v}\Vert=\sqrt{(-3)^2+(1)^2}=\sqrt{10}\approx 3.16.\) This vector's direction angle is between \(90^\circ\) and \(180^\circ\), and so the direction angle is \(\tan^{-1}(\frac{1}{-3})+180^\circ\approx 162^\circ.\) The unit vector in the direction of \(\overrightarrow{v}\) is \(\frac{\overrightarrow{v}}{\Vert\overrightarrow{v}\Vert}=\frac{\langle -3,1\rangle}{\sqrt{10}}=\langle -\frac{3}{\sqrt{10}},\frac{1}{\sqrt{10}}\rangle\approx \langle -0.95,0.32\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}=\langle 0,3\rangle\)</p>
+              <p>The magnitude is \(\Vert\overrightarrow{v}\Vert=\sqrt{(0)^2+(3)^2}=3.\) This vector's direction angle is \(90^\circ.\) The unit vector in the direction of \(\overrightarrow{v}\) is \(\frac{\overrightarrow{v}}{\Vert\overrightarrow{v}\Vert}=\frac{\langle 0,3\rangle}{3}=\langle 0,1\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}=\langle -2,0\rangle\)</p>
+              <p>The magnitude is \(\Vert\overrightarrow{v}\Vert=\sqrt{(-2)^2+(0)^2}=2.\) This vector's direction angle is \(180^\circ.\) The unit vector in the direction of \(\overrightarrow{v}\) is \(\frac{\overrightarrow{v}}{\Vert\overrightarrow{v}\Vert}=\frac{\langle -2,0\rangle}{2}=\langle -1,0\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}=\langle 4,-3\rangle\)</p>
+              <p>The magnitude is \(\Vert\overrightarrow{v}\Vert=\sqrt{(4)^2+(-3)^2}=5.\) This vector's direction angle is between \(270^\circ\) and \(360^\circ\), and so the direction angle is \(\tan^{-1}(\frac{-3}{4})+360^\circ\approx 323^\circ.\) The unit vector in the direction of \(\overrightarrow{v}\) is \(\frac{\overrightarrow{v}}{\Vert\overrightarrow{v}\Vert}=\frac{\langle 4,-3\rangle}{5}=\langle \frac{4}{5},-\frac{3}{5}\rangle=\langle 0.8,-0.6\rangle.\)</p></li>
+          </ol>
+        </li>
+        <li>Suppose \(\overrightarrow{v}=\langle 2,3\rangle\) and \(\overrightarrow{u}=\langle -1,4\rangle.\) Use component arithmetic to perform the following computations:
+          <ol type="a">
+            <li><p>\(3\overrightarrow{v}=3\cdot\langle 2,3\rangle=\langle 6,9\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}+\overrightarrow{u}=\langle 2,3\rangle+\langle -1,4\rangle=\langle 1,7\rangle.\)</p></li>
+            <li><p>\(\overrightarrow{v}-\overrightarrow{u}=\langle 2,3\rangle-\langle -1,4\rangle=\langle 3,-1\rangle.\)</p></li>
+            <li><p>\(2\overrightarrow{v}+3\overrightarrow{u}=2\langle 2,3\rangle+3\langle -1,4\rangle=\langle(2)(2)+(3)(-1),(2)(3)+(3)(4)\rangle=\langle 1,18\rangle.\)</p></li>
+            <li><p>\(3\overrightarrow{v}-2\overrightarrow{u}=3\langle 2,3\rangle-2\langle -1,4\rangle=\langle(3)(2)-(2)(-1),(3)(3)-(2)(4)\rangle=\langle 8,1\rangle.\)</p></li>
+            <li><p>\(3(\overrightarrow{v}-\overrightarrow{u})=3\cdot\langle 3,-1\rangle=\langle 9,-3\rangle.\)</p></li>
+            <li><p>\(\lVert\overrightarrow{v}\rVert+\lVert\overrightarrow{u}\rVert=\sqrt{(2)^2+(3)^2}+\sqrt{(-1)^2+(4)^2}=\sqrt{13}+\sqrt{15}.\)</p></li>
+            <li><p>\(\lVert\overrightarrow{v}+\overrightarrow{u}\rVert=\Vert\langle 1,7\rangle\Vert=\sqrt{(1)^2+(7)^2}=\sqrt{50}.\)</p></li>
+            <li><p>\(\frac{\lVert\overrightarrow{v}\rVert}{2}=\frac{\sqrt{13}}{2}.\)</p></li>
+            <li><p>\(\frac{\overrightarrow{v}+\overrightarrow{u}}{2}=\frac{\langle 1,7\rangle}{2}=\langle\frac{1}{2},\frac{7}{2}\rangle.\)</p></li>
+            <li><p>\(\frac{\lVert\overrightarrow{v}\rVert+\lVert\overrightarrow{u}\rVert}{2}=\frac{\sqrt{13}+\sqrt{15}}{2}.\)</p></li>
+            <li><p>\(\frac{\lVert\overrightarrow{v}+\overrightarrow{u}\rVert}{2}=\frac{\sqrt{50}}{2}.\)</p></li>
+            <li><p>\(\frac{\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert}=\frac{\langle 2,3\rangle}{\sqrt{13}}=\langle \frac{2}{\sqrt{13}},\frac{3}{\sqrt{13}}\rangle.\)</p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

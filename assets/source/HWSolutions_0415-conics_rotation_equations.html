@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0417 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0417)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, April 17. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Use the equations of rotation to find a simplified equation for the following equations with the given angle \(\alpha\). Sketch the graph of the resulting equation in the Cartesian coordinate system using its rotated axes.</li>
+          <ol type="a">
+            <li><p>\(xy=4; \alpha=45^\circ\)</p>
+              <p>Since \(\alpha=45^\circ,\) we get the rotation equations \(x=\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\) and \(y=\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'.\)</p>
+              <p>
+                \[
+                \begin{align}
+                xy &= 4 \\
+                \left(\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\right)\left(\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'\right) &= 4 \\
+                \frac{1}{2}(x')^2+\frac{1}{2}x'y'-\frac{1}{2}x'y'-\frac{1}{2}(y')^2 &= 4 \\
+                \frac{1}{2}(x')^2- \frac{1}{2}(y')^2 &= 4 \\
+                \frac{(x')^2}{8}-\frac{(y')^2}{8} &= 1.
+                \end{align}
+                \]
+              </p>
+              <p>This is a hyperbola with horizontal transverse axis:</p>
+              <p><img src="img/HW20240417_01a.png" class="w3-image" /></p></li>
+            <li><p>\(x^2-2xy+y^2+x+y=0; \alpha=45^\circ\)</p>
+              <p>Since \(\alpha=45^\circ,\) we get the rotation equations \(x=\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\) and \(y=\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'.\)</p>
+              <p>
+                \[
+                \begin{align}
+                x^2-2xy+y^2+x+y &= 0 \\
+                \textcolor{red}{\left(\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\right)^2}-\textcolor{purple}{2\left(\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\right)\left(\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'\right)}\\
+                +\textcolor{blue}{\left(\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'\right)^2}+\left(\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'\right)+\left(\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}y'\right) &= 0 \\
+                \textcolor{red}{\left(\frac{1}{2}(x')^2-\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}-\textcolor{purple}{2\left(\frac{1}{2}(x')^2+\frac{1}{2}x'y'-\frac{1}{2}x'y'-\frac{1}{2}(y')^2\right)}\\
+                +\textcolor{blue}{\left(\frac{1}{2}(x')^2+\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}+\frac{1}{\sqrt{2}}x'+\frac{1}{\sqrt{2}}x'-\frac{1}{\sqrt{2}}y'+\frac{1}{\sqrt{2}}y' &= 0 \\
+                \textcolor{red}{\left(\frac{1}{2}(x')^2-\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}+\textcolor{purple}{\left(-\frac{2}{2}(x')^2-\frac{2}{2}x'y'+\frac{2}{2}x'y'+\frac{2}{2}(y')^2\right)}\\
+                +\textcolor{blue}{\left(\frac{1}{2}(x')^2+\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}+\frac{2}{\sqrt{2}}x' &= 0 \\
+                \textcolor{red}{\left(\frac{1}{2}(x')^2-\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}+\textcolor{purple}{\left(-\frac{2}{2}(x')^2+\frac{2}{2}(y')^2\right)}+\textcolor{blue}{\left(\frac{1}{2}(x')^2+\frac{2}{2}x'y'+\frac{1}{2}(y')^2\right)}+\frac{2}{\sqrt{2}}x' &= 0 \\
+                \left(\textcolor{red}{\frac{1}{2}(x')^2}+\textcolor{purple}{-\frac{2}{2}(x')^2}+\textcolor{blue}{\frac{1}{2}(x')^2}\right)+\left(\textcolor{red}{-\frac{2}{2}x'y'}+\textcolor{blue}{\frac{2}{2}x'y'}\right)+\left(\textcolor{red}{\frac{1}{2}(y')^2}+\textcolor{purple}{\frac{2}{2}(y')^2}+\textcolor{blue}{\frac{1}{2}(y')^2}\right)+\frac{2}{\sqrt{2}}x' &= 0 \\
+                2(y')^2+\frac{2}{\sqrt{2}}x' &= 0 \\
+                (y')^2+\frac{1}{\sqrt{2}}x' &= 0 \\
+                (y')^2 &= -\frac{1}{\sqrt{2}}x'.
+                \end{align}
+                \]
+              </p>
+              <p>This is a leftward opening parabola with vertex \((x',y')=(0,0)\) and \(c=\frac{1}{4\sqrt{2}}\) (becuase \(4c=\frac{1}{\sqrt{2}}\)):</p>
+              <p><img src="img/HW20240417_01b.png" class="w3-image" /></p></li>
+            <li><p>\(31x^2+10\sqrt{3}xy+21y^2-144=0; \alpha=30^\circ\)</p>
+              <p>Since \(\alpha=30^\circ,\) we get the rotation equations \(x=\frac{\sqrt{3}}{2}x'-\frac{1}{2}y'\) and \(y=\frac{1}{2}x'+\frac{\sqrt{3}}{2}y'.\)</p>
+              <p>
+                \[
+                \begin{align}
+                31x^2+10\sqrt{3}xy+21y^2-144 &= 0 \\
+                \textcolor{red}{31\left(\frac{\sqrt{3}}{2}x'-\frac{1}{2}y'\right)^2}+\textcolor{purple}{10\sqrt{3}\left(\frac{\sqrt{3}}{2}x'-\frac{1}{2}y'\right)\left(\frac{1}{2}x'+\frac{\sqrt{3}}{2}y'\right)}+\textcolor{blue}{21\left(\frac{1}{2}x'+\frac{\sqrt{3}}{2}y'\right)^2}-144 &= 0 \\
+                \textcolor{red}{31\left(\frac{3}{4}(x')^2-\frac{2\sqrt{3}}{4}x'y'+\frac{1}{4}(y')^2\right)^2}+\textcolor{purple}{10\sqrt{3}\left(\frac{\sqrt{3}}{4}(x')^2+\frac{3}{4}x'y'-\frac{1}{4}x'y'-\frac{\sqrt{3}}{4}(y')^2\right)}\\
+                +\textcolor{blue}{21\left(\frac{1}{4}(x')^2+\frac{2\sqrt{3}}{4}x'y'+\frac{3}{4}(y')^2\right)} &= 144 \\
+                \textcolor{red}{\frac{93}{4}(x')^2-\frac{62\sqrt{3}}{4}x'y'+\frac{31}{4}(y')}+\textcolor{purple}{\frac{30}{4}(x')^2+\frac{30\sqrt{3}}{4}x'y'-\frac{10\sqrt{3}}{4}x'y'-\frac{30}{4}(y')^2}\\
+                +\textcolor{blue}{\frac{21}{4}(x')^2+\frac{42\sqrt{3}}{4}x'y'+\frac{63}{4}(y')} &= 144 \\
+                \left(\textcolor{red}{\frac{93}{4}(x')^2}+\textcolor{purple}{\frac{30}{4}(x')^2}+\textcolor{blue}{\frac{21}{2}(x')^2}\right)+\left(\textcolor{red}{-\frac{62\sqrt{3}}{2}x'y'}+\textcolor{purple}{\frac{20\sqrt{3}}{4}x'y'}+\textcolor{blue}{\frac{42\sqrt{3}}{4}x'y'}\right)+\left(\textcolor{red}{\frac{31}{4}(y')^2}+\textcolor{purple}{-\frac{30}{4}(y')^2}+\textcolor{blue}{\frac{63}{4}(y')^2}\right) &= 144 \\
+                \frac{144}{4}(x')^2+\frac{64}{4}(y')^2 &= 144 \\
+                36(x')^2+16(y')^2 &= 144 \\
+                \frac{(x')^2}{4}+\frac{(y')^2}{9} &= 1.
+                \end{align}
+                \]
+              </p>
+              <p>This is an ellipse whose major axis is vertical with vertex \((x',y')=(0,0),\) \(a=3,\) \(b=2,\) and \(c=\sqrt{5}\):</p>
+              <p><img src="img/HW20240417_01c.png" class="w3-image" /></p></li>
+            <li><p>\(8x^2+5xy-4y^2-4=0; \alpha=\tan^{-1}(\frac{1}{5})\)</p>
+              <p>Since \(\alpha=\tan^{-1}(\frac{1}{5}),\) we can draw a triangle to find \(\cos\alpha\) and \(\sin\alpha\):</p>
+              <p><img src="img/HW20240417_01d1.png" class="w3-image" /></p>
+              <p>Thus \(\cos\alpha=\frac{5}{\sqrt{26}}\) and \(\sin\alpha=\frac{1}{\sqrt{26}}.\) We get the rotation equations \(x=\frac{5}{\sqrt{26}}x'-\frac{1}{\sqrt{26}}y'\) and \(y=\frac{1}{\sqrt{26}}x'+\frac{5}{\sqrt{26}}y'.\)</p>
+              <p>
+                \[
+                \begin{align}
+                8x^2+5xy-4y^2-4 &= 0 \\
+                \textcolor{red}{8\left(\frac{5}{\sqrt{26}}x'-\frac{1}{\sqrt{26}}y'\right)^2}+\textcolor{purple}{5\left(\frac{5}{\sqrt{26}}x'-\frac{1}{\sqrt{26}}y'\right)\left(\frac{1}{\sqrt{26}}x'+\frac{5}{\sqrt{26}}y'\right)}-\textcolor{blue}{4\left(\frac{1}{\sqrt{26}}x'+\frac{5}{\sqrt{26}}y'\right)^2}-4 &= 0 \\
+                \textcolor{red}{8\left(\frac{25}{26}(x')^2-\frac{10}{26}x'y'+\frac{1}{26}(y')^2\right)^2}+\textcolor{purple}{5\left(\frac{5}{26}(x')^2+\frac{25}{26}x'y'-\frac{1}{26}x'y'-\frac{5}{26}(y')^2\right)}\\
+                +\textcolor{blue}{-4\left(\frac{1}{26}(x')^2+\frac{10}{26}x'y'+\frac{25}{26}(y')^2\right)} &= 4 \\
+                \textcolor{red}{\frac{200}{26}(x')^2-\frac{80}{26}x'y'+\frac{8}{26}(y')}+\textcolor{purple}{\frac{25}{26}(x')^2+\frac{125}{26}x'y'-\frac{5}{26}x'y'-\frac{25}{26}(y')^2}\\
+                +\textcolor{blue}{-\frac{4}{26}(x')^2-\frac{40}{26}x'y'-\frac{100}{26}(y')} &= 4 \\
+                \left(\textcolor{red}{\frac{200}{26}(x')^2}+\textcolor{purple}{\frac{25}{26}(x')^2}+\textcolor{blue}{-\frac{4}{26}(x')^2}\right)+\left(\textcolor{red}{-\frac{80}{26}x'y'}+\textcolor{purple}{\frac{120}{26}x'y'}+\textcolor{blue}{-\frac{40}{26}x'y'}\right)+\left(\textcolor{red}{\frac{8}{26}(y')^2}+\textcolor{purple}{-\frac{25}{26}(y')^2}+\textcolor{blue}{-\frac{100}{26}(y')^2}\right) &= 4 \\
+                \frac{221}{26}(x')^2-\frac{117}{26}(y')^2 &= 4 \\
+                \frac{(x')^2}{8/17}-\frac{(y')^2}{8/9} &= 1.
+                \end{align}
+                \]
+              </p>
+              <p>This is a hyperbola whose transverse acis is horizontal vertex \((x',y')=(0,0),\) \(a=\sqrt{8/17},\) \(b=\sqrt{8/9},\) and \(c=\sqrt{208/153}\):</p>
+              <p><img src="img/HW20240417_01d2.png" class="w3-image" /></p></li>
+          </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

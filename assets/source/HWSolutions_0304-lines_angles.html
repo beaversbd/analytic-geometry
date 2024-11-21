@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0304 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0304)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, March 4. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the angle from \(l_1\) to \(l_2\) with slopes \(m_1\) and \(m_2\), respectively:
+          <ol type="a">
+            <li><p>\(m_1=-2\) and \(m_2=3\)</p>
+                <p>Using \(\tan\alpha=\frac{3--2}{1+(-2)(3)}=-1\), we get that \(\alpha\) is exactly \(-45^\circ.\) The angle \(135^\circ\) is also correct.</p></li>
+            <li><p>\(m_1=1\) and \(m_2=4\)</p>
+              <p>Using \(\tan\alpha=\frac{4-1}{1+(1)(4)}=\frac{3}{5}\), we get that \(\alpha\) is approximately \(31^\circ.\) The angle \(-149^\circ\) is also correct.</p></li>
+            <li><p>\(m_1=-3\) and \(m_2=2\)</p>
+              <p>Using \(\tan\alpha=\frac{2--3}{1+(-3)(2)}=-1\), we get that \(\alpha\) is exactly \(-45^\circ.\) The angle \(135^\circ\) is also correct.</p></li>
+            <li><p>\(m_1=0\) and \(m_2=1\)</p>
+              <p>Using \(\tan\alpha=\frac{1-0}{1+(0)(1)}=1\), we get that \(\alpha\) is exactly \(45^\circ.\) The angle \(-135^\circ\) is also correct.</p></li>
+          </ol>
+        </li>
+        <li>Find the angle from \(l_1\) with slope \(m_1\) to the vertical:
+          <ol type="a">
+            <li><p>\(m_1=10\)</p>
+                <p>The line \(l_1\) with slope \(m_1\) has an inclination of approximately \(\tan^{-1}(10)\approx 84^\circ.\) To get to vertical, a \(6^\circ\) counterclockwise rotation or \(-174^\circ\) clockwise rotation is needed.</p></li>
+            <li><p>\(m_1=-2/3\)</p>
+                <p>The line \(l_1\) with slope \(m_1\) has an inclination of approximately \(\tan^{-1}(-2/3)+180^\circ \approx 146^\circ.\) To get to vertical, a \(-56^\circ\) clockwise rotation or \(127^\circ\) counterclockwise rotation is needed.</p></li>
+          </ol>
+        </li>
+        <li><p><em>Find the interior angles of the triangle with vertices \((1,5)\), \((3,-1)\), and \((-1,1)\), rounded to the nearest degree.</em></p>
+            <p>The slopes of the three sides are \(-3,\) \(-1/2,\) and \(2,\) as shown in the following picture.</p>
+            <p><img src="img/HW20240304_01.png" class="w3-image" /></p>
+            <p>Since \(-1/2\) and \(2\) are opposite reciprocals, the angle at \((-1,1)\) is \(90^\circ.\) We calculate the angle at \((1,5)\) as follows: \(\tan^{-1}\left(\frac{-3-2}{1+(-3)(2)}\right)=45^\circ.\) We calculate the angle at \((3,-1)\) as follows: \(\tan^{-1}\left(\frac{-1/2--3}{1+(-3)(-1/2)}\right)=45^\circ.\) Thus we have found the three interior angles exactly (no need to round). The sum of the angles is \(180^\circ,\) so that is consistent with this being a correct answer.</p></li>
+        <li><p><em>Find the slope of line \(l_1\) where the angle from \(l_1\) to \(l_2\) is \(45^\circ\) and the slope of \(l_2\) is \(m_2=1/2\).</em></p>
+            <p>Using the formula for the angle from one line to another, we have the equation \(\tan(45^\circ)=\frac{1/2-m_1}{1+m_1(1/2)}.\) Then \(1=\frac{1/2-m_1}{1+(1/2)m_1}.\) Then \(1/2-m_1=1+(1/2)m_1.\) Then \(-1/2=(3/2)m_1\). Then \(m_1=-1/3,\) which is the slope of \(l_1.\)</p></li>
+        <li><p><em>Use slopes and angles, not the length of sides, to show that \((-1,0)\), \((4,6)\), and \((10,1)\) are the vertices of an isosceles triangle. Hint: a triangle is defined to be isosceles when it has at least two congruent sides, but it is also true that a triangle is isosceles when it has at least two congruent angles.</em></p>
+            <p>The slopes of the three sides are \(-5/6,\) \(1/11,\) and \(6/5,\) as shown in the following picture.</p>
+            <p><img src="img/HW20240304_02.png" class="w3-image" /></p>
+            <p>It looks like the angles at vertex \(A\) and vertex \(C\) might be congruent. We calculate the angle at \(A(-1,0)\) as follows: \(\tan^{-1}\left(\frac{6/5-1/11}{1+(1/11)(6/5)}\right)=45^\circ.\) We calculate the angle at \(C(10,1)\) as follows: \(\tan^{-1}\left(\frac{1/11--5/6}{1+(-5/6)(1/11)}\right)=45^\circ.\) Thus the angles at vertex \(A\) and vertex \(C\) are congruent. Therefore this is an isosceles triangle.</p></li>
+        <li>Use slopes and angles to classify each of the following triangles as <em>acute</em>, <em>obtuse</em>, or <em>right</em>.
+          <ol type="a">
+            <li><p>\((-1,0)\), \((4,6)\), and \((10,1)\)</p>
+              <p>The slopes of the three sides are \(-5/6,\) \(1/11,\) and \(6/5,\) as shown in the following picture.</p>
+              <p><img src="img/HW20240304_02.png" class="w3-image" /></p>
+              <p>The slopes \(-5/6\) and \(6/5\) are opposite reciprocals, so this triangle has a right angle at vertex \((4,6).\) Therefore, it is a right triangle.</p></li>
+            <li><p>\((9,6)\), \((-5,4)\), and \((7,10)\)</p>
+              <p>The slopes of the three sides are \(1/7,\) \(1/4,\) and \(-2,\) as shown in the following picture.</p>
+              <p><img src="img/HW20240304_03.png" class="w3-image" /></p>
+              <p>We calculate the angle at \(C(7,10)\) as follows: \(\tan^{-1}\left(\frac{-2-1/4}{1+(1/4)(-2)}\right)+180^\circ\approx 103^\circ.\) This triangle has an obtuse angle, and so, it must be an obtuse triangle.</p></li>
+            <li><p>\((-2,1)\), \((-1,-5)\), and \((2,-3)\)</p>
+              <p>The slopes of the three sides are \(2/3,\) \(-1,\) and \(-6,\) as shown in the following picture.</p>
+              <p><img src="img/HW20240304_04.png" class="w3-image" /></p>
+              <p>We calculate the angle at \(A(-2,1)\) as follows: \(\tan^{-1}\left(\frac{-1--6}{1+(-1)(-6)}\right)\approx 34^\circ.\)</p>
+              <p>We calculate the angle at \(B(-1,-5)\) as follows: \(\tan^{-1}\left(\frac{-6-2/3}{1+(2/3)(-6)}\right)\approx 66^\circ.\)</p>
+              <p>We calculate the angle at \(C(2,-3)\) as follows: \(\tan^{-1}\left(\frac{2/3--1}{1+(-1)(2/3)}\right)\approx 79^\circ.\)</p>
+              <p>Since all three angles are acute, this is an acute triangle. (These three add up to only \(179^\circ\) because of rounding.)</p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

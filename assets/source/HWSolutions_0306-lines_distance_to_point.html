@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0306 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0306)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, March 6. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the distance from the given point \(P\) to the given line \(l\):
+          <ol type="a">
+            <li><p>\(P=(1,2)\) and \(l\) is \(2x+3y+5=0\)</p>
+                <p>The line is in general form, so \(A=2,\) \(B=3,\) \(C=5,\) \(x_1=1,\) and \(y_1=2.\) Thus the distance is \(\frac{|(2)(1)+(3)(2)+(5)|}{\sqrt{2^2+3^2}}=\frac{13}{\sqrt{13}}=\sqrt{13}.\)</p></li>
+            <li><p>\(P=(1,1)\) and \(l\) is \(x-y=0\)</p>
+                <p>The line is in general form, so \(A=1,\) \(B=-1,\) \(C=0,\) \(x_1=1,\) and \(y_1=1.\) Thus the distance is \(\frac{|(1)(1)+(-1)(1)+(0)|}{\sqrt{1^2+(-1)^2}}=\frac{0}{\sqrt{2}}=0.\)</p>
+                <p>Alternatively, notice that the point \((1,1)\) is on the line \(x-y=0\), and so the distance from the point to the line has to be \(0.\)</p></li>
+            <li><p>\(P=(3,-2)\) and \(l\) is \(4x-2y+8=0\)</p>
+              <p>The line is in general form, so \(A=4,\) \(B=-2,\) \(C=8,\) \(x_1=3,\) and \(y_1=-2.\) Thus the distance is \(\frac{|(4)(3)+(-2)(-2)+(8)|}{\sqrt{4^2+(-2)^2}}=\frac{24}{\sqrt{20}}=\frac{12}{\sqrt{5}}.\)</p></li>
+            <li><p>\(P=(3,-2)\) and \(l\) is \(y=-\frac{1}{3}x+5\)</p>
+              <p>The line is not in general form, so we set it equal to zero: \(\frac{1}{3}x+y-5=0.\) Now \(A=\frac{1}{3},\) \(B=1,\) \(C=-5,\) \(x_1=3,\) and \(y_1=-2.\) Thus the distance is \(\frac{|(1/3)(3)+(1)(-2)+(-5)|}{\sqrt{(1/3)^2+2^2}}=\frac{6}{\sqrt{37/9}}=\frac{18}{\sqrt{37}}.\)</p></li>
+            <li><p>\(P=(-2,-5)\) and \(l\) is \(y=5\)</p>
+              <p>The line is not in general form, so we set it equal to zero: \(0x+1y-5=0.\) Now \(A=0,\) \(B=1,\) \(C=-5,\) \(x_1=-2,\) and \(y_1=-5.\) Thus the distance is \(\frac{|(0)(-2)+(1)(-5)+(-5)|}{\sqrt{0^2+1^2}}=\frac{10}{\sqrt{1}}=10.\)</p>
+              <p>Alternatively, this is the horizontal line \(y=5\) and the point \((-2,-5)\) is \(10\) units directly below this line. Thus \(10\) is the distance from the point to the line.</p></li>
+          </ol>
+        </li>
+        <li>Suppose \(P=(1,1)\) and \(l\) is \(y=-x+5\).
+          <ol type="a">
+            <li><p>Find an equation of the line \(m\) perpendicular to \(l\) that goes through \(P\).</p>
+                <p>The line \(l\) has slope \(-1\), so the line \(m\) perpendicular to \(l\) has slope \(1.\) This line also goes through \((1,1).\) So the line perpendicular to \(y=-x+5\) through \((1,1)\) is \(y-1=1(x-1).\) This simplifies to \(y=x.\)</p></li>
+            <li><p>Find the coordinates of the intersection point \(Q\) of line \(m\) with line \(l\).</p>
+              <p>We must find the intersection point of the lines \(y=-x+5\) and \(y=x.\) Combining the equations, we get \(x=-x+5.\) Thus \(2x=5,\) and so \(x=\frac{5}{2}.\) Thus the intersection point is \((\frac{5}{2},\frac{5}{2}).\)</p></li>
+            <li><p>Use the distance formula to find the distance from point \(P\) to point \(Q\).</p>
+              <p>The distance is \(\sqrt{(5/2-1)^2+(5/2-1)^2}=\sqrt{18/4}=\frac{3\sqrt{2}}{2}.\)</p></li>
+            <li><p>Use the distance from a point to a line formula to find the distance from point \(P\) to line \(l\).</p>
+              <p>Let us put \(y=-x+5\) in general form: \(x+y-5=0.\) Now the distance is \(\frac{|(1)(1)+(1)(1)+(-5)|}{\sqrt{1^2+1^2}}=\frac{3}{\sqrt{2}}=\frac{3\sqrt{2}}{2}.\)</p></li>
+            <li><p>Compare your answers in parts c and d.</p>
+              <p>The answers are the same, as we have computed the same distance two different ways.</p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

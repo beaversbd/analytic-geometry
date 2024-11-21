@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0209 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0209)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, February 9. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li><p><em>Find three points on the graph of the parametric equations \((x,y)=(2\sin t,3\cos t).\)</em></p>
+            <p>When \(t=0\), we get the point \((2,0).\) When \(t=\frac{\pi}{4}\), we get the point \(\left(\sqrt{2},\frac{3\sqrt{2}}{2}\right).\) When \(t=\frac{\pi}{2}\), we get the point \((0,3)\). Other points can be obtained by using other values of \(t.\)</p></li>
+        <li><p><em>Is the point \((3,4)\) on the graph of the parametric equations \((x,y)=(2t-1,3t+2)\) or not? Explain how you know.</em></p>
+            <p>For the point \((3,4)\) to be on the graph, there must be a time value \(t\) that we can substitute to get this point. Considering the \(x\)-value, such a \(t\)-value must solve the equation \(3=2t-1\). Thus \(t\) must be \(2\). This means that the only way for the point \((3,4)\) to be on the graph is for that to happen when \(t=2\). However, when we use \(t=2\) in the second equation, we get \(y=3(2)+2=8\), which is not the \(y\)-value of \(4\) that we were expecting. Since the only \(t\)-value that makes the \(x\)-value \(3\) makes the \(y\)-value \(6\), the point \((3,4)\) is not on this graph.</p></li>
+        <li><p><em>Find the \(x\)-intercepts and \(y\)-intercepts, if any, of the graphs of the following parametric equations.</em></p>
+          <ol type="a">
+            <li><p>\((x,y)=(2t-1, 3t+2)\)</p>
+                <p>When the \(x\)-component \(2t-1\) is zero, we can find the time value(s) of the \(y\)-intercepts. When \(2t-1=0\), we get \(t=\frac{1}{2}\). Substituting \(t=\frac{1}{2}\) into \(3t+2\), we get \(y=\frac{7}{2}\). Thus the only \(y\)-intercept is \(\left(0,\frac{7}{2}\right).\)</p>
+                <p>When the \(y\)-component \(3t+2\) is zero, we can find the time value(s) of the \(x\)-intercepts. When \(3t+2=0\), we get \(t=-\frac{2}{3}\). Substituting \(t=-\frac{2}{3}\) into \(2t-1\), we get \(y=-\frac{7}{2}\). Thus the only \(x\)-intercept is \(\left(-\frac{7}{3},0\right).\)</p></li>
+            <li><p>\((x,y)=(t^2-4, 3t+5)\)</p>
+              <p>Solving \(t^2-4=0\), we get \(t=\pm 2.\) Thus the \(y\)-intercepts are \(\left(0,11\right)\) at \(t=2\) and  \(\left(0,-1\right)\) at \(t=-2.\)</p>
+              <p>Solving \(3t+5=0\), we get \(t=-\frac{5}{3}.\) Thus the only \(x\)-intercept is \(\left(-\frac{11}{9},0\right)\) at \(t=-\frac{5}{3}.\)</p></li>
+            <li><p>\((x,y)=(\sqrt{4-t}, \sqrt{t-1})\)</p>
+              <p>Solving \(\sqrt{4-t}=0\), we get \(t=4.\) Thus the only \(y\)-intercept is \(\left(0,\sqrt{3}\right)\) at \(t=4.\)</p>
+              <p>Solving \(\sqrt{t-1}=0\), we get \(t=1.\) Thus the only \(x\)-intercept is \(\left(\sqrt{3},0\right)\) at \(t=1.\)</p></li>
+            <li><p>\((x,y)=(e^t, \ln(t))\)</p>
+              <p>Solving \(e^t=0\) yields no solutions. Thus there are no \(y\)-intercepts.</p>
+              <p>Solving \(\ln(t)=0\), we get \(t=1.\) Thus the only \(x\)-intercept is \(\left(e,0\right)\) at \(t=1.\)</p></li>
+            <li><p>\((x,y)=\left(\sin(t), t+\frac{\pi}{2}\right)\)</p>
+              <p>Solving \(\sin(t)=0\), we get \(t=n\pi\), for all natural numbers \(n.\) Thus there are infinitely many \(y\)-intercepts following the pattern \(\left(0,n\pi+\frac{\pi}{2}\right)\) for all natural numbers \(n.\)</p>
+              <p>Solving \(t+\frac{\pi}{2}=0\), we get \(t=-\frac{\pi}{2}.\) Thus the only \(x\)-intercept is \(\left(-1,0\right)\) at \(t=-\frac{\pi}{2}.\)</p></li>
+          </ol>
+        </li>
+        <li><p><em>Find three points on the graph of the polar equation \(r=2-3\cos\theta.\)</em></p>
+          <p>When \(\theta=0^\circ\), we get the point \((-1,0^\circ).\) When \(\theta=90^\circ\), we get the point \((2,90^\circ).\) When \(\theta=180^\circ\), we get the point \((5,180^\circ)\). Other points can be obtained easily by using other values of \(\theta.\)</p></li>
+        <li><p><em>Is the point \((4,45^\circ)\) on the graph of the polar equation \(r=2\sin\theta+3\cos\theta\) or not? Explain how you know.</em></p>
+            <p>Substitute \(4\) for \(r\) and \(45^\circ\) for \(\theta\). We get \(4=2\sin 45^\circ + 3\cos 45^\circ.\) The right hand side simplifies to \(\frac{5\sqrt{2}}{2}\), which is not equal to \(4\). Thus this point is <em>not</em> on the graph.</p></li>
+        <li><p><em>Find the \(x\)-intercepts and \(y\)-intercepts, if any, of the graphs of following polar equations.</em></p>
+          <ol type="a">
+            <li><p>\(r=2+3\sin\theta\)</p>
+              <p>The \(x\)-intercepts occur when \(\theta=0^\circ\) or \(\theta=180^\circ.\) Then \(r=2+3\sin 0^\circ\) tells us that \((2,0^\circ\)) is an \(x\)-intercept and \(r=2+3\sin 180^\circ\) tells us that \((2,180^\circ)\) is also an \(x\)-intercept.</p>
+              <p>The \(y\)-intercepts occur when \(\theta=90^\circ\) or \(\theta=270^\circ.\) Then \(r=2+3\sin 90^\circ\) tells us that \((5,90^\circ\)) is a \(y\)-intercept and \(r=2+3\sin 270^\circ\) tells us that \((-1,270^\circ)\) is also a \(y\)-intercept.</p>
+              <p>The graph goes through the pole if there is a value of \(\theta\) where \(r=0\). Then \(0=2+3\sin\theta\) tells us that \(\sin\theta=-\frac{2}{3}\); there are infinitely many angles \(\theta\) that work in this equation, including the Quadrant IV angle \(\sin^{-1}\left(-\frac{2}{3}\right)\) (approximately \(-41.81^\circ\)). Thus the graph does go through the pole.</p>
+              <p>Thus \((2,0^\circ)\), \((2,180^\circ)\), and the pole are the \(x\)-intercepts and \((5,90^\circ)\), \((-1,270^\circ)\), and the pole are the \(y\)-intercepts.</p></li>
+            <li><p>\(r=\cos(4\theta)\)</p>
+              <p>The \(x\)-intercepts occur when \(\theta=0^\circ\) or \(\theta=180^\circ.\) Then \(r=\cos(4\cdot 0^\circ)\) tells us that \((1,0^\circ\)) is an \(x\)-intercept and \(r=\cos(4\cdot 180^\circ)\) tells us that \((1,180^\circ)\) is also an \(x\)-intercept.</p>
+              <p>The \(y\)-intercepts occur when \(\theta=90^\circ\) or \(\theta=270^\circ.\) Then \(r=\cos(4\cdot 90^\circ)\) tells us that \((1,90^\circ\)) is a \(y\)-intercept and \(r=\cos(4\cdot 270^\circ)\) tells us that \((1,270^\circ)\) is also a \(y\)-intercept.</p>
+              <p>The graph goes through the pole if there is a value of \(\theta\) where \(r=0\). Then we must solve \(0=\cos(4\theta)\). One value that works is exactly \(22.5^\circ.\) Then \(\cos(4\cdot 22.5^\circ)=\cos(90^\circ)=0\), so the graph does go through the pole.</p>
+              <p>Thus \((1,0^\circ)\), \((1,180^\circ)\), and the pole are the \(x\)-intercepts and \((1,90^\circ)\), \((1,270^\circ)\), and the pole are the \(y\)-intercepts.</p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

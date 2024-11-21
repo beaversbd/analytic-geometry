@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Equations, Functions, and Graphs</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Expressions and Types of Equations</h2>
+
+  <p>Many mathematical facts and relationships are communicated via equations. Our current symbolic way of writing equations is a relatively new invention in human history. Up until just a few hundred years ago, equations were expressed as sentences in everyday language, perhaps with some abbreviations. For example, if I wanted to write \(x+3=5\) back in 1000 AD, I would write the sentence "three more than a number is five" (but in Latin instead of English). As you have seen in previous classes, we want to define our words carefully. For this part of the review, I want to define <em><strong>equation</strong></em> and <em><strong>expression</strong></em> and related words, and break down the types of equations that you will see in this class and beyond.</p>
+  
+  <p>My first attempt at defining "equation" is to say that it is "something with an equals sign in it". The problem with that is that we have to define the vague word "something." I will create a new word, "expression" for the sort of thing that we would see on one side of an equation:</p>
+  
+  <p><strong>Definition:</strong> An <em><strong>equation</strong></em> is a mathematical object formed by placing an equal sign between two expressions.</p>
+  
+  <p>Now we have the challenge of defining the term <em>expression</em>. It's a bit hard to define <em>expression</em> without the concept of recursion that we will discuss in detail in the module on induction. To start with, we need to say say that any number by itself is an expression. Also, any variable by itself is also an expression. But we also get an expression by adding, subtracting, multiplying, etc those numbers and variables. Moreover, if we take those expressions and then do "mathy" things to them, we should get yet another expression. So \(2\) and \(x\) are expressions. Thus so are \(x+2\) and \(2x\). Thus so are \((2x)(x+2)\) and \(2x-(x+2)\). Thus a mathematical thing is an expression if it is (1) a number or a variable, or (2) obtained by doing something "mathy" to something we already know to be an expression. Now we can properly define expression:</p>
+  
+  <p><strong>Definition:</strong> An <em><strong>expression</strong></em> is a mathematical object that is either a number, a constant, a variable, or the result of applying a mathematical operation to objects already known to be expressions.</p>
+  
+  <p>Notice that this definition includes the word "expression" in the definition. Normally this is an invalid thing to do. However, when we have a situation where we want to define something and we know what the simplest versions of the thing are and how to get new versions of the thing from things that we have already determined to fit our definition, we consider this to be a special type of valid definition, called <em><strong>definition by recursion</strong></em>. If all that was a bit abstract and confusing, just remember an informal definition of expression: An expression is what you get by starting with numbers, constants, and variables and then add, subtract, multiply, and divide them and/or plug them into functions.</p>
+  
+  <h3>Types of Expressions</h3>
+  
+  <p>Let's dig a bit more deeply into the concept of an <em>expression</em>. Expressions are the building blocks of mathematics. They are used to represent a mathematical quantity. Here are the main types of expressions:</p>
+  
+  <ol>
+    <li>A single number, like 3, 1/2, \(\pi\), or \(\sqrt 2\).</li>
+    <li>A variable or constant, like \(x\), \(y\), \(m\), or \(b\).</li>
+    <li>An expression that contains no variables or constants but has various mathematical operations, like \(2+3\), \(e^6\), \(\sqrt{3^2+4^2}\). These expressions represent a particular real number that we could find a decimal for (using our calculators or a computer) or put on the number line.</li>
+    <li>An expression that contains variables and constants and has various mathematical operations, like \(mx+b\) or \(2x\). These expressions represent various real numbers, and the specific value of the expression depends on values you plug in for the variables or constants.</li>
+  </ol>
+
+  <p>The last type of expression is often used to represent functions, but we will get to that later in the review. The main verbs associated with expressions are <em><strong>evaluate</strong></em>, which means to substitute given values for the variables and report your answer as a single real number, and <em><strong>simplify,</strong></em> which means to rewrite the expression in such a way that the values of the resulting expression are the same as the original expression, but the resulting expression looks "simpler." "Simpler" is a matter of taste or is specifically defined depending on the situation. For example "simplify" for rational expressions means to factor and cancel out common factors.</p>
+  
+  <p>When you can plug in values into two expressions and the result is always the same, we say that the expressions are <em><strong>equivalent</strong></em>. For example, the distributive property of multiplication over addition tells us that \(2(x+3)\) and \(2x+6\) are equivalent expressions. No matter value for \(x\) we use to evaluate the two expressions, as long as we use the same value for \(x\) in each expression, the resulting evaluated values for each expression will be equal.</p>
+  
+  <p>Note that a mathematical expression is considered a noun. Mathematical expressions serve as some of the grammatical subjects and objects of our mathematical language. Ultimately, an expression represents a particular number, which we know if there are no variables, and which we don't know if there are variables (but we will know the value once we evaluate the expression).</p>
+
+  <h3>Types of Equations</h3>
+  
+  <p>Equations are the next important concept to discuss. In mathematical language, they represent complete sentences. Unlike expressions, equations express a complete thought. Here is how I would summarize the types and purposes of equations:</p>
+
+  <p>Equations fall into two main categories:
+    <ol type="1">
+      <li>Equations with no variables or constants, like \(1/2=2/4\) or \(2+3=6.\) These types of equations are used to attempt assert the equality of two particular known numbers or numeric expressions. Equations of this type are either true or false.</li>
+      <li>Equations that have at least one variable come in one of two ultimate types, but they have several uses:
+        <ol type="a">
+          <li>Identities: A equation is an identity if it is true for all values of the variables for which the expressions on both sides are defined. For example, \(2(x+y)=2x+2y\) is an identity.</li>
+            <ol type="i">
+              <li>Properties: Often identities are used to express properties of numbers, such as the associative (\(a+(b+c)=(a+b)+c\)), commutative (\(a+b=b+a\) and \(a\cdot b=b\cdot a\)) and distributive properties.</li>
+              <li>Equivalent expressions: In order to solve equations, we often have to re-express parts of the equation in a different, more useful form. For example, to solve \(x^2-4=0\), we need to rewrite \(x^2-4\) as \((x-2)(x+2)\). The equation \(x^2-4=(x-2)(x+2)\) is an identity. Thus solving the equation \((x-2)(x+2)=0\) is the same as solving the equation \(x^2-4=0\). Words such as "simplify" and "factor" usually involve steps that are identities.</li>
+            </ol>
+          <li>Conditional Equation. A conditional equation is an equation that contains variables, and the equation is false for at least one set of values for the variables (includes contradictions). For example, \(x^2−4=0\) is true if we plug \(2\) in for \(x\), but false if we plug \(0\) in for \(x\). The verb we use to describe the process of finding all the values of the variables that make the equation true is <strong>solve</strong>. In other words, the word "solve" most naturally applies to conditional equations.
+            <ol type="i">
+              <li>Conditional equations of a single variable
+                <ul>
+                  <li>Equations with a single variable on one side and a numerical expression on the other, like \(x=3\). These types of equations are used to communicate that the variable x should be considered to have the value of 3. We can also use these types of equations to describe vertical and horizontal lines.</li>
+                  <li>Equations involving more complicated expressions, like \(x^2-4=0\) are often purposed to be solved. For example, solving \(x^2-4=0\) would give you the x-coordinates of the x-intercepts of the parabola \(y=x^2-4\). Linear, quadratic, polynomial, rational, root, absolute value, trigonometric, exponential describe what types of mathematical operations are found in this type of equation.</li>
+                </ul>
+              </li>
+              <li>Conditional equations of two or more variables
+                <ul>
+                  <li>Geometric formulas, like \(A=l\cdot w\). These equations are used to describe a geometric relationship, and depending on what variables we have values for, we can solve to find values for the remaining variables.</li>
+                  <li>Physics/chemistry formulas, like the idea gas law \(PV=nRT\). These equations are used to describe a law of nature, and depending on what variables we have values for, we can solve to find the remaining variables.</li>
+                  <li>Graphs. If we have an equation with two variables \(x\) and \(y\), we can view the sets of values that make the equation true as coordinates of ordered pairs.</li>
+                </ul>
+              </li>
+            </ol></li>
+        </ol>
+      </li>
+    </ol>
+      
+    </p>
+
+<h2>Graphs and Equations</h2>
+
+<p>Given an equation whose only variables are \(x\) and \(y\), we say that the <strong><em>graph</em></strong> of the equation is the set of all points \((a,b)\) such that when you substitute \(a\) into \(x\) and \(b\) into \(y\), the resulting numerical equation is true. Conversely, the point \((a,b)\) is not on the graph if, when we substitute \(a\) for \(x\) and \(b\) for \(y\), the resulting numerical equation is false. While not precisely correct, we often casually identify the equation with the graph when the context is clear.</p>
+
+<p>An <strong><em>\(x\)-intercept</em></strong> of a graph is a point that is both on the graph and the \(x\)-axis. Similarly, a <strong><em>\(y\)-intercept</em></strong> of a graph is a point that is both on the graph and the \(y\)-axis.</p>
+
+<p>To find any \(y\)-intercepts of the graph of an equation, substitute \(0\) for \(x\) and solve for \(y\); this gives you all the \(y\)-values that you can substitute into the equation along with \(0\) for \(x\) to get a true equation. Similarly, to find any \(x\)-intercepts of the graph of an equation, substitute \(0\) for \(y\) and solve for \(x\).</p>
+
+<div class="w3-card-4">
+  <header class="w3-container w3-2019-eden">
+    <h3>Examples</h3>
+  </header>
+    
+  <div class="w3-container">
+    <ul>
+      <li>The point \((2,3)\) is on the graph of the equation \(y=2x-1\) because \((3)=2(2)-1\) is a true equation. On the other hand, \((5,4)\) is not because \((4)=2(5)-1\) is not true.</li>
+      <li>The point \((0,-1)\) is a \(y\)-intercept of the graph of \(y=2x-1\) because it is a point on the \(y\)-axis and it satisfies the equation. The point \((2,0)\) is not an \(x\)-intercept of \(y=2x-1\) because, even though it is on the \(x\)-axis, it does not satisfy the equation. Instead, \((\frac{1}{2},0)\) is an \(x\)-intercept of \(y=2x-1\).</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Functions</h2>
+
+<p>A <strong><em>function</em></strong> is an input-output relationship between two sets of values such that for each allowed input value, there is one and only one output value to go with it. The <strong><em>domain</em></strong> of a function is its set of allowed input values, and the <strong><em>range</em></strong> of a function is its set of output values.</p>
+
+<p>Often an equation can represent a function of \(x\)-values. This is usually indicated by an equation of the form \(y=f(x)\), where \(f(x)\) is a mathematical expression involving \(x\) as the only variable. In this case, geometrically, all vertical lines in the plane intersect our the graph in at most one point. If any vertical line intersects our graph in more than one point, then our equation does not express a function of \(x\). This idea is called the <strong><em>vertical line test</em></strong>.</p>
+
+<p>If a function of \(x\) is defined by a mathematical expression \(f(x)\), then the <strong><em>domain</em></strong> of the function is the set of all real numbers for which the expression \(f(x)\) is defined, and the <strong><em>range</em></strong> is the set of all values output by the expression.</p>
+
+<div class="w3-card-4">
+  <header class="w3-container w3-2019-eden">
+    <h3>Examples</h3>
+  </header>
+    
+  <div class="w3-container">
+    <ul>
+      <li>The domain of the function \(f(x)=\frac{1}{1-x}\) is very large. Most real numbers can be substituted in for \(x\) and get a result. The only \(x\)-value that can't is \(x=1\) because substituting \(1\) for \(x\) would result in division by zero. Thus the domain is \((-\infty,1)\cup(1,\infty)\) (in interval notation). The range is harder to calculate, but we can use technology to graph the function and see that you can obtain any real number except \(0\). Thus the range is \((-\infty,0)\cup(0,\infty)\).</li>
+      <li>The domain of the function \(f(x)=\sqrt{1-x}\) is primarily determined by the issue that we can only take the square root of nonnegative numbers. To find the domain, we must determine what values of \(x\) make \(1-x\) nonnegative. In other words, we must solve the inequality \(1-x\geq 0\). The solution is \((-\infty,1]\), and so the domain of the function is also \((-\infty,1]\). The range of an untransformed root function is \([0,\infty)\), and that is the case here as well.</li>
+    </ul>
+  </div>
+</div>
+
+<p>When an equation is not of the form \(y=f(x)\), that is, the \(y\) is not isolated to one side of the equation, the equation can still sometimes represent a function of \(x\), and in this case we say that the function is defined <strong><em>implicitly</em></strong></p>
+
+<p>We don't have to restrict ourselves to functions of \(x\)! We can also take \(y\) as our variable to get equations like \(x=g(y)\), where \(g(y)\) is a function expressed in the variable \(y\).</p>
+
+<div class="w3-card-4">
+  <header class="w3-container w3-2019-eden">
+    <h3>Example</h3>
+  </header>
+    
+  <div class="w3-container">
+      <p>The equation \(x+y=1\) is not in the form \(y=f(x)\), but we can solve for \(y\) to get \(y=1-x\). Thus this equation does represent a function of \(x\). Alternatively, we could solve for \(x\) to get \(x=1-y\). Thus the equation \(x+y=1\) also represents a function of \(y\).</p>
+  </div>
+</div>
+
+<p>A set of points is often called a <strong><em>locus</em></strong>. Just as we can find the set of points for an equation (graphing), we can do the reverse - find an equation for a set of points.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, February 7. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>For the equation \(x^2+y^2=1\), confirm that \((0,1)\) is a point on the graph and that \((1,1)\) is not.</li>
+        <li>Find three points that are on the graph of \(\sqrt{x^2+1}=3y-2\) and three points that are not.</li>
+        <li>Find all \(x\)-intercepts and \(y\)-intercepts of the graphs of the following equations. Be sure to indicate which answers are \(x\)-intercepts and which are \(y\)-intercepts, and express all answers as points (both coordinates).
+          <ol type="a">
+            <li>\(\frac{x}{2}+\frac{y}{3}=1\)</li>
+            <li>\(y=1-x^2\)</li>
+            <li>\(\frac{x-1}{x+1}=y+2\)</li>
+            <li>\((x-3)^2+(y-2)^2=16\)</li>
+            <li>\(y=\frac{1}{x}+1\)</li>
+          </ol>
+        </li>
+        <li>Determine the domain of each of the following functions.
+          <ol type="a">
+            <li>\(f(x)=x^2-3x+1\)</li>
+            <li>\(f(x)=\frac{1}{x^2-1}\)</li>
+            <li>\(f(x)=\sqrt{2x-1}\)</li>
+            <li>\(f(x)=\frac{x-2}{\sqrt{3x-5}}\)</li>
+          </ol>
+        </li>
+        <li>Use Desmos or a graphing calculator to determine the range of the functions from Question 4.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

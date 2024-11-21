@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: General 2nd Degree Equations</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>Now we are ready to tackle the general 2nd degree equation: \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\).</p>
+  
+  <h3>Unrotated Case: \(B=0\)</h3>
+  
+  <p>First, let's take care of the special cases when \(B=0\):
+  <ol>
+    <li>\(A=B=C=0\): this isn't really a 2nd degree equation. This yields the general 1st degree equation \(Dx+Ey+F=0\), which is the general form for lines and can yield all possible lines: vertical (\(E=0\)), horizontal (\(D=0\)), or oblique (neither \(D\) nor \(E\) are zero).</li>
+    <li>\(B\) is zero and either \(A\) or \(C\) is zero but not both: the parabola case. This yields either a parabola or one of three degenerate cases (a single line, two parallel lines, or no graph).</li>
+    <li>\(B\) is zero and \(A\) and \(C\) have the same sign: the ellipse case. This yields either an ellipse, a circle (when \(A=C\)), or one of two degenerate cases (a single point or no graph).</li>
+    <li>\(B\) is zero and \(A\) and \(C\) have opposite sign: the hyperbola case. This yields either a hyperbola or the degenerate case of two intersecting lines.</li>
+  </ol></p>
+
+  <p>At this point, it will be useful to of a circle as a special kind of degenerate ellipse. So when I refer to a the "degenerate cases" of an ellipse, this could include a circle, a single point, or no graph.</p>
+
+  <h3>Rotated Case: \(B\neq 0\)</h3>
+
+  <p>If \(B\neq 0\), we will see that we can find an angle \(\alpha\) by which to apply the rotation equations to eliminate the \(xy\)-term.</p>
+
+  <p>Substitute the rotation equations \(x=x'\cos\alpha-y'\sin\alpha\) and \(y=x'\sin\alpha+y'\cos\alpha\) into \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\) to get the following: \[A(x'\cos\alpha-y'\sin\alpha)^2+B(x'\cos\alpha-y'\sin\alpha)(x'\sin\alpha+y'\cos\alpha)\]\[+C(x'\sin\alpha+y'\cos\alpha)^2+D(x'\cos\alpha-y'\sin\alpha)\]\[+E(x'\sin\alpha+y'\cos\alpha)+F=0.\]</p>
+
+  <p>After distributing and simplifying, the coeffcient of the \(x'y'\) term is \[(C-A)2\sin\alpha\cos\alpha+B(\cos^2\alpha-\sin^2\alpha).\] This is the coefficient we need to be zero. Thus we can set equal to zero and solve for the needed value of \(\alpha\), if such a solution exists.</p>
+
+  <p>First, let's use double-angle identities to simplify: \[(C-A)2\sin\alpha\cos\alpha+B(\cos^2\alpha-\sin^2\alpha)=(C-A)\sin 2\alpha+B\cos 2\alpha.\]</p>
+
+  <p>Setting the preceding step \((C-A)\sin 2\alpha+B\cos 2\alpha\) equal to zero, let's consider two cases. First, it could be that \(A=C\). If that were true, then the first term is eliminated and we get \(B\cos 2\alpha=0\). Then \(\alpha=45^\circ\) is the only acute solution to this equation. Thus when \(A=C\), we can use rotation by \(\alpha=45^\circ\) to eliminate the \(xy\)-term.</p>
+
+  <p>In the harder case, when \(A\neq C\), we can do the following:
+  \[
+  \begin{align}
+     (C-A)\sin 2\alpha + B\cos 2\alpha & = 0 \\
+     (C-A)\sin 2\alpha &= -B\cos 2\alpha \\
+     -(A-C)\sin 2\alpha &= -B\cos 2\alpha \\
+     (A-C)\sin 2\alpha &= B\cos 2\alpha \\
+     (A-C)\tan 2\alpha &=B \\
+     \tan 2\alpha &= \frac{B}{A-C}. 
+  \end{align}
+  \]</p>
+
+  <p>Let's work to eliminate the double-angle by using the identity \(\tan 2\alpha = \frac{2\tan\alpha}{1-\tan^2\alpha}\): 
+  \[
+  \begin{align}
+     (A-C)\tan 2\alpha &= B \\
+     (A-C)\frac{2\tan\alpha}{1-\tan^2\alpha} &= B \\
+     2(A-C)\tan\alpha &= B-B\tan^2\alpha \\
+     B\tan^2\alpha+2(A-C)\tan\alpha-B&=0.
+  \end{align}
+  \]</p>
+  
+  <p>This last equation is a quadratic equation in \(\tan\alpha\), which we can solve using the quadratic formula: \[\tan\alpha=\frac{-2(A-C)\pm\sqrt{[2(A-C)]^2-4(B)(-B)}}{2B}.\]
+  </p>
+
+  <p>This simplifies to \[\tan\alpha=\frac{(C-A)\pm\sqrt{(C-A)^2+B^2}}{B}.\]</p>
+
+  <p>The numerator is negative when we choose the \(-\) sign and positive when we choose the \(+\) sign. So if we choose the sign based on what makes the overall fraction positive - when the sign of \(\pm\) is chosen to agree with the sign of \(B\) - we will get a solution that leads to a value of \(\alpha\) that is a positive and acute. </p>
+
+  <h4>The Discriminant</h4>
+
+  <p>I will skip the messy algebra, but it can be shown that if we take the equation \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\) and perform a rotation to get \(A'(x')^2+B'x'y'+C'(y')^2+D'x'+E'y'+F'=0\), then \(B^2-4AC=(B')^2-4A'C'\). Rotating a conic section does not change what type of conic section it is, so this gives us a way to determine what kind of conic section we have!</p>
+  
+  <p>This expression \(B^2-4AC\) is often called the <em>discriminant</em>. In the case of quadratic equations, it tells us how many solutions the quadratic equation has. For conics, it tells us what type of conic section we will get, no matter what the equation looks like!</p>
+
+  <p>Let's combine what we said at the beginning (when \(B=0\)) with what we know now about the discriminant. For a parabola, when \(B\) is zero, either \(A\) or \(C\) is zero; in that case, the discriminant is zero. For an ellipse, when \(B\) is zero, \(A\) and \(C\) have the same sign; in that case, the discriminant is negative. For a hyperbola, when \(B\) is zero, \(A\) and \(C\) have opposite sign; in that case the discriminant is positive. Thus the sign (positive, negative, or zero) tells us what type of conic section we have before we even perform the rotation!</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Strategy for General Equations of Second Degree</h3></header>
+    <div class="w3-container">
+        <p>Suppose we are given a general second degree equation \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\).</p>
+        <p>The discriminant \(B^2-4AC\) tells us the following:
+          <ul>
+            <li>\(B^2-4AC=0\): the conic is a parabola or one of its degenerate cases</li>
+            <li>\(B^2-4AC&gt; 0\): the conic is a hyperbola or one of its degenerate cases</li>
+            <li>\(B^2-4AC&lt;0\): the conic is an ellipse or one of its degenerate cases</li>
+          </ul>
+        </p>
+        <p>First, use the rotation equations with the positive acute angle \(\alpha\), where \(\tan\alpha=\frac{(C-A)\pm\sqrt{(C-A)^2+B^2}}{B}\) and the sign in the numerator is chosen to agree with the sign of \(B\), to generate produce an equation with no \(x'y'\)-term.</p>
+        <p>Once we have an equation with no \(x'y'\)-term, work to put the resulting equation in a standard form. While you work to do this, you may discover that the equation is one of the degenerate cases.</p>
+        <p>Finally, graph and find the key information about the resulting standard-form equation or degenerate case, based on the rotated axes.</p>
+    </div>
+  </div>
+
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednessday, April 24. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Rotate axes to eliminate the \(xy\)-term and then put in standard form where possible. Sketching the resulting graph is optional.</li>
+          <ol type="a">
+            <li>\(x^2+4xy-2y^2-6=0\)</li>
+            <li>\(2x^2-xy+2y^2-2=0\)</li>
+            <li>\(21x^2+50xy-99y^2+6\sqrt{26}x-82\sqrt{26}y-494=0\)</li>
+            <li>\(4x^2+12xy+9y^2+8\sqrt{13}x+12\sqrt{13}y-65=0\)</li>
+            <li>\(9x^2-6xy+y^2-12\sqrt{10}x-36\sqrt{10}y=0\)</li>
+          </ol>
+      </ol>
+      <p>HINT - Equations: 1a: \(\frac{(x')^2}{3}-\frac{(y')^2}{2}=1\) (hyperbola), 1b: \(\frac{(x')^2}{4/3}+\frac{(y')^2}{4/5}=1\) (ellipse), 1c: \(\frac{(x'-1)^2}{4}-\frac{(y'+2)^2}{1}=1\) (hyperbola), 1d: \((x')^2+4x'-5=0\) (degenerate parabola), 1e: \((y')^2=12x'\) (parabola).</p>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

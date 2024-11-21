@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework for Vector Projection</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework for Vector Projection</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for your own practice. They will not be collected.</p>
+      <ol type="1">
+        <li>Find the projection \(\overrightarrow{w}\) and perpendicular projection \(\overrightarrow{w_\perp}\) of \(\overrightarrow{u}\) onto \(\overrightarrow{v}\):
+          <ol type="a">
+            <li><p>\(\overrightarrow{u}=\langle 1,2\rangle\) and \(\overrightarrow{v}=\langle 2,5\rangle\)</p>
+                <p>\(\overrightarrow{w}=\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}=\frac{\langle 1,2\rangle\cdot\langle 2,5\rangle}{\lVert\langle 2,5\rangle\rVert^2}\langle 2,5\rangle=\frac{12}{(\sqrt{29})^2}\langle 2,5\rangle=\langle\frac{24}{29},\frac{60}{29}\rangle\) and <br/>
+                \(\overrightarrow{w_\perp}=\overrightarrow{u}-\overrightarrow{w}=\langle 1,2\rangle-\langle\frac{24}{29},\frac{60}{29}\rangle=\langle\frac{5}{29},-\frac{2}{29}\rangle.\)</p>
+                <p><img src="img/HWvecproj_01.png" class="w3-image"/></p></li>
+            <li><p>\(\overrightarrow{u}=\langle -1,2\rangle\) and \(\overrightarrow{v}=\langle 1,4 \rangle\)</p>
+              <p>\(\overrightarrow{w}=\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}=\frac{\langle -1,2\rangle\cdot\langle 1,4\rangle}{\lVert\langle 1,4\rangle\rVert^2}\langle 1,4\rangle=\frac{7}{(\sqrt{17})^2}\langle 1,4\rangle=\langle\frac{7}{17},\frac{28}{17}\rangle\) and <br/>
+              \(\overrightarrow{w_\perp}=\overrightarrow{u}-\overrightarrow{w}=\langle -1,2\rangle-\langle\frac{7}{17},\frac{28}{17}\rangle=\langle-\frac{24}{17},\frac{6}{17}\rangle.\)</p>
+              <p><img src="img/HWvecproj_02.png" class="w3-image"/></p></li>
+            <li><p>\(\overrightarrow{u}=\langle -1,-1\rangle\) and \(\overrightarrow{v}=\langle 4,-1\rangle\)</p>
+              <p>\(\overrightarrow{w}=\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}=\frac{\langle -1,-1\rangle\cdot\langle 4,-1\rangle}{\lVert\langle 4,-1\rangle\rVert^2}\langle 4,-1\rangle=\frac{-3}{(\sqrt{17})^2}\langle 4,-1\rangle=\langle-\frac{12}{17},\frac{3}{17}\rangle\) and <br/>
+              \(\overrightarrow{w_\perp}=\overrightarrow{u}-\overrightarrow{w}=\langle -1,-1\rangle-\langle-\frac{12}{17},\frac{3}{17}\rangle=\langle\frac{29}{17},-\frac{20}{17}\rangle.\)</p>
+              <p><img src="img/HWvecproj_03.png" class="w3-image"/></p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

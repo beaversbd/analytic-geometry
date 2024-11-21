@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Parallel Lines</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>One key relation for lines is for them to be <em>parallel</em> or not. The geometric definition for parallelism is the following: <em>two distinct lines are parallel if they have no point in common</em>. Let's explore how to tell if lines are parallel from their equations.</p>
+
+  <p>We have three main types of lines: horizontal, vertical, and oblique. If we have a pair of lines then one of six things can happen: (1) we have two horizontal lines, (2) we have a horizontal line and a vertical line, (3) we have a horizontal line and an oblique line, (4) we have two vertical lines, (5) we have one vertical line and one oblique line, and (6) we have two oblique lines.</p>
+
+  <p>In order to completely characterize when two lines are parallel, we must check all six of these cases.</p>
+
+  <p>In case (1), suppose we have two distinct horizontal lines \(y=b_1\) and \(y=b_2\). These cannot intersect because any point on the line \(y=b_1\) must have a \(y\)-coordinate of \(b_1\) and any point on the line \(y=b_2\) must have a \(y\)-coordinate of \(b_2\). No point can have two different \(y\)-coordinates! Thus any two distinct horizontal lines are parallel.</p>
+
+  <p>In case (2), suppose we have a horizontal line \(y=b\) and a vertical line \(x=a\). These cannot be parallel because the point \((a,b)\) is on both lines.</p>
+
+  <p>In case (3), suppose we have a horizontal line \(y=b\) and an oblique line \(y=m_1x+b_1\). These cannot be parallel because the point \(\left(\frac{b-b_1}{m_1},b\right)\) is on both lines.</p>
+
+  <p>In case (4), suppose we have two distinct vertical lines \(x=a_1\) and \(x=a_2\). Like with the case with two horizontal lines, any intersection point would have to have two different \(x\)-coordinates. Thus any two distinct vertical lines are parallel.</p>
+
+  <p>In case (5), suppose we have a vertical line \(x=a\) and an oblique line \(y=mx+b\). These cannot be parallel because the point \((a,ma+b)\) is on both lines.</p>
+
+  <p>In case (6), my hypothesis is that two distinct oblique lines are parallel if and only if they have the same slope. Let's see why that is true.</p>
+
+  <p>Let us make things easier on ourselves by using a fact of logic: The sentence "two distinct oblique lines are parallel if and only if they have the same slope" is logically equivalent to the sentence "two distinct oblique lines intersect if and only if they have different slopes." The both boil down to the fact that parallel lines have the same slope and intersecting lines have different slopes, and this second sentence is easier to prove.</p>
+
+  <p>To verify this statement, we must make sure that if we have two distinct intersecting lines, then their slopes must be different, and if we have two distinct lines with slopes that are different, then they must be intersect.</p>
+
+  <p>First, suppose we have two oblique lines \(y=m_1x+b_1\) and \(y=m_2x+b_2\). At this point we do not know for sure whether \(m_1\) and \(m_2\) are different or whether \(b_1\) and \(b_2\) are different, but we do know for sure that we can't have both \(m_1=m_2\) and \(b_1=b_2\) because the lines are distinct. Let's try to find an intersection point. Using the equations \(y=m_1x+b_1\) and \(y=m_2x+b_2\), we get \(m_1x+b_1=m_2x+b_2\). Then we can solve for \(x\) and get \(x=\frac{b_2-b_1}{m_1-m_2}\), or alternatively, \(x=-\frac{b_2-b_1}{m_2-m_1}.\) Substituting this back in either equation gives us the \(y\)-coordinate that would go with the \(x\)-coordinate: 
+
+    \[\begin{align}
+    y&=m_1\left(-\frac{b_2-b_1}{m_2-m_1}\right)+b_1 \\
+    y&=\frac{-m_1b_2+m_1b_1}{m_2-m_1}+\frac{b_1m_2-b_1m_1}{m_2-m_1} \\
+    y&=\frac{b_1m_2-m_1b_2}{m_2-m_1}
+    \end{align}\]
+  </p>
+
+  <p>So what we have here for the oblique lines \(y=m_1x+b_1\) and \(y=m_2x+b_2\) is a potential intersection point \((x,y)=\left(-\frac{b_2-b_1}{m_2-m_1},\frac{b_1m_2-b_2m_1}{m_2-m_1}\right).\) If the slopes \(m_1\) and \(m_2\) are different, then this intersection point will exist, and if the slopes are the same, then this intersection point will not exist. Thus the two lines will be parallel when, and only when, they have the same slope. Before we move on, let's save this formula for the intersection point.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>General Formula for the Intersection Point of Two Lines</h4>
+    </header>
+    <div class="w3-container"><p>If two distinct nonvertical lines \(y=m_1x+b_1\) and \(y=m_2x+b_2\) have different slopes, then the intersection point of the two lines is \[(x,y)=\left(-\frac{b_2-b_1}{m_2-m_1},\frac{b_1m_2-b_2m_1}{m_2-m_1}\right).\]
+    </p></div>
+  </div>
+
+  <p>Lets look back at the six cases. We can summarize: two distinct lines are parallel if and only if (a) they are both horizontal, (b) they are both vertical, or (c) they are both oblique, but they have the same slope. Notice that distinct horizontal lines also have the same slope (zero). Thus we can combine options (a) and (c) to get our final result:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Slopes and Parallel Lines</h4>
+    </header>
+    <div class="w3-container"><p>Two distinct lines are parallel if and only if they are both vertical or they have the same slope.
+    </p></div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, February 28. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Determine whether the lines are parallel or not.
+          <ol type="a">
+            <li>\(y=2x+3\) and \(y=3x+2\)</li>
+            <li>\(y=2x+4\) and \(y=2x+5\)</li>
+            <li>\(3x+2y=6\) and \(2x-3y=4\)</li>
+            <li>\(x=2\) and \(y=3\)</li>
+            <li>\(0x+3y=6\) and \(0x+y=2\)</li>
+            <li>\(y-1=2(x+3)\) and \(y-1=-\frac{1}{2}(x+3)\)</li>
+            <li>\(2x+4y=8\) and \(y=-\frac{1}{2}x+2\)</li>
+          </ol>
+        </li>
+        <li>Give an equation for the line through \((1,2)\) that is parallel to \(y=3x+5\).</li>
+        <li>If the line through \((a,5)\) and \((4,3)\) is parallel to a line with slope 3, find the value of \(a\).</li>
+        <li>Use slopes to show that \((1,1)\), \((4,1)\), \((3,-2)\), and \((0,-2)\) are the vertices of a parallelogram.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0216 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0216)</h3>
+    </header>
+      
+    <div class="w3-container">
+        <p>Complete these for Friday, February 16. Where appropriate, show work that justifies your answers for full credit.</p>
+        <ol type="1">
+          <li>Find the slope (if it exists) and inclination (rounded to nearest degree or tenth of a radian) of the line through the given points:
+              <ol type="a">
+                  <li><p>\((2,3)\) and \((5,8)\)</p>
+                      <p>The slope is \(\frac{8-3}{5-2},\) or \(\frac{5}{3}.\) To get the inclination, we use inverse tangent: \(\tan^{-1}(\frac{5}{3})\approx 59^\circ.\) Thus \(59^\circ\) is our approximate inclination.</p></li>
+                  <li><p>\((-1,4)\) and \((4,2)\)</p>
+                    <p>The slope is \(\frac{2-4}{4--1},\) or \(-\frac{2}{5}.\) To get the inclination, we use inverse tangent: \(\tan^{-1}(-\frac{2}{5})\approx -22^\circ.\) Since the inclination must be an angle between \(0^\circ\) and \(180^\circ,\) we must add \(180^\circ\) to get an obtuse angle as our final answer: \(-22^\circ + 180^\circ = 158^\circ.\)</p></li>
+                  <li><p>\((-4,2)\) and \((-4,5)\)</p>
+                    <p>Since these two points have the same \(x\)-coordinates, these two points are on the same vertical line. There is no slope and the inclination is \(90^\circ.\)</p></li>
+                  <li><p>\((2,3)\) and \((-4,3)\)</p>
+                    <p>Since these two points have the same \(y\)-coordinates, these two points are on the same horizontal line. The slope is \(0\) and the inclination is \(0^\circ.\)</p></li>
+              </ol>
+          </li>
+          <li>Find an equation of the line indicated and sketch the graph:
+              <ol type="a">
+                  <li><p><em>contains \((2,-4)\) with slope \(m=-2\)</em></p>
+                      <p>We can use point-slope form: \(y-(-4)=-2(x-2).\)</p>
+                      <p><img src="img/HW20240216_01.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((2,2)\) with slope \(m=1\)</em></p>
+                    <p>We can use point-slope form: \(y-2=1(x-2).\)</p>
+                    <p><img src="img/HW20240216_02.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((5,3)\) with slope \(m=4\)</em></p>
+                    <p>We can use point-slope form: \(y-3=4(x-5).\)</p>
+                    <p><img src="img/HW20240216_03.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((3,4)\) with slope \(m=0\)</em></p>
+                    <p>Since the slope is zero, this is a horizontal line: \(y=4.\)</p>
+                    <p><img src="img/HW20240216_04.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((-2,-3)\) and has no slope</em></p>
+                    <p>Since there is no slope, this is a vertical line: \(x=-2.\)</p>
+                    <p><img src="img/HW20240216_05.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((1,4)\) and \((3,5)\)</em></p>
+                    <p>We can use two-point form: \(y-4=\frac{5-4}{3-1}(x-1).\)</p>
+                    <p><img src="img/HW20240216_06.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((-3,4)\) and \((3,-4)\)</em></p>
+                    <p>We can use two-point form: \(y-4=\frac{-4-4}{3--3}(x--3).\)</p>
+                    <p><img src="img/HW20240216_07.png" class="w3-image" /></p></li>
+                  <li><p><em>contains \((2,-1)\) and \((-2,-1)\)</em></p>
+                    <p>Since these two points have the same \(y\)-coordinates, these two points are on the same horizontal line: \(y=-1.\)</p>
+                    <p><img src="img/HW20240216_08.png" class="w3-image" /></p></li>
+              </ol>
+          </li>
+          <li><p><em>The vertices of a triangle are \((2,3),\) \((-1,5),\) and \((-2,-3).\) Give equations for the lines that contain the sides of this triangle.</em></p>
+              <p>Here are equations for each of the three sides:
+                <ul>
+                    <li>side containing \((2,3),\) and \((-1,5)\): \(y-3=\frac{5-3}{-1-2}(x-2).\)</li>
+                    <li>side containing \((-1,5)\) and \((-2,-3)\): \(y-5=\frac{-3-5}{-2--1}(x--1).\)</li>
+                    <li>side containing \((2,3)\) and \((-2,-3)\): \(y-3=\frac{-3-3}{-2-2}(x-2).\)</li>                   
+                </ul>
+              </p></li>
+        </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

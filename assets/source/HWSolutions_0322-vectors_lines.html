@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework for Vector Equations of Lines</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework for Vector Equations of Lines</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for your own practice. They will not be collected.</p>
+      <ol type="1">
+        <li>Give a vector equation for the following lines:
+          <ol type="a">
+            <li><p><em>the line containing the point \((2,3)\) with direction vector \(\overrightarrow{m}=\langle 1,2\rangle\)</em></p>
+                <p>We have all we need to plug directly into the form: \(\langle x,y\rangle = \langle 2+1t,3+2t\rangle.\)</p></li>
+            <li><p><em>the line containing the point \((2,3)\) and the point \((3,-1)\)</em></p>
+              <p>We have at least one point, but we need a direction vector. We can get that direction vector from the two points on this line: \(\overrightarrow{m}=\langle 3-2,-1-3\rangle=\langle 1,-4\rangle.\) Now an equation for the line is \(\langle x,y\rangle=\langle 2+1t,3-4t\rangle.\)</p></li>
+            <li><p><em>the line containing the point \((-1,-1)\) with slope \(m=3\)</em></p>
+              <p>We have a point but we don't have a direction vector. However, we can use the slope \(m=3\) to get a direction vector; we can think of the slope of \(3\) as a rise of \(3\) versus a run of \(1\) to get the direction vector \(\overrightarrow{m}=\langle 1,3\rangle.\) Then an equation for the line is \(\langle x,y\rangle=\langle -1+1t,-1+3t\rangle.\)</p></li>
+            <li><p><em>the line containing the point \((3,4)\) with inclination \(150^\circ\)</em></p>
+              <p>We have a point but we don't have a direction vector. However, we can use the inclination to get a direction vector. An inclination of \(150^\circ\) yields a slope of \(\tan(150^\circ)=-\frac{\sqrt{3}}{3},\) which in turn gives us a direction vector \(\langle -\sqrt{3},3\rangle.\) Then an equation for the line is \(\langle x,y\rangle=\langle 3-t\sqrt{3},4+3t\rangle.\)</p></li>
+            <li><p><em>the vertical line through \((2,4)\)</em></p>
+              <p>We have a point, but we don't have a direction vector. However, knowing that the line is vertical gives us a direction vector \(\overrightarrow{m}=\langle 0,1\rangle.\) Then an equation for the line is \(\langle x,y\rangle=\langle 2,4+t\rangle.\)</p></li>
+            <li><p><em>the horizontal line through \((2,4)\)</em></p>
+              <p>We have a point, but we don't have a direction vector. However, knowing that the line is horizontal gives us a direction vector \(\overrightarrow{m}=\langle 1,0\rangle.\) Then an equation for the line is \(\langle x,y\rangle=\langle 2+t,4\rangle.\)</p></li>
+          </ol>
+        </li>
+        <li>Sketch a graph of the following lines. Give the intercepts and two other points on the line.
+          <ol type="a">
+            <li><p>\(\langle x,y \rangle = \langle 1+3t,2-5t\rangle\)</p>
+                <p>We can read a point of \((1,2)\) and a slope of \(\frac{-5}{3}\) from the equation. Thus a rectangular equation for this line is \(y-2=-\frac{5}{3}(x-1).\) Putting this in slope-intercept form, we get \(y=-\frac{5}{3}x+\frac{11}{3}.\) Now we can see that the \(y\)-intercept is \((0,11/3).\) We can also set \(y\) to zero and solve to see that the \(x\)-intercept is \((11/5,0).\) We can substitute values into any of the equations to find other points. I'll use \(x=2\) and \(x=-1\) in the slope intercept-form equation to get \((2,1/10)\) and \((-1,16/3),\) respectively.</p>
+                <p><img src="img/HWvecline_01.png" class="w3-image" /></p></li>
+            <li><p>\(\langle x,y \rangle = \langle t,1+2t\rangle\)</p>
+              <p>We can read a point of \((0,1)\) and a slope of \(\frac{2}{1}\) from the equation. Thus a rectangular equation for this line is \(y-1=2(x-0).\) Putting this in slope-intercept form, we get \(y=2x+1.\) Now we can see that the \(y\)-intercept is \((0,1).\) We can also set \(y\) to zero and solve to see that the \(x\)-intercept is \((-1/2,0).\) We can substitute values into any of the equations to find other points. I'll use \(x=1\) and \(x=-1\) in the slope intercept-form equation to get \((1,3)\) and \((-1,-1),\) respectively.</p>
+              <p><img src="img/HWvecline_02.png" class="w3-image" /></p></li>
+            <li><p>\(\langle x,y \rangle = \langle 3t,-2t\rangle\)</p>
+              <p>We can read a point of \((0,0)\) and a slope of \(\frac{-2}{3}\) from the equation. Thus a rectangular equation for this line is \(y-0=-\frac{2}{3}(x-0).\) Putting this in slope-intercept form, we get \(y=-\frac{2}{3}x.\) Now we can see that \((0,0)\) is the \(x\)-intercept and the \(y\)-intercept. We can substitute values into any of the equations to find other points. I'll use \(x=3\) and \(x=-3\) in the slope intercept-form equation to get \((3,-2)\) and \((-3,2),\) respectively.</p>
+              <p><img src="img/HWvecline_03.png" class="w3-image" /></p></li>
+            <li><p>\(\langle x,y \rangle = \langle 1,3-t\rangle\)</p>
+              <p>We can read a point of \((1,3)\) and a direction vector of \(\overrightarrow{m}=\langle 0,-1\rangle\) from the equation. The direction vector is vertical, and so, the line is vertical. Thus a rectangular equation for this line is \(x=1.\) This line has no \(y\)-intercept, and its \(x\)-intercept is \((1,0).\) Two other points on this line are \((1,5)\) and \((1,6).\)</p>
+              <p><img src="img/HWvecline_04.png" class="w3-image" /></p></li>
+            <li><p>\(\langle x,y \rangle = \langle -2t,3\rangle\)</p>
+              <p>We can read a point of \((0,3)\) and a direction vector of \(\overrightarrow{m}=\langle -2,0 \rangle\) from the equation. The direction vector is horizontal, and so, the line is horizontal. Thus a rectangular equation for this line is \(y=3.\) This line has no \(x\)-intercept, and its \(y\)-intercept is \((0,3).\) Two other points on this line are \((1,3)\) and \((2,3).\)</p>
+              <p><img src="img/HWvecline_05.png" class="w3-image" /></p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

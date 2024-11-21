@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Vectors: Projection and Distance from a Point to a Line</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  
+  <p>When we have a vector \(\overrightarrow{u}\), we have found it useful to break the vector into a horizontal component and a vertical component. In other words, we can think of \(\overrightarrow{u}\) as the sum of a purely horizontal vector \(\overrightarrow{w}\) plus a purely vertical vector \(\overrightarrow{w_\perp}\). Another word we use for this idea is <strong><em>projection</em></strong>; in other words, if we move \(\overrightarrow{u}\) to start at the origin, we <em>project</em> the vector down onto the \(x\)-axis to get the \(x\)-component and we <em>project</em> the vector over onto the \(y\)-axis (or a parallel vertical line) to get the \(y\)-component.</p>
+
+  <p><img src="img/0322_03.png" class="w3-image" /></p>
+
+  <p>Why do I bring this up? Sometimes, when we have two vectors, we are interested in projecting one onto the other. In physics, suppose you are towing along an angle rather than horizontally, and then you have a second force that is also pulling on the object, but at a slight angle to the first. The second force helps the first force pull the object up along the angle of the ground, but it also slightly pulls "up" compared to the angled ground. We are interested in how much of the second force pulls along the slanted ground and how much of the second force pulls perpendicularly from the slanted ground.</p>
+
+  <p>So let's take two vectors, \(\overrightarrow{u}\) and \(\overrightarrow{v}\), with a common starting point.</p>
+  
+  <p><img src="img/0322_00.png" class="w3-image" /></p>
+
+  <p>Let's project \(\overrightarrow{u}\) down onto \(\overrightarrow{v}\). Let's introduce the vector \(\overrightarrow{w}\) starting from the same point as \(\overrightarrow{u}\) and is the projection of \(\overrightarrow{u}\) down onto \(\overrightarrow{v}\) (that is, \(\overrightarrow{w}\) that has the same direction as \(\overrightarrow{v}\)).</p>
+
+  <p><img src="img/0322_01.png" class="w3-image" /></p>
+
+  <p>In this case, trigonometry tells us that \(\lVert\overrightarrow{w}\rVert=\lVert\overrightarrow{u}\rVert \cdot|\cos\theta|.\) Multiplying the top and bottom of the right hand side by \(\lVert\overrightarrow{v}\rVert\), we get \(\lVert\overrightarrow{w}\rVert=\frac{\lVert\overrightarrow{u}\rVert\lVert\overrightarrow{v}\rVert |\cos\theta|}{\lVert\overrightarrow{v}\rVert}.\) We can use properties of absolute value and the angle between two vector formula to then rewrite this as \(\lVert\overrightarrow{w}\rVert=\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}.\) Thus \(\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}\) is the length of the projection. </p>
+
+  <p>Recall that \(\overrightarrow{w}\) has the same direction as \(\overrightarrow{v}\). Thus we get a way to compute \(\overrightarrow{w}\): multiply \(\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}\) (length of the projection) by \(\frac{\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert}\) (unit vector in the same direction as the projection): \(\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}.\) </p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Projection of One Vector onto Another</h3></header>
+    <div class="w3-container">
+        <p>If \(\overrightarrow{w}\) is the projection of \(\overrightarrow{u}\) onto \(\overrightarrow{v}\), then the length of \(\overrightarrow{w}\) can be expressed as follows: \[\lVert\overrightarrow{w}\rVert=\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}.\]and the projection \(\overrightarrow{w}\) itself can be computed as follows: \[\overrightarrow{w}=\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}\]</p>
+    </div>
+  </div>
+
+  <p>We can find another vector \(\overrightarrow{w_\perp}\) that is perpendicular to \(\overrightarrow{v}\) such that \(\overrightarrow{w}+\overrightarrow{w_\perp}=\overrightarrow{u}\). In other words, we can decompose \(\overrightarrow{u}\) into two components, one along the same direction as \(\overrightarrow{v}\) and one perpendicular to \(\overrightarrow{v}\), just as we can break a vector down into horizontal and vertical components.</p>
+
+  <p><img src="img/0322_02.png" class="w3-image" /></p>
+
+  <p>This formula for \(\overrightarrow{w_\perp}\) is easy to find, because we can just take the equation \(\overrightarrow{w}+\overrightarrow{w_\perp}=\overrightarrow{u}\) and rearrange it to get \(\overrightarrow{w_\perp}=\overrightarrow{u}-\overrightarrow{w}\):</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Perpendicular Component of the Projection of One Vector onto Another</h3></header>
+    <div class="w3-container">
+        <p>If \(\overrightarrow{w}\) is the projection of \(\overrightarrow{u}\) onto \(\overrightarrow{v}\), then the projection \(\overrightarrow{w_\perp}\) of \(\overrightarrow{u}\) onto a vector perpendicular to \(\overrightarrow{v}\) is \[\overrightarrow{w_\perp}=\overrightarrow{u}-\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\lVert\overrightarrow{v}\rVert^2}\;\overrightarrow{v}\]</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2>Distance from a Point to a Line - Again!</h2>
+
+  <p>Earlier in the class, we derived a formula that would find the distance from a point \((x_1,y_1)\) to a line \(Ax+By+C=0.\) We did it the hard way! It turns out that if we use vectors, and vector projection in particular, we can derive the same formula but with less work.</p>
+
+  <p><img src="img/0322_04.png" class="w3-image" /></p>
+
+  <p>Recall that the slope of the line \(l\) given by the general form equation \(Ax+By+C=0\) is \(\frac{-A}{B}\). The opposite reciprocal of \(\frac{-A}{B}\) is \(\frac{B}{A}\), and so any line with slope \(\frac{B}{A}\) will be perpendicular to \(l.\)</p>
+
+  <p>Let's let \(P\) have coordinates \((x_1,y_1)\) and let's let \(\overrightarrow{v}\) be \(\langle A,B\rangle\) (perpendicular to our line). We can make a vector \(\overline{u}\) from a generic point \((x,y)\) on the line to \((x_1,y_1)\). The components of \(\overrightarrow{u}\) would be \(\langle x_1-x,y_1-y\rangle.\)</p>
+  
+  <p><img src="img/0322_05.png" class="w3-image" /></p>
+
+  <p>Since \(\overrightarrow{v}\) is perpendicular to \(l\), the distance we seek is the length of the projection of \(\overrightarrow{u}\) onto \(\overrightarrow{v}=\langle A,B\rangle.\) In the previous section, we saw that this length \(d\) was \(\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}\).</p>
+
+  <p>Thus, \[d=\frac{|\overrightarrow{u}\cdot\overrightarrow{v}|}{\lVert\overrightarrow{v}\rVert}=\frac{|A(x_1-x)+B(y_1-y)|}{\sqrt{A^2+B^2}}=\frac{|Ax_1+By_1-(Ax+By)|}{\sqrt{A^2+B^2}}=\frac{|Ax_1+By_1+C|}{\sqrt{A^2+B^2}}.\]</p>
+
+  <p>That was so much shorter than what we did before! Here is the formula, once again:</p>
+
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Distance from a Point to a Line</h3></header>
+    <div class="w3-container">
+        <p>Given a point \(P(x_1,y_1)\) and a line \(l\) given by \(Ax+By+C=0\), the distance \(d\) from \(P\) to \(l\) is \[d=\frac{|Ax_1+By_1+C|}{\sqrt{A^2+B^2}}.\]</p>
+
+    </div>
+  </div>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for your own practice. They will not be collected.</p>
+      <ol type="1">
+        <li>Find the projection \(\overrightarrow{w}\) and perpendicular projection \(\overrightarrow{w_\perp}\) of \(\overrightarrow{u}\) onto \(\overrightarrow{v}\):
+          <ol type="a">
+            <li>\(\overrightarrow{u}=\langle 1,2\rangle\) and \(\overrightarrow{v}=\langle 2,5\rangle\)</li>
+            <li>\(\overrightarrow{u}=\langle -1,2\rangle\) and \(\overrightarrow{v}=\langle 1,4 \rangle\)</li>
+            <li>\(\overrightarrow{u}=\langle -1,-1\rangle\) and \(\overrightarrow{v}=\langle 4,-1\rangle\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>
