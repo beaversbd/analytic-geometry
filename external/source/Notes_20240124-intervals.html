@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Analytic Geometry on the Line | Interval Notation</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Interval Notation</h2>
+
+  <p>We often want to talk about all the points to the left of a given point, to the right of a given point, or in between two points. These are called <strong><em>intervals</em></strong>.</p>
+  
+  <p>For convenience, we will talk about the real numbers corresponding to the points of an interval rather than the points of the interval itself. Notice that it can get convoluted when we are precise by explicitly keeping the points and their corresponding real numbers separate in how we write and speak. It is common practice to just <em>identify</em> the point with its corresponding number and talk about the real number as if it were a point. So instead of talking about the point corresponding to the real number \(x\), we will often just refer to the "point" \(x\) instead.</p>
+
+  <p>There are two key distinguishing properties for intervals: (1) finite vs. infinite and (2) open vs. closed.</p>
+
+  <p>Our first type of intervals will be the <strong><em>infinite</em></strong> ones. These are the intervals that consist of all the points to the left or all the points to the right of a given point.  On the other hand, we can have range of values between two given values \(x\) and \(y\); in that case we say we have a <strong><em>finite</em></strong> interval.</p>
+  
+  <p>Should boundary values of our interval be included? It depends on the situation. If we want to include the boundary of our interval, then we use the word <em>closed</em>. If we want to exclude the boundaries of our interval, the we use the word <em>open</em>. If we include one but not the other of our boundary points, we say the interval is <strong><em>half-open/half-closed</em></strong>.</p>
+
+  <p>We described the different types of intervals above in words. We could also use inequalities (using \(\leq\) and \(\geq\) symbols) and what is called <em>set builder notation</em>. There is another notation that is simpler (but can be confusing when we get to two-dimensional spaces). We call this simpler notation <em><strong>interval notation</strong></em>, which uses just parentheses ( and ) and brackets [ and ]. Here are eight types of intervals and how they are expressed in the various kinds of notation, including interval notation:</p>
+
+  <table class="w3-table-all">
+    <tr>
+      <th>Verbal Description</th>
+      <th>Inequality Notation</th>
+      <th>Set Builder Notation</th>
+      <th>Interval Notation</th>
+      <th>Interval Type</th>
+    </tr>
+    <tr>
+      <td>all points to the left of \(a\)</td>
+      <td>\(x&lt; a\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;x&lt; a\}\)</td>
+      <td>\((-\infty,a)\)</td>
+      <td>infinite open interval</td>
+    </tr>
+    <tr>
+      <td>\(a\) and all the points to its left</td>
+      <td>\(x\leq a\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;x\leq a\}\)</td>
+      <td>\((-\infty,a]\)</td>
+      <td>infinite closed interval</td>
+    </tr>
+    <tr>
+      <td>all points to the right of \(a\)</td>
+      <td>\(x&gt; a\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;x&gt; a\}\)</td>
+      <td>\((a, \infty)\)</td>
+      <td>infinite open interval</td>
+    </tr>
+    <tr>
+      <td>\(a\) and all the points to its right</td>
+      <td>\(x\geq a\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;x\geq a\}\)</td>
+      <td>\([a,\infty)\)</td>
+      <td>infinite closed interval</td>
+    </tr>
+    <tr>
+      <td>all points between \(a\) and \(b\)</td>
+      <td>\(a&lt;x&lt;b\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;a&lt;x&lt;b\}\)</td>
+      <td>\((a,b)\)</td>
+      <td>finite open interval</td>
+    </tr>
+    <tr>
+      <td>all points between \(a\) and \(b\), inclusive</td>
+      <td>\(a\leq x\leq b\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;a\leq x\leq b\}\)</td>
+      <td>\([a,b]\)</td>
+      <td>finite closed interval</td>
+    </tr>
+    <tr>
+      <td>all points between \(a\) and \(b\), including \(a\) but not \(b\)</td>
+      <td>\(a\leq x&lt;b\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;a\leq x&lt;b\}\)</td>
+      <td>\([a,b)\)</td>
+      <td>finite half-open/half-closed interval</td>
+    </tr>
+    <tr>
+      <td>all points between \(a\) and \(b\), including \(b\) but not \(a\)</td>
+      <td>\(a&lt;x\leq b\)</td>
+      <td>\(\{x\in\mathbb{R}\;|\;a&lt;x\leq b\}\)</td>
+      <td>\((a,b]\)</td>
+      <td>finite half-open/half-closed interval</td>
+    </tr>
+  </table>
+
+    <p>We also have one more type: a special interval to include all real numbers:</p>
+
+    <table class="w3-table-all">
+      <tr>
+        <th>Verbal Description</th>
+        <th>Set Notation</th>
+        <th>Interval Notation</th>
+        <th>Interval Type</th>
+      </tr>
+
+      <tr>
+        <td>all real numbers</td>
+        <td>\(\mathbb{R}\)</td>
+        <td>\((-\infty,\infty)\)</td>
+        <td>open infinite interval</td>
+      </tr>
+    </table>
+
+  <hr />
+
+  <h2>Applications of Intervals</h2>
+
+  <p>So why do we care so much about intervals? We will pretty frequently want to describe some subset of the real number line as a solution set to problems, or as a way to communicate what values work for a formula or algorithm.</p>
+
+  <p>For example, consider the function \(f(x)=\sqrt{x}\). From prerequisite courses, we know that you can't take the square root of a negative. Conversely, the only values of \(x\) that make sense to take a square root of are zero and any positive number. How can we express "zero and any positive number" using symbols? Notice that the positive numbers are the numbers to the right of zero. Thus we are talking about the interval of numbers including zero and all numbers to its right. We can express this in interval notation as \([0,\infty)\). That's a lot shorter than saying "zero and any positive number"!</p>
+
+  <p>Intervals are also the natural way to give the solutions for <em>inequalities</em> such as \(5x-3\geq x+5\) or \(|2x-1|\gt 2\). Let's solve these equations, but before we do that, let's do a quick refresher about how to deal with inequalities:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Properties of Inequalities</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p><strong>Addition Property of Inequalities:</strong>
+        <ul>
+          <li>If \(a&lt;b\), then \(a+c&lt; b+c\).</li>
+          <li>If \(a\leq b\), then \(a+c\leq b+c\).</li>
+          <li>If \(a&gt;b\), then \(a+c&gt; b+c\).</li>
+          <li>If \(a\geq b\), then \(a+c\geq b+c\).</li>         
+        </ul>
+      In other words, if you add the same value to both sides of a true inequality, the inequality remains true.
+      </p>
+      <p><strong>Multiplication Property of Inequalities:</strong>
+        <ul>
+          <li>If \(a&lt;b\) and \(c\gt 0\), then \(a\cdot c&lt; b\cdot c\).</li>
+          <li>If \(a\leq b\) and \(c\gt 0\), then \(a\cdot c\leq b\cdot c\).</li>
+          <li>If \(a&gt;b\) and \(c\gt 0\), then \(a\cdot c&gt; b\cdot c\).</li>
+          <li>If \(a\geq b\) and \(c\gt 0\), then \(a\cdot c\geq b\cdot c\).</li>         
+        </ul>
+      In other words, if you multiply the same positive value to both sides of a true inequality, the inequality remains true.
+      <ul>
+        <li>If \(a&lt;b\) and \(c\lt 0\), then \(a\cdot c&gt; b\cdot c\).</li>
+        <li>If \(a\leq b\) and \(c\lt 0\), then \(a\cdot c\geq b\cdot c\).</li>
+        <li>If \(a&gt;b\) and \(c\lt 0\), then \(a\cdot c&lt; b\cdot c\).</li>
+        <li>If \(a\geq b\) and \(c\lt 0\), then \(a\cdot c\leq b\cdot c\).</li>         
+      </ul>
+      In other words, if you multiply the same negative value to both sides of a true inequality, the inequality must be "reversed" to remain true.
+      </p>
+      <p><strong>Absolute Value and Inequalities:</strong>
+        <ul>
+          <li>If \(|x|\lt a\), then \(x\lt a\) <em>and</em> \(x\gt -a\), or in other words, \(-a\lt x\lt a\) or \(x\) can be any value in the interval \((-a,a)\).</li>
+          <li>If \(|x|\leq a\), then \(x\leq a\) <em>and</em> \(x\geq -a\), or in other words, \(-a\leq x\leq a\) or \(x\) can be any value in the interval \([-a,a]\).</li>
+          <li>If \(|x|\gt a\), then \(x\gt a\) <em>or</em> \(x\lt -a\), or in other words, \(x\) can be any value in the interval \((-\infty,-a)\) or in the interval \((a,\infty)\).</li>   
+          <li>If \(|x|\geq a\), then \(x\geq a\) <em>or</em> \(x\leq -a\), or in other words, \(x\) can be any value in the interval \((-\infty,-a]\) or in the interval \([a,\infty)\).</li>  
+        </ul></p>
+    </div>
+  </div>
+
+  <p>Note: when we want to put two disjoint intervals together into a single answer, such as how with \(|x|\gt 2\) we know that \(x\) can be any number in the interval \((-\infty, -2)\) or in the interval \((2,\infty)\), we use the \(\cup\) symbol to join them: \((-\infty, -2)\cup (2,\infty).\)</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example 1</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Solve \(5x-3\geq x+5\). Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions:</p>
+      <p>Strategy: if we can get our equation to look like \(x\lt a\), \(x\leq a\), \(x\gt a\), or \(x\geq a\), then we are done! Let's use properties of inequalities to do that. It should remind you of how we usually solve <em>linear</em> equations.
+      \[\begin{align} 
+        5x-3 &\geq x+5 \\
+        5x-3+3 &\geq x+5+3 \\
+        5x &\geq x+8 \\
+        5x-x &\geq x+8 - x \\
+        4x &\geq 8 \\
+        x &\geq 2.
+      \end{align}\]</p>
+      <p>Thus our solution includes all real numbers greater than or equal to \(2\). In interval notation, we would write \([2,\infty).\)</p>
+      <p>We can graph the solution on a number line as follows. Since \(2\) is included, we used a filled circle for that boundary point.<br />
+      <img src="img/0124_01.png" class="w3-image" /></p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example 2</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Solve \(|2x-1|\gt 2\). Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions:</p>
+      <p>Strategy: We will use what we know about absolute value and inequalities to get us going. We know that any \(x\) that solves \(2x-1\gt 2\) or that solves \(2x-1\lt -2\) will be a solution to our original problem.</p>
+      <p>First, 
+      \[\begin{align} 
+        2x-1 &\gt 2 \\
+        2x &\gt 3 \\
+        x &\gt \frac{3}{2}.
+      \end{align}\]</p>
+      <p>Second, 
+        \[\begin{align} 
+          2x-1 &\lt -2 \\
+          2x &\lt -1 \\
+          x &\lt -\frac{1}{2}.
+        \end{align}\]</p>
+      <p>Thus our solution includes all real numbers greater than or equal to \(\frac{3}{2}\) and all real numbers less than or equal to \(-\frac{1}{2}\). In interval notation, we would write \(\left(-\infty,-\frac{1}{2}\right)\cup\left(\frac{3}{2},\infty\right).\)</p>
+      <p>We can graph the solution on a number line as follows. Since \(-\frac{1}{2}\) and \(\frac{3}{2}\) are not solutions, we use open circles at those boundary points.<br />
+        <img src="img/0124_02.png" class="w3-image" /></p>
+    </div>
+  </div>
+
+
+  <hr />
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete the following homework problems for Friday, January 26. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Solve. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions:
+          <ol type="a">
+            <li>\(x&gt;2\)</li>
+            <li>\(x-3\leq 0\)</li>
+            <li>\(5-2x&lt 0\)</li>
+            <li>\(3x-5\geq 6x+9\)</li>
+            <li>\(|2x-3|\geq 3\)</li>
+            <li>\(|3x+6|-5\lt 3\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

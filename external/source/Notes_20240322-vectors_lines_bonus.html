@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Vectors: Vector Form for an Equation of a Line</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>The vector \(\langle x,y\rangle\) can be thought of as the vector whose initial point is \((0,0)\) and whose terminal point is \((x,y)\). We call \(\langle x,y\rangle\) the <em>position vector</em> of \((x,y)\). This observation lets us equate the points of a plane with the vectors in standard position (pointing from the origin).</p>
+
+  <p><img src="img/0322_06.png" class="w3-image" /></p>
+  
+  <p>Let's use this idea to create an equation that describes all the position vectors for the various points on a given line \(y=mx+b.\)</p>
+  
+  <p>Take a starting point \((x_0,y_0)\) and a vector \(\overrightarrow{m}=\langle m_1,m_2\rangle\) that gives us a direction (vector) for the line. In other words, the slope of the line (if it is not vertical) is \(m=m_2/m_1\) and the inclination \(\theta\) satisfies \(\tan\theta=m_2/m_1\). In the picture below, we have a line with slope \(\frac{1}{2}\), and \(\langle 4,2\rangle\) is a direction vector for that line because \(\frac{m_2}{m_1}=\frac{2}{4}=\frac{1}{2}.\)</p>
+  
+  <p><img src="img/0322_07.png" class="w3-image" /></p>
+  
+  <p>To get to any other point \((x,y)\) on this line, we can think of the corresponding position vector \(\langle x,y\rangle\) as having been obtained by starting with the position vector \(\langle x_0,y_0\rangle\) and adding a stretched version of the direction vector \(t\langle m_1,m_2\rangle\) to get our resulting position vector \(\langle x,y \rangle\): \(\langle x,y\rangle=\langle x_0,y_0\rangle + t\langle m_1,m_2\rangle\).</p>
+
+  <p><img src="img/0322_08.png" class="w3-image" /></p>
+
+  <p>In the following image, we let \(t\) vary. The red vector points to different points on the graph of the line, and it is obtained by adding the blue position vector of the initial point \((x_0,y_0)\) to the purple stretched direction vector of the line \(t\cdot\langle m_1,m_2\rangle\):</p>
+
+  <video width="1696" height="836" controls>
+    <source src="img/0322_09.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+  <p>Putting all this together, we get an equation for the position vector of the various points of our line:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Vector Form of a Line</h3></header>
+    <div class="w3-container">
+        <p>Suppose a vector \(\langle x,y\rangle\) points from the origin to the point \((x,y)\) on the line that contains the point \((x_0,y_0)\) and has \(\overrightarrow{m}=\langle m_1,m_2\rangle\) as a direction vector. Then that direction vector \(\langle x,y\rangle\)  satisfies the vector equation \[\langle x,y\rangle=\langle x_0,y_0\rangle + t\langle m_1,m_2\rangle.\] Alternatively, \[\langle x,y \rangle = \langle x_0+m_1t,y_0+m_2t\rangle.\]</p>
+
+        <p>This form works for vertical (\(m_1=0\)) lines, for horizontal (\(m_2=0\)) lines, and for oblique lines (neither \(m_1\) nor \(m_2\) are zero).</p>
+    </div>
+  </div>
+
+  <p>One drawback for the vector form is that we can get different equations for the same line by either starting with a different initial point on the line or by using a different (stretched or reversed) version of the direction vector. We had a similar issue with parametric equations for lines. On the other hand, an advantage of this form comes from physics applications: we can think of this as the straight path of an object given its position at a particular time and given its velocity as a vector (the direction vector).</p>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for your own practice. They will not be collected.</p>
+      <ol type="1">
+        <li>Give a vector equation for the following lines:
+          <ol type="a">
+            <li>the line containing the point \((2,3)\) with direction vector \(\overrightarrow{m}=\langle 1,2\rangle\)</li>
+            <li>the line containing the point \((2,3)\) and the point \((3,-1)\)</li>
+            <li>the line containing the point \((-1,-1)\) with slope \(m=3\)</li>
+            <li>the line containing the point \((3,4)\) with inclination \(150^\circ\)</li>
+            <li>the vertical line through \((2,4)\)</li>
+            <li>the horizontal line through \((2,4)\)</li>
+          </ol>
+        </li>
+        <li>Sketch a graph of the following lines. Give the intercepts and two other points on the line.
+          <ol type="a">
+            <li>\(\langle x,y \rangle = \langle 1+3t,2-5t\rangle\)</li>
+            <li>\(\langle x,y \rangle = \langle t,1+2t\rangle\)</li>
+            <li>\(\langle x,y \rangle = \langle 3t,-2t\rangle\)</li>
+            <li>\(\langle x,y \rangle = \langle 1,3-t\rangle\)</li>
+            <li>\(\langle x,y \rangle = \langle -2t,3\rangle\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

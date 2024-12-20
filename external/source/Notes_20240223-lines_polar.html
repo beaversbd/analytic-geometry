@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Polar Equations</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>Equations for lines using polar coordinates are not as nice as equations in rectangular coordinates. However, if we are working in polar coordinates, we still need a way to express lines.</p>
+
+  <p>The easiest way to express lines in polar coordinates is the special case of lines through the pole. All the points on a line through the pole can be expressed with the same \(\theta\)-coordinate \(\theta_1.\) Thus the equation for such a line can be expressed as \(\theta=\theta_1.\) For example, all the points on with a \(\theta\)-coordinate of \(30^\circ\) can be expressed as the equation \(\theta=30^\circ.\)</p>
+
+  <p>Vertical lines have the form \(x=a\) in rectangular coordinates. The easiest way to get an equation for a vertical line using polar coordinates is to use our conversion equation \(x=r\cos\theta\). Substituting this into \(x=a\), we get \(r\cos\theta = a.\) We can manipulate this to \(r=\frac{a}{\cos\theta}\) or to \(r=a\sec\theta\) if we would prefer the equation expressed as a function of \(\theta.\)</p>
+
+  <p>Horizontal lines have the form \(y=b\) in rectangular coordinates. The easiest way to get an equation for a horizontal line using polar coordinates is to use our conversion equation \(y=r\sin\theta\). Substituting this into \(y=b\), we get \(r\sin\theta = b.\) We can manipulate this to \(r=\frac{b}{\sin\theta}\) or to \(r=a\csc\theta\) if we would prefer the equation expressed as a function of \(\theta.\)</p>
+
+  <p>Finally, if we exclude lines through the pole/origin, vertical lines, and horizontal lines, we are left with oblique lines that do not go through the origin. These can be expressed in slope-intercept form as \(y=mx+b\), where \(b\) is not zero. Using our conversion equations, we get \(r\sin\theta=m(r\cos\theta)+b.\) Solving for \(r\), we get \(r=\frac{b}{\sin\theta-m\cos\theta}.\)</p>
+
+  <p>Alternatively, we could start with general form \(Ax+By+C=0\) and have a single form for oblique, vertical, and horizontal lines that don't go through the pole (\(C\neq 0\)). Substituting, we get \(A(r\cos\theta)+B(r\sin\theta)+C=0.\). Solving for \(r\), we get \(r=\frac{-C}{A\cos\theta+B\sin\theta}.\) Notice that this form can also work with vertical or horizontal lines so long as they don't go through the origin/pole.</p>
+
+  <p>Perhaps the best way to give a general line not through the pole is to use intercept form: \(\frac{x}{a}+\frac{y}{b}=1\). Substitute to get \(\frac{r\cos\theta}{a}+\frac{r\sin\theta}{b}=1.\) Multiply both sides by \(ab\) to eliminate fractions: \(rb\cos\theta+ra\sin\theta=ab.\) Factor out \(r\) and then divide to solve for \(r\): \(r=\frac{ab}{b\cos\theta+a\sin\theta}.\)</p>
+
+  <p>You can experiment with this formula in the following desmos graph (click on <em>edit graph on desmos</em> to open in a new tab). Try changing the \(x\)-intercept using the slider for \(a\) and the \(y\)-intercept using the slider for \(b.\)</p>
+
+  <iframe src="https://www.desmos.com/calculator/etry0qpwsc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+  <p><strong>Summary:</strong></p>
+    <ul>
+      <li>lines through the pole: a line through the pole contains all the points who have a given angle \(\theta_0\) for their \(\theta\)-coordinate. These lines have an equation of the form \(\theta=\theta_0\).</li>
+      <li>lines not through the pole: if a line does not go through the pole, it is easiest to describe it in rectangular coordinates and then convert it to polar. There are three main types:
+        <ul>
+          <li>vertical lines \(r=a\sec\theta\): use the vertical line equation \(x=a\) and  \(x=r\cos\theta\) to get \(r=a\sec\theta\).</li>
+          <li>horizontal lines \(r=b\csc\theta\): use the horizontal line equation \(y=b\) and \(y=r\sin\theta\) to get \(r=b\csc\theta\).</li>
+          <li>oblique lines \(r=\frac{ab}{b\cos\theta+a\sin\theta}\) (or use a standard form such as \(\frac{x}{a}+\frac{y}{b}=1,\) \(y=mx+b,\) or \(Ax+By=C\) and convert using \(x=r\cos\theta\) and \(y=r\sin\theta\)).</li>
+        </ul>
+      </li>
+    </ul>
+  </p>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, February 26. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Convert the following rectangular equations of lines to polar equations.
+            <ol type="a">
+                <li>\(y=\frac{1}{2}x\)</li>
+                <li>\(2x+3y=6\)</li>
+                <li>\(y=-3x+5\)</li>
+                <li>\(y=-x\)</li>
+                <li>\(\frac{x}{4}+\frac{y}{-3}=1\)</li>
+            </ol>
+        </li>
+        <li>Convert the following polar equations of lines to rectangular equations. Find the slope and any intercepts.
+          <ol type="a">
+            <li>\(\theta = 45^\circ\)</li>
+            <li>\(r=2\sec\theta\)</li>
+            <li>\(r=-3\csc\theta\)</li>
+            <li>\(r=\frac{4}{3\cos\theta+2\sin\theta}\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Equations: Parametric and Polar</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+<h2>Parametric Equations</h2>
+
+<p><strong><em>Parametric equations</em></strong> let us view time as the independent variable that drives a graph. For each time value \(t,\) we can associate a point \((x,y)\) on the graph. Thus we plug \(t\) into a formula \(f(t)\) to get the \(x\)-value and we plug \(t\) into a formula \(g(t)\) to get the \(y\)-values. We can write this more compactly as \((x,y)=(f(t),g(t)).\) We can also express this as a pair of equations \(x=f(t),y=g(t).\) Sometimes we add an inequality to restrict the values of \(t\) that are allowed.</p>
+
+<p>In the graph below, we take advantage of the Desmos online graphing calculator (<a href="https://www.desmos.com">https://www.desmos.com</a>) to show you the graph for some parametric equations. It looks like a normal graph except that unlike the graph of a function of \(x,\) it loops back on itself. The formula for this shape is \((x,y)=(-t^3+6t^2-9t+7,-t^3+4t), 0\leq t\leq 2.\) As we let \(t\) grow from \(0\) to \(2,\) the point on the graph starts at \((7,0),\) goes back and around the loop and ends at \((5,0)\) when \(t=2.\) Click on "edit graph on Desmos" and then click on Play button on the slider to see the point move along the graph as time changes. If you pause the slider, you can drag and choose the time value you are interested in. Can you tell at what time value we reach the turning point of the loop?</p>
+
+<p><iframe src="https://www.desmos.com/calculator/9z0zz6dbrz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+
+  <p>We can make a \(txy\)-table showing the \(x\)-coordinates and \(y\)-coordinates that go with specific \(t\)-values. like a normal \(xy\)-table for a function, we can sketch a graph from the formula by plugging in values, graphing the points, and filling in the gaps.</p>
+
+  <table class="w3-table-all">
+    <thead>
+      <th>\(t\)</th>
+      <th>\(x=-t^3+6t^2-9t+7\)</th>
+      <th>\(y=-t^3+4t\)</th>
+      <th>point \((x,y)\)</th>
+    </thead>
+    <tr>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>\((7,0)\)</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>3.875</td>
+      <td>1.875</td>
+      <td>\((3.875,1.875)\)</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>\((3,3)\)</td>
+    </tr>
+    <tr>
+      <td>1.5</td>
+      <td>3.625</td>
+      <td>2.625</td>
+      <td>\((3.625,2.625)\)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>5</td>
+      <td>0</td>
+      <td>\((5,0)\)</td>
+    </tr>
+  </table>
+
+  <p>An advantage of graphing using parametric equations is that they are considered functions of the time variable \(t,\) so the path traced out by the graph can loop back onto itself or have two points with the same \(y\)-value or \(x\)-value, unlike functions of \(y\) or \(x.\) The tradeoff is that we have to use two formulas to determine the points, and the form of those functions are less easily recognizable than our old functions of \(x.\) Another issue is that the same graph can come from different sets of parametric equations. You may recall that the sine and cosine functions are defined to be the \(y\) and \(x\) coordinates of the points on the unit circle \(x^2+y^2=1.\) Thus a set of parametric equations for the unit circle is \((x,y)=(\cos t,\sin t)\) as \(t\) ranges from \(0\) to \(2\pi\):</p>
+
+  <p><iframe src="https://www.desmos.com/calculator/yh8ec5enk1?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+
+  <p>Just like with rectangular equations, we have three basic tasks to master:
+    <ul>
+      <li>Determine whether or not a point is on the graph of parametric equations.</li>
+      <li>Find the coordinates of several points that are on the graph of parametric equations.</li>
+      <li>Find the \(x\)-intercepts and \(y\)-intercepts of a graph of parametric equations.</li>
+    </ul>
+  </p>
+
+  <p>To determine whether or not a point is on the graph of a set of parametric equation, we must see if there is a \(t\)-value that we can plug into both the \(x\)-coordinate function and the \(y\)-coordinate function to get the point. If this is not possible, then the point is not on the graph.
+
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-eden">
+        <h3>Example</h3>
+      </header>
+        
+      <div class="w3-container">
+        <p><em>Determine whether or not the point \((1,2)\) is on the graph of \((x,y)=(t-3,\sqrt{t}).\)</em></p>
+        <p>For \((1,2)\) to be on the graph, we must plug a \(t\)-value into the \(x\)-coordinate function to get \(1\) and plug in that same \(t\)-value into the \(y\)-coordinate function to get \(2.\) Looking at the \(x\)-coordinate function more closely, this happens when \(t-3=1,\) that is, when \(t=4.\) If we substitute \(t=4\) into the \(y\)-coordinate function, we get \(y=2.\) Thus at the time \(t=4,\) we get the point \((1,2)\) on the graph. So \((1,2)\) is indeed on the graph of these parametric equations.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-eden">
+        <h3>Example</h3>
+      </header>
+        
+      <div class="w3-container">
+        <p><em>Determine whether or not the point \((3,-2)\) is on the graph of \((x,y)=(t-3,\sqrt{t}).\)</em></p>
+        <p>For \((3,-2)\) to be on the graph, we must plug a \(t\)-value into the \(x\)-coordinate function to get \(3\) and plug in that same \(t\)-value into the \(y\)-coordinate function to get \(-2.\) Since the \(y\)-coordinate function is \(\sqrt{t},\) it is impossible to get a negative value like \(-2.\) Thus \((3,-2)\) is not on the graph of these equations.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-eden">
+        <h3>Example</h3>
+      </header>
+        
+      <div class="w3-container">
+        <p><em>Find all \(x\)-intercepts and \(y\)-intercepts of \((x,y)=(t-3,\sqrt{t}).\) </em></p>
+        <p>The \(x\)-coordinate function is zero at the solutions of \(t-3=0.\) Thus any \(y\)-intercepts occur when \(t=3.\) At \(t=3,\) we get the point \((0,\sqrt{3}),\) which is the only \(y\)-intercept.</p>
+        <p>The \(y\)-coordinate function is zero at the solutions of \(\sqrt{t}=0.\) Thus any \(x\)-intercepts occur when \(t=0.\) At \(t=0,\) we get the point \((-3,0),\) which is the only \(x\)-intercept.</p>
+      </div>
+    </div>
+
+  <h2>Polar Equations</h2>
+
+  <p>Polar coordinates are very useful for certain types of graphs. The idea of a polar graph is to take an equation with the variables \(r\) and \(\theta\) such that the polar point \((r,\theta)\) is on the graph of the equation if and only if when you substitute \(r\) and \(\theta\) values into the variables, you get a true numerical equation. Consider the polar equation \(r=3-3\sin\theta\):</p>
+
+  <p><iframe src="https://www.desmos.com/calculator/v6qsfyftjw?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+
+  <p>We can create a table of important values, just as with Cartesian equations:</p>
+
+  <table class="w3-table-all">
+    <thead>
+      <th>\(\theta\)</th>
+      <th>\(r=3-3\sin\theta\)</th>
+      <th>\((r,\theta)\)</th>
+    </thead>
+    <tr>
+      <td>\(0^\circ\)</td>
+      <td>\(3\)</td>
+      <td>\((3,0^\circ)\)</td>
+    </tr>
+    <tr>
+        <td>\(90^\circ\)</td>
+        <td>\(0\)</td>
+        <td>\((0,90^\circ)\)</td>
+      </tr>
+      <tr>
+          <td>\(180^\circ\)</td>
+          <td>\(3\)</td>
+          <td>\((3,180^\circ)\)</td>
+        </tr>
+        <tr>
+            <td>\(270^\circ\)</td>
+            <td>\(6\)</td>
+            <td>\((6,270^\circ)\)</td>
+          </tr>
+  </table>
+
+  <p>Shapes range from the <em>cardioid</em> (heart-shaped) graph we just saw to more complicated flowers like the graph of \(r=\cos 8\theta\):</p>
+
+  <p><iframe src="https://www.desmos.com/calculator/adpmy9glej?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+
+  <p>Just like with rectangular and parametric equations, we have three basic tasks to master:
+    <ul>
+      <li>Determine whether or not a point is on the graph of a polar equation.</li>
+      <li>Find the coordinates of several points that are on the graph of a polar equation.</li>
+      <li>Find the \(x\)-intercepts and \(y\)-intercepts of a graph of a polar equation.</li>
+    </ul>
+  </p> 
+
+  <p>There are a couple of wrinkles to these tasks with polar coordinates.</p>
+  
+  <p>When determining if a point is on the graph or not, we can have some issues with pole. Recall that it can be described using \(r=0\) and \(\theta\) as any angle you want. However, only certain points of the form \((0,\theta)\) might satisfy a given equation. For example, with \(r=3-3\sin\theta\) above, we can see that the pole is on the graph because \((0,90^\circ)\) satisfies the equation. However, \((0,30^\circ)\) also represents the pole but does not satisfy the equation. To see if the pole is on the graph, set \(r=0\) and see if there is a value of \(\theta\) that solves the resulting equation. If there is such an angle, the pole is on the graph, and there is no such angle, the pole is not on the graph. The non-pole points do not have this issue but there can be multiple representations of the same point that satisfy the equation - but that's not a problem from the point of view of seeing what satisfies the equation or not.</p>
+
+  <p>To find the intercepts of a polar graph, we need to find any points where \(\theta\) is \(0^\circ,\) \(90^\circ,\) \(180^\circ,\) or \(270^\circ\). This, however, will not always tell us if the graph goes through the pole. To do that, see if there is any angle \(\theta\) for which \(r\) is zero.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p><em>Determine whether or not the point \((2,30^\circ)\) is on the graph of \(r=1+2\sin\theta.\)</em></p>
+      <p>Substitute \(2\) for \(r\) and \(30^\circ\) for \(\theta\): \(2=1+2\sin 30^\circ.\) This simplifies to \(2=1+2\cdot\frac{1}{2}\) and hence to \(2=2.\) Thus \((2,30^\circ)\) is on the graph of \(r=1+2\sin\theta.\)</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p><em>Determine whether or not the point \((2,210^\circ)\) is on the graph of \(r=1+2\sin\theta.\)</em></p>
+      <p>Substitute \(2\) for \(r\) and \(210^\circ\) for \(\theta\): \(2=1+2\sin 210^\circ.\) This simplifies to \(2=1+2\cdot-\frac{1}{2}\) and hence to \(2=0.\) Thus \((2,210^\circ)\) is not on the graph of \(r=1+2\sin\theta.\)</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-eden">
+      <h3>Example</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p><em>Find all \(x\)-intercepts and \(y\)-intercepts of \(r=1+2\sin\theta.\) </em></p>
+      <p>The \(x\)-intercepts occur when \(\theta=0^\circ\) or \(\theta=180^\circ.\) Then \(r=1+2\sin 0^\circ\) tells us that \((1,0^\circ\)) is an \(x\)-intercept and \(r=1+2\sin 180^\circ\) tells us that \((1,180^\circ)\) is also an \(x\)-intercept.</p>
+      <p>The \(y\)-intercepts occur when \(\theta=90^\circ\) or \(\theta=270^\circ.\) Then \(r=1+2\sin 90^\circ\) tells us that \((3,90^\circ\)) is a \(y\)-intercept and \(r=1+2\sin 270^\circ\) tells us that \((-1,270^\circ)\) is also a \(y\)-intercept.</p>
+      <p>The graph goes through the pole if there is a value of \(\theta\) where \(r=0\). Then \(0=1+2\sin\theta\) tells us that \(\sin\theta=-\frac{1}{2}\). We know that \(\sin(-30^\circ)=-\frac{1}{2}\), so the graph does go through the pole. The point \((0,-30^\circ)\) indicates this.</p>
+      <p>Thus \((1,0^\circ)\), \((1,180^\circ)\), and the pole (that is, \((0,-30^\circ)\) or equivalent) are the \(x\)-intercepts and \((3,90^\circ)\), \((-1,270^\circ)\), and the pole are the \(y\)-intercepts. We can see these five intercepts on the following graph of this equation:</p>
+      <p><img src="img/0207_01.png" class="w3-image" /></p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, February 9. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find three points on the graph of the parametric equations \((x,y)=(2\sin t,3\cos t).\)</li>
+        <li>Is the point \((3,4)\) on the graph of the parametric equations \((x,y)=(2t-1,3t+2)\) or not? Explain how you know.</li>
+        <li>Find the \(x\)-intercepts and \(y\)-intercepts, if any, of the graphs of the following parametric equations.
+          <ol type="a">
+            <li>\((x,y)=(2t-1, 3t+2)\)</li>
+            <li>\((x,y)=(t^2-4, 3t+5)\)</li>
+            <li>\((x,y)=(\sqrt{4-t}, \sqrt{t-1})\)</li>
+            <li>\((x,y)=(e^t, \ln(t))\)</li>
+            <li>\((x,y)=\left(\sin(t), t+\frac{\pi}{2}\right)\)</li>
+          </ol>
+        </li>
+        <li>Find three points on the graph of the polar equation \(r=2-3\cos\theta.\)</li>
+        <li>Is the point \((4,45^\circ)\) on the graph of the polar equation \(r=2\sin\theta+3\cos\theta\) or not? Explain how you know.</li>
+        <li>Find the \(x\)-intercepts and \(y\)-intercepts, if any, of the graphs of following polar equations.
+          <ol type="a">
+            <li>\(r=2+3\sin\theta\)</li>
+            <li>\(r=\cos(4\theta)\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Analytic Geometry in the Plane | Geometry Terms and Problems</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>As we saw when discussing the idea of a midpoint of a line segment in the plane, there are a lot of concepts that are defined geometrically and we now want to give an algebraic way of thinking about them as well. We'll need to review some geometry terms and formulas to make full use of this idea.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Points, Lines, and Angles</h3>
+    </header>
+      
+    <div class="w3-container">
+      <ul>
+        <li>A <strong><em>point</em></strong> is represented by a dot. It has a location (coordinates) but no area, length, width, or other properties. It is represented by an upper-case letter like \(P\), \(Q\), \(A\), \(B\), etc.</li>
+        <li>Any pair of points, say \(A\) and \(B\), determine a unique (straight) line.
+          <ul>
+            <li>A line is usually named by a lower-case letter like \(l\) or by the two points we know on the line with a double-arrow above them: \(\overleftrightarrow{AB}\).</li>
+            <li>All the points of the line between \(A\) and \(B\), inclusive, is called a <strong><em>line segment</em></strong>, and it is denoted by a bar over the point names: \(\overline{AB}\). The points \(A\) and \(B\) are called <strong><em>endpoints</em></strong> of the line segment.</li>
+            <li>All the points of the line on the same side of \(A\) as \(B\) is called a <strong><em>ray</em></strong> and is denoted by a single-arrow line over the point name: \(\overrightarrow{AB}\). The point \(A\) is called an endpoint of the ray.</li>
+            <li>The <strong><em>length</em></strong> of a line segment, also defined as the distance between the two points, is denoted by the pair of letters with nothing on top: \(AB\). Two line segments are geometrically identical, or <strong><em>congruent</em></strong>, when they have the same length.</li>
+            <li>A <strong><em>bisector</em></strong> of a line or an angle is a geometric object that divides the given line or angle into two congruent halves. We can bisect a line with its midpoint or a line through the midpoint. We can bisect an angle with a ray.</li>
+            <li>A set of points is said to be <strong><em>collinear</em></strong> of they are all on the same line.</li>
+          </ul>
+        </li>
+        <li>An <strong><em>angle</em></strong> is formed when two rays \(\overrightarrow{AB}\) and \(\overrightarrow{AC}\) share a common endpoint called the <strong><em>vertex</em></strong> of the angle. Such an angle is usually denoted by \(\angle BAC\) where the vertex is the middle letter of the three.</li>
+        <li>The measure (size) of an angle is usually expressed in units like <em>rotations</em>, <em>revolutions</em>, <em>degrees</em>, and <em>radians</em>. Two angles are congruent when they have the same measure.</li>
+        <li>An <strong><em>acute</em></strong> angle is an angle whose measure is between \(0^\circ\) and \(90^\circ\).</li>
+        <li>A <strong><em>right</em></strong> angle is an angle whose measure is exactly \(90^\circ.\)</li>
+        <li>An <strong><em>obtuse</em></strong> angle is an angle whose measure is between \(90^\circ\) and \(180^\circ\).</li>
+        <li><strong><em>Supplementary</em></strong> angles are a pair of angles whose measure sum to exactly \(180^\circ\).</li>
+        <li><strong><em>Complementary</em></strong> angles are a pair of angles whose measure sum to exactly \(90^\circ\).</li>
+        <li><a href="http://www.mathopenref.com/linearpair.html">Linear Pair</a>: If two angles are a linear pair, then they are supplementary. </li>
+        <li>A <a href="http://www.mathopenref.com/anglestraight.html">straight angle</a> has angle measure of \(180^\circ\).</li>
+        <li>Two lines are <strong><em>parallel</em></strong> if there is no point that is on both lines.</li>
+        <li>Two lines <strong><em>intersect</em></strong> if they have one and only one point in common.</li>
+        <li>Two lines are <strong><em>perpendicular</em></strong> if they intersect and the angles formed at the intersection are right angles. (Note: when at least one angle at an intersection point is a right angle, then all of the angles at the intersection point must be right angles.) </li>
+        <li>Transversal:
+          Given that a pair lines are intersected by a <a href="http://www.mathopenref.com/transversal.html">transversal</a>, then the following are true:
+          <ul>
+                <li><a href="http://www.mathopenref.com/anglesalternateinterior.html">Alternate interior angles are congruent if and only if the lines are parallel.</a></li>
+            <li><a href="http://www.mathopenref.com/anglesalternateexterior.html">Alternate exterior angles are congruent if and only if the lines are parallel. </a></li>
+            <li><a href="http://www.mathopenref.com/anglescorresponding.html">Corresponding angles are congruent if and only if the lines are parallel. </a></li>
+            <li><a href="http://www.mathopenref.com/anglestransinterior.html">Interior</a> and<a href="http://www.mathopenref.com/anglestransexterior.html"> exterior</a> angles of the transversal are supplementary if and only if the lines are parallel. </li>
+          </ul></li>
+
+      </ul>
+    </div>
+  </div>
+  
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Triangles</h3>
+    </header>
+      
+    <div class="w3-container">
+      <ul>
+        <li>A triangle is a plane figure whose boundary consists of three lines segments called <strong><em>sides</em></strong> and three non-collinear points called <strong><em>vertices</em></strong>. Each vertex is a common endpoint for a pair of sides and serves as a vertex for an interior angle using two sides.</li>
+        <li>The sum of measures of the three internal angles of a triangle is \(180^\circ.\)</li>
+        <li>An <strong><em>acute triangle</em></strong> is a triangle where all three interior angles are acute angles.</li>
+        <li>An <strong><em>obtuse triangle</em></strong> is a triangle where one interior angle is obtuse and the other two interior angles are acute.</li>
+        <li>A <strong><em>right triangle</em></strong> is a triangle where one interior angle is right and the other two interior angles are acute angles. The side with the longest side length in a right triangle is called the <strong><em>hypotenuse</em></strong> and the other two sides are called the <strong><em>legs</em></strong>. The hypotenuse is opposite the right angle and the legs are adjacent to the right angle.</li>
+        <li>A <strong><em>scalene triangle</em></strong> is a triangle no two sides have the same length.</li>
+        <li>An <strong><em>isosceles triangle</em></strong> is a triangle where at least two sides have the same length.</li>
+        <li>An <strong><em>equilateral triangle</em></strong> is a triangle where all three sides have the same length.</li>
+        <li><strong>Base Angles Theorem:</strong> If two sides of a triangle are the same length, then the angles opposite those sides have the same measure.</li>
+        <li><strong>Converse of the Base Angles Theorem:</strong> If two angles of a triangle have the same measure, then the sides opposite those angles have the same length.</li>
+        <li>In a triangle, the smallest-sized angle is across from the smallest-sized side, the middle-sized angle is across from the middle-sized side, and the largest-sized angle is across from the largest-sized side.</li>
+        <li>A <strong><em>median</em></strong> of a triangle is a line segment with the midpoint of a side as one endpoint and the third vertex of the triangle as its other endpoint.</li>
+        <li>An <strong><em>altitude</em></strong> of a triangle is a line segment that goes through one vertex of a triangle and is perpendicular to line that contains the opposite side.</li>
+        <li><strong>Pythagorean Theorem:</strong> if we have a right triangle whose hypotenuse has length \(c\) and whose two legs have lengths are \(a\) and \(b\), then \(a^2+b^2=c^2\).</li>
+        <li><strong>Converse of the Pythagorean Theorem:</strong> if we have a triangle whose sides have lengths \(a\), \(b\), and \(c\) and satisfy the equation \(a^2+b^2=c^2\), then the triangle is a right triangle such that \(c\) is the length of the hypotenuse and \(a\) and \(b\) are the lengths of the legs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Quadrilaterals</h3>
+    </header>
+      
+    <div class="w3-container">
+      <ul>
+        <li>A quadrilateral is a plane figure whose boundary consists of four non-collinear points \(A\), \(B\), \(C\), and \(D\), called <strong><em>vertices</em></strong> and four lines segments \(AB\), \(BC\), \(CD\), and \(DA\) called<strong><em>sides</em></strong>. Each vertex is a common endpoint for a pair of sides and serves as a vertex for an interior angle using two sides. The other two line segments among the four points, \(AC\) and \(BD\), are called the <strong><em>diagonals</em></strong>.</li>
+        <li>Definitions of Special Quadrilaterals
+          <ul>
+            <li>A <strong><em>trapezoid</em></strong> is a quadrilateral that has exactly one pair of parallel sides.</li>
+            <li>A <strong><em>parallelogram</em></strong> is a quadrilateral with two pairs of parallel sides.</li>
+            <li>A <strong><em>rectangle</em></strong> is a parallelogram that has at least one internal right angle. (Note: when one angle in a parallelogram is a right angle, then all angles in a parallelogram must be right angles.)</li>
+            <li>A <strong><em>rhombus</em></strong> is a parallelogram with four congruent sides.</li>
+            <li>A <strong><em>square</em></strong> is a parallelogram that is both a rectangle and a rhombus.</li>
+            <li>A <strong><em>kite</em></strong> is a quadrilateral whose sides can be divided into two pairs of adjacent congruent sides.</li>
+          </ul>
+        <li>Alternative Characterizations of Special Quadrilaterals
+          <ul>
+            <li>A quadrilateral is a <em>parallelogram</em> if and only if...
+              <ul>
+                <li>opposite sides area parallel (definition)</li>
+                <li>opposite sides are congruent</li>
+                <li>opposite angles are congruent</li>
+                <li>the diagonals bisect each other</li>
+                <li>one pair of sides are parallel and of equal length</li>
+                <li>adjacent angles are supplementary</li>
+              </ul>
+            </li>
+            <li>A quadrilateral is a <em>rectangle</em> if and only if...
+              <ul>
+                <li>it is a parallelogram with at least one right angle (definition)</li>
+                <li>it is a quadrilateral with four right angles</li>
+                <li>it is a quadrilateral with opposite sides congruent and diagonals congruent</li>
+                <li>it is a quadrilateral whose diagonals are equal in length and bisect each other</li>
+              </ul>
+            </li>
+            <li>A quadrilateral is a <em>rhombus</em> if and only if...
+              <ul>
+                <li>it is a parallelogram with four congruent sides (definition)</li>
+                <li>it is a quadrilateral with four congruent sides</li>
+                <li>it is a parallelogram whose diagonals are perpendicular</li>
+                <li>it is a parallelogram whose diagonals bisect an interior angle</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>The interior angles of a quadrilateral sum to \(360^\circ\).</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Strategies for Geometric Problems</h3>
+    </header>
+      
+    <div class="w3-container">
+      <ul>
+        <li><strong>Converse of the Pythagorean theorem</strong> : the Pythagorean theorem says that "if we have a right triangle whose hypotenuse has length \(c\) and whose legs have length \(a\) and \(b\), then \(a^2+b^2=c^2\). However, the converse is also true: "if we have a triangle whose side lengths satisfy the equation \(a^2+b^2=c^2\), then the (1) the triangle is a right triangle, (2) \(c\) is the length of the hypotenuse, and (3) \(a\) and \(b\) are the lengths of the legs. Thus if we have three points in the plane, we can tell if they are the vertices of a right triangle or not by testing the distances by using the Pythagorean theorem and its converse. This can also be used to determine if two lines are perpendicular or not.</li>
+        <li><strong>The Triangle Inequality</strong>: note that when we have three points, either they all fall on the same line (are collinear), or they form the vertices of a triangle, but not both. We can pair the three points up into three distinct pairs. Three points are the vertices of a triangle (instead of being collinear) if and only if the sum of the distances between the points in two of the pairs is larger than the distance between the points in the other pair. A consequence of this is that if the sum of the distances between the points in two of the pairs is exactly equal to the distance between the points of the third pair, then the three points do not form a triangle; rather, they must all lie on the same line (that is, are <em>colinear</em>). This is a useful way to determine if three points are colinear or not.</li>
+        <li><strong>Parallelograms</strong>: parallelograms are very useful geometric objects. A parallelogram is a quadrilateral where both pairs of opposite sides are parallel. One important theorem says that a quadrilateral is a parallelogram if and only if its opposite sides have the same length. Thus you can determine if a shape is a parallelogram or not just by finding side lengths.</li>
+        <li><strong>Rectangles</strong>: A rectangle is a parallelogram that has at least one right angle. We can tell if four points form a rectangle by (1) first checking that they form a parallelogram, and then (2) finding a right angle. There are several other alternative characterizations of rectangles (listed above) that we can use instead. Notice the one that gives us a way to check that does not require us to use angles at all: opposite sides are congruent (same length) and diagonals are congruent (same length).</li>
+        <li><strong>Rhombus</strong>: A rhombus is a parallelogram where all four sides are the same length. This is easy to determine using the distance formula.</li>
+        <li><strong>Square</strong>: A square is a quadrilateral that is both a rectangle and a rhombus. To prove that a shape is a square, we need to know that all four sides are the same length and there is at least one right angle. Alternatively, using the equivalences above, we could just check that all four sides have the same length and the diagonals have the same length.</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete problems 1-5 for Wednesday, January 31. Where appropriate, show work that justifies your answers for full credit.</p>
+      <p>Complete problems 6-8 for Friday, February 2. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Plot the points \((1,2)\) and \((4,6)\). Find a third point that makes a right triangle with these two given points as the endpoints of the hypotenuse. Verify that the distance between the two points is the same as the length of the hypotenuse of the right triangle you created.</li>
+        <li>Without using slopes or equations of lines, determine whether the points \((-2,3)\), \((0,1)\), and \((2,5)\) colinear or not. Explain how you know.</li>
+        <li>Without using slopes or equations of lines, determine whether the points \((1,7)\), \((0,3)\), and \((-2,-5)\) colinear or not. Explain how you know.</li>
+        <li>Are the points \((9,6)\), \((-5,4)\), and \((7,10)\) the vertices of a right triangle or not? Explain how you know.</li>    
+        <li>Are the points \((-2,1)\), \((-1,-5)\), and \((2,-3)\) the vertices of a right triangle or not? Explain how you know.</li>
+        <li>Show that \((1,1)\), \((4,1)\), \((3,-2)\), and \((0,-2)\) are the vertices of a parallelogram.</li>
+        <li>Show that \((1,2)\), \((4,7)\), \((-6,13)\) and \((-9,8)\) are the vertices of a rectangle.</li>
+        <li>Show that \((3,3)\), \((0,2)\), \(\left(\frac{9}{5},-\frac{3}{5}\right)\), and \(\left(\frac{24}{5},\frac{2}{5}\right)\) are the vertices of a rhombus.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: Equations of Rotation</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>Before we tackle the general 2nd power equation, we need a tool to deal with the \(xy\)-term. That tool is <em>rotation of axes</em>. In other words, rotation of one of our standard shapes will produce an \(xy\)-term in our equation. In this class, we'll talk about how to do the rotation but I will give you the angle that you will need to solve the problem. In the next class we'll see how to figure out the angle from a general-form equation that has an \(xy\)-term.</p>
+
+    <h3>Rotating a Shape</h3>
+  
+    <p>Say we have a nice ellipse like \(\frac{x^2}{4}+y^2=1\) (shown in purple below) and we want to rotate it \(30^\circ\) (shown in red below). What might the resulting equation look like?</p>
+  
+    <p><img class="w3-image" src="img/rotate1.png" /></p>
+  
+    <p>Let's use the variables \(x'\) and \(y'\) to represent the coordinates for the points of our ideal unrotated ellipse, measured using its major and minor axes. We can think about one of these special, simpler points \((x',y')\) as being in two places in the picture above. The first way uses the purple axes (major and minor axis for our unrotated ellipse, but these are also our regular \(x\) and \(y\) axes): we can go right \(x'\) units and up \(y'\) units along the purple axes. After we rotate, we can still go right \(x'\) units and up \(y'\) units, but we have to use the red major and minor axis lines to do so to get to the corresponding point after rotation. But we can also imagine the rotated point as having \((x,y)\) coordinates versus the purple axes. Thus the point labeled \((x,y)\) in the picture represents the complicated coordinates of our rotated point based on our standard \(x\) and \(y\)-axis, but it also represents the simple \((x',y')\) point measured using the red axes. We can get the coordinates of the \((x,y)\) point by rotating the coordinates of the \((x',y')\) point by an angle \(30^\circ\) about the origin.</p>
+  
+    <p>So how get the coordinates of the new point if we rotate an old point by an angle of \(30^\circ\)? That's a job for polar coordinates!!! Suppose our original point \((x',y')\) is converted to the polar coordinates \((r,\theta)\). Then to rotate \(30^\circ\), we just add \(30^\circ\) to \(\theta\). How simple is that!?!?!?</p>
+  
+    <p>So our new point has coordinates \((r,\theta+30^\circ)\). Now the hard part is converting back to rectangular. However, remember that we can convert from polar to rectangular using some basic trigonometry: \((r,\theta+30^\circ)\) is just \((r\cos(\theta+30^\circ),r\sin(\theta+30^\circ))\) in rectangular coordinates. We can use the cosine and sine sum identities to write this as \[(x,y)=(r(\cos\theta\cos 30^\circ-\sin\theta\sin 30^\circ),r(\sin\theta\cos 30^\circ+\cos\theta\sin 30^\circ)).\] Distributing, we get \[(x,y)=(r\cos\theta\cos 30^\circ-r\sin\theta\sin 30^\circ,r\sin\theta\cos 30^\circ+r\cos\theta\sin 30^\circ).\] But remember that \(x'=r\cos\theta\), \(y'=r\sin\theta\), \(\sin 30^\circ=1/2\) and \(\cos 30^\circ = \sqrt{3}/2\): \[(x,y)=\left(x'\cdot\frac{\sqrt{3}}{2}-y'\cdot\frac{1}{2},y'\cdot\frac{\sqrt{3}}{2}+x'\cdot\frac{1}{2}\right).\]</p>
+  
+    <p></p>
+  
+    <p>Now consider the equation \(7x^2-6\sqrt{3}xy+13y^2-16=0\). I claim that this equation is just our basic ellipse \(\frac{(x')^2}{4}+(y')^2 = 1\) after it has been rotated by \(30^\circ\). If that is true, then I should be able to replace \(x\) with \(x'\cdot\frac{\sqrt{3}}{2}-y'\cdot\frac{1}{2}\) and replace \(y\) with \(y'\cdot\frac{\sqrt{3}}{2}+x'\cdot\frac{1}{2}\) in \(7x^2-6\sqrt{3}xy+13y^2-16=0\), then we should get \(\frac{(x')^2}{4}+(y')^2 = 1\). Try it out and see what happens! It's a good amount of algebra work (we'll do it in class).</p>
+  
+    <p>In general, if we have a general equation that was rotated by an angle \(\alpha\), then by substituting \(x'\cos\alpha-y'\sin\alpha\) for \(x\) and substituting \(x'\sin\alpha+y'\cos\alpha\) for \(y\), we will get the simpler unrotated conic equation.</p>
+  
+    <div class="w3-card-4">
+      <header class="w3-container w3-dark-gray"><h3>Equations of Rotation</h3></header>
+      <div class="w3-container">
+          <p>To transform the rotated general equation expressed in the variables \(x\) and \(y\), rotated by an angle \(\alpha\), of a conic graph to its unrotated version in terms of \(x'\) and \(y'\), substitute using the following equations: \[x=x'\cos\alpha-y'\sin\alpha\] and \[y=x'\sin\alpha+y'\cos\alpha.\]</p>
+          <p>To transform an unrotated conic graph expressed in the variables \(x'\) and \(y'\) to its rotated form (rotated by an angle \(\alpha\)), substitute using the following equations: \[x'=x\cos\alpha+y\sin\alpha\] and \[y'=-x\sin\alpha+y\cos\alpha.\]</p></p>
+      </div>
+    </div>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, April 17. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Use the equations of rotation to find a simplified equation for the following equations with the given angle \(\alpha\). Sketch the graph of the resulting equation in the Cartesian coordinate system using its rotated axes.</li>
+          <ol type="a">
+            <li>\(xy=4; \alpha=45^\circ\)</li>
+            <li>\(x^2-2xy+y^2+x+y=0; \alpha=45^\circ\)</li>
+            <li>\(31x^2+10\sqrt{3}xy+21y^2-144=0; \alpha=30^\circ\)</li>
+            <li>\(8x^2+5xy-4y^2-4=0; \alpha=\tan^{-1}(\frac{1}{5})\)</li>
+          </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

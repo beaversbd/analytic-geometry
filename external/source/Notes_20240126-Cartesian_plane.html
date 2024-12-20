@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Analytic Geometry in the Plane | Fundamental Definitions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Coordinates in the Cartesian plane</h2>
+
+  <p>The <em>Cartesian coordinate system</em>, or <em>rectangular coordinate system</em> is a way of assigning a location to every point in the plane by using an ordered pair of real numbers, \((a,b)\), for each point. Just as with the one-dimensional case, we will call these numbers <strong><em>coordinates</em></strong>. This system is defined as follows:
+  
+    <ul>
+      <li>Take a line in the plane and coordinatize it. We will call this line the <strong><em>\(x\)-axis</em></strong>. If \(a\) is the coordinate of a point on this line, then its coordinates in the plane are \((a,0)\). We usually choose a horizontal line to be the \(x\)-axis and choose the positive coordinates to be on the right of the line, but this is not absolutely necessary.</li>
+      <li>The point \((0,0)\) on the \(x\)-axis is an important point that we name the <strong><em>origin</em></strong>.</li>
+      <li>The line perpendicular to the \(x\)-axis at the origin is called the <strong><em>\(y\)-axis</em></strong>. Coordinatize this line. If \(b\) is the coordinate of a point on this line, then its coordinates in the plane will be \((0,b)\). If the \(x\)-axis is horizontal, then the \(y\)-axis will be vertical. We usually choose the positive coordinates to be the upper part of the line.</li>
+      <li>To obtain the coordinates of a point \(P\) of the plane that is not on one of the axes, draw the line \(l\) parallel to the \(x\)-axis that contains \(P\) and the line \(m\) parallel to the \(y\)-axis that contains \(P\). The coordinates of \(P\) are \((a,b)\), where \(a\) is the coordinate of the point on the \(x\)-axis where \(m\) intersects, and \(b\) is the coordinate of the point on the \(y\)-axis where \(l\) intersects.</li>
+    </ul>
+
+  <p>The axes partition the plane into five types of points:
+    <ul>
+      <li><em>points on the axes</em>: these points have zero for one or both coordinates. These lines separate the rest of the points into four regions called <em>quadrants</em>.</li>
+      <li><em>Quadrant I</em>: these points have positive numbers for both coordinates. This is typically the top right region of the plane</li>
+      <li><em>Quadrant II</em>: these points have a negative \(x\)-coordinate and a positive \(y\)-coordinate. This is typically the top left region of the plane.</li>
+      <li><em>Quadrant III</em>: these points have negative numbers for both coordinates. This is typically the bottom left region of the plane.</li>
+      <li><em>Quadrant IV</em>: these points have a positive \(x\)-coordinate and a negative \(y\)-coordinate. This is typically the bottom right region of the plane.</li>
+    </ul>
+  </p>
+
+  <hr />
+
+  <h2>Distance between points</h2>
+
+  <p>On a coordinatized line, if we have two points with coordinates \(x\) and \(y\), then the distance between them is \(|x-y|\). We can use this and the Pythagorean theorem to create a distance formula for the Cartesian plane.</p>
+
+  <p>First, what if we have two points that are on the same vertical or horizontal line? If we have to points on the same vertical line, then their coordinates will look like \((a,y_1)\) and \((a,y_2)\). We can use what we already know to find the distance: \(|y_2-y_1|\). Similarly, if we have two points on the same horizontal line, then their coordinates will look like \((x_1,b)\) and \((x_2,b)\); the distance between the points will be \(|x_2-x_1|\).</p>
+
+    <p>What if we have two points \((x_1,y_1)\) and \((x_2,y_2)\) in the plane that are not on the same vertical or horizontal line? Then we can see that these two points together with either \((x_2,y_1)\) or \((x_1,y_2)\) form a right triangle. Importantly, \((x_1,y_1)\) and \((x_2,y_2)\) are the end vertices of the hypotenuse. Using what we just discussed, the length of the horizontal leg is \(|x_2-x_1|\) and the length of the vertical leg is \(|y_2-y_1|\). The Pythagorean theorem the tells us that the length of the hypotenuse (that is, the distance between our two points) is \(\sqrt{(|x_2-x_1|)^2+(|y_2-y_1|)^2}\). We may remove the absolute value bars to get an equivalent expression: \(\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\).</p>
+
+    <p>So do we need to memorize three different formulas depending on whether the two points are vertical, horizontal, or oblique? It turns out that the formula \(\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\) works in all three cases. If the points are on the same vertical line, then \(|x_2-x_1|\) is zero and the formula reduces to \(\sqrt{(y_2-y_1)^2}\), which is equivalent to \(|y_2-y_1|\). A similar thing happens for the case when the two points are on the same vertical line. Thus we can use the same formula in all cases. However, it is often convenient to remember how to find the distance between vertical points and between horizontal points without needing the full complexity of the distance formula.</p>
+
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-princess-blue">
+        <h4>Distance Between Points in the Cartesian Plane ("The Distance Formula")</h4>
+      </header>
+      <div class="w3-container"><p>The distance between any two points \((x_1,y_1)\) and \((x_2,y_2)\) in the Cartesian plane can be computed using the following formula:
+        \[\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\]
+      </p></div>
+    </div>
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-princess-blue">
+        <h4>Distance Between Vertical Points in the Cartesian Plane</h4>
+      </header>
+      <div class="w3-container"><p>The distance between any two points \((a,y_1)\) and \((a,y_2)\)  on the same vertical line in the Cartesian plane can be computed using the following formula:
+        \[|y_2-y_1|\]
+      </p></div>
+    </div>
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-princess-blue">
+        <h4>Distance Between Horizontal Points in the Cartesian Plane</h4>
+      </header>
+      <div class="w3-container"><p>The distance between any two points \((x_1,b)\) and \((x_2,b)\)  on the same horizontal line in the Cartesian plane can be computed using the following formula:
+        \[|x_2-x_1|\]
+      </p></div>
+    </div>
+
+  <hr />
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete the following homework problems for Monday, January 29. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Give the coordinates of three points that are in the second quadrant and plot them in the Cartesian plane.</li>
+        <li>Give the coordinates of three points that are in none of the four quadrants and plot them in the Cartesian plane.</li>
+        <li>Give the coordinates of both points on the vertical line that goes through \((2,3)\) that are at a distance of \(5\) units from \((2,3)\)</li>
+        <li>Find the exact distance (no rounding!) between the points \((2,1)\) and \((-2,-5)\).
+        <li>What are the value(s) of \(x\) such that the distance from the point \((x,2)\) to \((4,6)\) is \(5\)?</li>
+        <li>The midpoint of the line segment through \((-2,5)\) and \((4,-1)\) is \((1,2)\). Use the distance formula to verify that the distance from \((-2,5)\) to \((1,2)\) is the same as the distance from \((4, -1)\) to \((1,2)\).</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

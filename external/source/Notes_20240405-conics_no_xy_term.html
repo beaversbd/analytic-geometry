@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: Translation</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>The general 2nd degree in two variables is \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\) where at least one of \(A\), \(B\) and \(C\) is not zero. Our goal over the next week is to see how to graph all of these equations. The \(xy\)-term presents a particular problem, and we will deal with it later. For now, let us look at equations of the form \(Ax^2+Cy^2+Dx+Ey+F=0\), where at least one of \(A\) and \(C\) is not zero.</p>
+
+  <p>The key to analyzing these equations, to this, however is a special algebra technique that we tend to skip over in regular algebra classes: <em>completing the square</em>. Using completing the square is an <em>inverse</em>, or <em>reverse</em> process - it reverses something that is easier to do. Let's start there and build up our needed tools.</p>
+
+  <h3>Squaring Binomials an Factoring Perfect Square Trinomials</h3>
+
+  <p>When we want to square a binomial like \((x+2)\). Then we write \((x+2)(x+2)\) and use the distributive property. In this case, the process is often abbreviated as <em>FOIL</em> ("first," "outer," "inner," "last"), but let's look at it more carefully. The distributive property says that \((x+2)(x+2)=[(x+2)\cdot x] + [(x+2)\cdot 2]\). Distributing in the previous result, we get \([(x+2)\cdot x] + [(x+2)\cdot 2]=x^2+2x+2x+4\). Notice that \(x^2\) is the product of the [F]irst terms, the first \(2x\) is the product of the [O]uter terms, the second \(2x\) is the product of the [I]nner terms, and \(4\) is the product of the [L]ast terms of \((x+2)(x+2)\). Notice also that we get two terms of \(2x\); this is not a coincidence either. This happens because our two factors are both \((x+2)\). Thus we get the end result \(x^2+4x+4\), which is also called a <em>perfect square trinomial</em> because it is a <em>trinomial</em> (3 terms) that is the square of a binomial. In other words, we can factor \(x^2+4x+4\) back to \((x+2)^2\) if we need to.</p>
+
+  <p>In general, we can square a binomial \((x+a)\) to get \((x+a)(x+a)=x^2+ax+ax+a^2\), or \(x^2+2ax+a^2\). If we square \((x-a)\), we get \(x^2-2ax+a^2\). We can summarize this as \((x\pm a)^2=x^2\pm 2ax+a^2\). Notice that the constant term is always positive when we have a perfect square trinomial, but the linear term could be positive or negative, and that sign corresponds to the sign in \((x\pm a)\). Now let's think in reverse. </p>
+
+  <p>If we have a trinomial like \(x^2+6x+9\), how do we tell if it is a perfect square trinomial? If it is, then we can factor it to look like \((x\pm a)^2\) (where the plus or minus depends on the sign on the linear term in a given problem). Notice in the pattern: if it is a perfect square, then the coefficient of the \(x\) term is \(2a\) and the constant term is \(a^2\). So if half the coefficient of the constant term (ignoring signs) is equal to the square root the constant term, then we have a perfect square trinomial. In the example \(x^2+6x+9\) we see that half the six is the square root of nine. Thus this is a perfect square trinomial and our \(a\) is \(3\). Thus \(x^2+6x+9=(x+3)^2\), and similarly, \(x^2-6x+9=(x-3)^2\). You can always check to see if your factorization was correct by distributing your answer to see if it matches with the trinomial you started with.</p>
+
+  <h3>Using Completing the Square to Convert from General Form to Standard Form</h3>
+
+  <p>So what if you have a trinomial that isn't a perfect square? We can still use this idea to help us out in certain problems.</p>
+
+  <p>Consider the trinomial \(x^2+2x+5\). Now the constant term is positive, but half of two is not the same as the square root of 5, so this is not a perfect square trinomial. The perfect square trinomial with \(x^2+2x\) for its first two term would have to be \(x^2+2x+1\), but we were given \(x^2+2x+5\). If we still want to rewrite our expression so that we have square binomial as part of it, we could do this: \(x^2+2x+5 = x^2 + 2x + (1 + 4) = (x^2+2x+1)+4 = (x+1)^2+4\).</p>
+
+  <p>What if we had \(x^2+5x+3\)? The constant term is positive, but half of the linear coefficient is not the square root of the constant term, so this is not a perfect square trinomial. But we can do this: \(x^2+5x+3=x^2+5x+(\frac{25}{4}-\frac{25}{4})+3=(x^2+5x+\frac{25}{4})-\frac{25}{4}+3= (x+\frac{5}{2})^2-\frac{13}{4}\).</p>
+
+  <p>Why is this useful? Suppose we have a parabola \((x+\frac{5}{2})^2=(y+\frac{13}{4})\). If we distribute we get \(x^2+5x+\frac{25}{4}=y+\frac{13}{4}\), or equivalently, \(x^2+5x-y+3=0\). This general form \(x^2+5x-y+3=0\) is much simpler looking, but harder to graph. We want to be able to reverse the distribution steps and get back to the messier \((x+\frac{5}{2})^2=(y+\frac{13}{4})\) so we can immediately see the vertex \((-\frac{5}{2},-\frac{13}{4})\) and that \(c=\frac{1}{4}\). To go back to standard form, the steps we need are precisely the ones we used to transform \(x^2+5x+3\) into \((x+\frac{5}{2})^2-\frac{13}{4}\)!</p>
+
+  <p>Starting with \(x^2+5x-y+3=0\), move the \(y\) to the right hand side: \(x^2+5x+3=y\). Then to complete the square, we need the constant term \((\frac{5}{2})^2\) on the left hand side, so we will both add it and subtract it to maintain the truth of the equation: \(x^2+5x+(\frac{25}{4}-\frac{25}{4})+3=y\). Thus \((x^2+5x+\frac{25}{4})-\frac{25}{4}+3=y\), and so we get \((x+\frac{5}{2})^2-\frac{13}{4}=y\). Adding \(\frac{13}{4}\) to both sides, we finally get back to the standard form \((x+\frac{5}{2})^2=(y+\frac{13}{4})\) for our parabola.</p>
+
+  <p>In the preceding example, we worked with an equation for a parabola. Notice that only one variable is squared in a parabola. In ellipses, hyperbolas, and circles, both variables are squared, so <em>two</em> completing the square processes are involved to get from general to standard form.</p>
+
+  <h3>Degenerate Conic Sections</h3>
+
+  <p>Some general form 2nd degree equations do not represent a circle, ellipse, parabola, or hyperbola. Consider \(x^2+y^2=0\). This graph of this equation is not a circle, but rather is the single point \((0,0)\). Similarly, there are <em>no</em> points on the graph of \(x^2+y^2=-1\). The equation \(x^2-y^2=0\) looks like it would be a hyperbola, but because the right hand side is 0 instead of 1, that cannot be the case. We can use algebra to rewrite this as \(y^2=x^2\), and so we get the two lines \(y=x\) and \(y=-x\).</p>
+
+  <p>So watch out for 2nd degree equations that produce no graph, the graph of a single point, the graph of a single line, the graph of two intersecting lines, or the graph of two parallel lines.</p>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, April 8. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Convert the following general form equations to standard form. Determine which standard or degenerate conic is given by the equation.
+          <ol type="a">
+            <li>\(y^2-4x-2y+9=0\)</li>
+            <li>\(x^2-8x-8y+8=0\)</li>
+            <li>\(4x^2+y^2+24x-2y+21=0\)</li>
+            <li>\(x^2+9y^2-10x+36y+52=0\)</li>
+            <li>\(9x^2-4y^2+90x+32y+125=0\)</li>
+            <li>\(9x^2-16y^2+72x+96y+144=0\)</li>
+            <li>\(9x^2+4y^2-72x+16y+160=0\)</li>
+            <li>\(4x^2-y^2-40x+6y+91=0\)</li>
+            <li>\(4x^2-4x-4y-5=0\)</li>
+            <li>\(16x^2+36y^2+48x-180y+257=0\)</li>
+            <li>\(4x^2-16y^2+12x+16y+69=0\)</li>
+            <li>\(y^2-5y+6=0\)</li>
+            <li>\(25x^2+4y^2-150x+40y+350=0\)</li>
+            <li>\(4x^2-y^2-2x-y=0\)</li>
+          </ol>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

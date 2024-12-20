@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Analytic Geometry on the Line | Fundamental Definitions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p><strong><em>Analytic geometry</em></strong> is fundamentally about thinking of geometric shapes as collections of points, each of which has numerical coordinates in the space in which we are working, and then using the techniques of algebra to solve geometric problems.</p>
+
+  <p>The simplest space to be working in is when the world is just a single point. The next simplest is when all that exists is on a single line. The next simplest is when all that exists is in a single plane. The "size" of a space is measured by a counting number called the <strong><em>dimension</em></strong> which indicates how many fundamental "directions" are available in your space. On a line, you can only go back and forth (one fundamental direction with its backwards direction), but in a plane, you can go north and south or east and west (two fundamental direction) or a partial combination of two fundamental directions. "Space" is considered three-dimensional because we get the two fundamental directions of the plane, plus the up/down direction. Physicists and mathematicians also work in spaces of dimension higher than three for some problems.</p>
+
+  <p>In this class, we will focus on two-dimensional space - "the plane." Before we do that, it's useful to work in one-dimensional space - "the line" - first.</p>
+
+  <p>We model one-dimensional space as a single straight line as follows:
+
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-princess-blue">
+        <h3>Axioms for One-Dimensional Analytic Geometry ("The Line")</h3>
+      </header>
+        
+      <div class="w3-container">
+        <ol type="1">
+          <li>Each point on the line corresponds to a unique real number</li>
+          <li>The distance between points corresponding to the real numbers \(x\) and \(y\) is \(|x-y|.\)</li>
+          <li>The point corresponding to the real number \(x\) is to the left of the point corresponding to the real number \(y\) if and only if \(x&lt;y.\)</li>
+        </ol>
+      </div>
+    </div>
+
+  <p>The three axioms above tell us how to <em>coordinatize</em> a line to make a <em>number</em> line. Each point gets paired with exactly one number, and we want this pairing to behave in a way that doesn't conflict with our usual way of thinking about real numbers: moving one way gives us bigger numbers, moving the other way gives us smaller numbers, and the distance between two numbers is the difference of the larger minus the smaller (or the negative of the smaller minus the larger - hence the need for absolute value bars if we don't actually know which number is larger when they are represented by variables).</p>
+
+  <p>Once we assign points to the real numbers \(0\) and \(1,\) the assignment of points to all other numbers is set automatically.</p>
+
+  <p>When we have two points on a line, we often want to find the <em>midpoint</em> between the two points:
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Definition of Midpoint (on "The Line")</h3>
+    </header>
+    <div class="w3-container">
+      <p><strong>Geometric definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates \(x\) and \(y\) is a point \(z\) between \(x\) and \(y\) such that the distance from \(x\) to \(z\) is the same as the distance from \(y\) to \(z.\) Symbolically, the midpoint is the point with coordinate \(z\) such that \(|x-z|=|y-z|.\)</p>
+      <p><strong>Algebraic definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates \(x\) and \(y\) is a point \(z\) with coordinate \(\frac{x+y}{2}.\)</p>
+    </div>
+  </div>
+
+  <p>Notice that I have given two definitions of midpoint! One is from a geometric perspective: it talks about distances between certain points being equal. The other is given by an algebraic formula involving the coordinates for the two points. This is often the case in analytic geometry! We are bridging the world where we think of things geometrically with the world where we think of things algebraically.</p>
+
+  <p>How do we know for sure, without exception, that these two definitions are really describing the same point? That's where the idea of mathematical proof comes in. You probably encountered two-column geometric proof in high school. Here, we will start to use algebraic proof as well to make sure the geometry and algebra ideas really do correspond to one another...</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-bluestone">
+      <h4>Theorem: Given two points \(x\) and \(y\) on a coordinate line, there is a point with coordinate \(z\) between \(x\) and \(y\) such that \(|x-z|=|y-z|\) if and only if \(z=\frac{x+y}{2}.\)</h4>
+    </header>
+    <div class="w3-container">
+      <p>Proof: First, we must make sure that if there is a point \(z\) where \(|x-z|=|y-z|,\) then \(z\) is indeed the number we get from the formula \(\frac{x+y}{2}.\) Since the points corresponding to \(x\) and \(y\) are distinct, one of \(x\) and \(y\) must be greater than the other. Suppose \(x&lt; y.\) Since \(z\) is between \(x\) and \(y,\) we know that \(x&lt; z&lt; y.\) Let \(d\) be the distance between \(x\) and \(z\) (that is, let \(d=|x-z|\)) and between \(y\) and \(z\) (that is, let \(d=|y-z|\)), which we know to be equal. Then \(z=x+d\) and \(y=x+2d.\) Moreover, \(\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.\) A similar result occurs if we were to let \(y\) be less than \(x.\) Thus we have shown that <strong>if</strong> \(z\) is a point between the two points \(x\) and \(y\) with \(|x-z|=|y-z|,\) <strong>then</strong> \(z=\frac{x+y}{2}.\)</p>
+      <p>Next, we must make sure that if \(z=\frac{x+y}{2},\) then \(|x-z|=|y-z|.\) Hence,
+        \[\begin{align} 
+        |x-z| &=\left|x-\frac{x+y}{2}\right| \\
+              &=\left|x-\frac{x}{2}-\frac{y}{2}\right| \\
+              &=\left|\frac{x}{2}-\frac{y}{2}\right| \\
+              &=\left|\frac{y}{2}-\frac{x}{2}\right| \\
+              &=\left|y-\frac{y}{2}-\frac{x}{2}\right| \\
+              &=\left|y-\frac{y+x}{2}\right| \\
+              &=\left|y-\frac{x+y}{2}\right| \\
+              &=|y-z|.
+          \end{align}\]
+          
+      Thus we have shown that <strong>if </strong> \(z=\frac{x+y}{2},\) <strong>then</strong> the distance from \(x\) to \(z\) is the same as the distance from \(y\) to \(z.\)</p>
+      <p>We have checked both directions of this "if and only if" statement, so the statement is true. QED</p>
+    </div>
+  </div>
+
+  <p>Notice that we used property of absolute value that has not been mentioned yet: \(|x-y|=|y-x|.\) This is because of how absolute values work! If you compare \(5-2\) and \(2-5,\) the only difference is the negative sign (one is \(3\) and the other is \(-3\)). So when we take the absolute value, that negative sign gets "eaten" and the result is the same if we do \(|5-2|\) or if we do \(|2-5|.\) This is an example of a prerequisite property that should make sense to you, and if it doesn't, you should review it from outside materials or ask me or a tutor about it.</p>
+
+  <p>Now that we have the axioms and the definition of midpoint, let's apply them to some problems!</p>
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete the following homework problems for Wednesday, January 24. These should essentially be review from previous courses. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Draw a number line and label points with \(0,\) \(1,\) and three other points of your choosing.</li>
+        <li>Is the point on a number line corresponding to the real number \(\frac{1}{2}\) to the left of the point on the number line corresponding to the real number \(\frac{\pi}{6}\)? Explain why or why not.</li>
+        <li>Find the distance between the points associated with the real numbers \(8\) and \(-3.\)</li>
+        <li>What real numbers correspond to points that are a distance of \(3\) units from the point that corresponds to \(1\)?</li>
+        <li>Find the distance on a number line between the point whose coordinate is \(3\) and the point whose coordinate is \(-1.\)</li>
+        <li>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.
+          <ol type="a">
+            <li>\(|x|=2\)</li>
+            <li>\(|x-1|=3\)</li>
+            <li>\(|1+x|=2\)</li>
+            <li>\(3|2+x|+1=2\)</li>
+            <li>\(\left|\frac{x-1}{x+1}\right|=3\)</li>
+            <li>\(|x+3|+|x+4|=9\)</li>
+          </ol>
+        </li>
+        <li>Find the coordinate of the midpoint between the point with coordinate \(4\) and the point with coordinate \(7.\)</li>
+        <li>If the midpoint is \(\frac{1}{3}\) between a point with coordinate \(4\) and some other point, what is the coordinate of the other point?</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

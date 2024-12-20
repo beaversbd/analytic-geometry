@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Distance from a Point to a Line</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+<p>Our last geometric property to explore using equations of lines will be <em>the distance from a point to a line</em>.</p>
+
+<p>This distance from a point to a line is a bit tricky to define. There are infinitely many points on a line, so we have to choose which point to measure from. What is fixed, however, is the perpendicular distance between two parallel lines. So the distance from a point to a line is the same distance as the distance between our original line and the line that passes through our point of interest that is parallel to the original line.</p>
+
+<p>It turns out that the easiest form of a line to use here is a line in <em>general form</em> \(Ax+By+C=0;\) this is our first time for finding this form to be more useful than slope-intercept or intercept forms. Let's start with knowing the general form for our given line \(l_1:Ax+By+C=0\) and the coordinates of our point \(P_0(x_1,y_2)\)</p>
+
+<p>First, we note that the line \(l_2:Ax+By-(Ax_1+By_1)=0\) is parallel to \(l_1:Ax+By+C=0\) and goes through the point \(P(x_1,y_1)\). How do we know they are parallel? If we solve both for \(y\), we see that the slopes are both \(-\frac{A}{B}\). How do we know that \(P\) is on \(l_2\)? We can substitute \(x_1\) for \(x\) and \(y_1\) for \(y\) and the resulting equation is true.</p>
+
+<p>Next, we note that the line \(l_3:Bx-Ay=0\) is perpendicular to both \(l_1:Ax+By+C=0\) and \(l_2:Ax+By-(Ax_1+By_1)=0\). How do we know that \(Bx-Ay=0\) is perpendicular to \(l_1\) and \(l_2?\) The slope of \(l_1\) and \(l_2\) is \(-\frac{A}{B}\) and the slope of \(l_3\) is \(\frac{B}{A},\) and these two are opposite reciprocals.</p>
+
+<p>Let \(P\) be the intersection point of \(Bx-Ay=0\) with \(Ax+By+C=0\) and let \(Q\) be the intersection point of \(Bx-Ay=0\) with \(Ax+By-(Ax_1+By_1)=0\). Since the lines \(Ax+By+C=0\) and \(Ax+By-(Ax_1+By_1)=0\) are parallel, the distance between \(P\) and \(Q\) is the same as the distance between \((x_1,y_1)\) and \(Ax+By+C=0\).</p>
+
+  <p>Now we need coordinates for \(P\) and \(Q\). Using standard solution methods, we can calculate that \(P=(\frac{-AC}{A^2+B^2},\frac{-BC}{A^2+B^2})\) and \(Q=(\frac{A(Ax_1+By_1)}{A^2+B^2},\frac{B(Ax_1+By_1)}{A^2+B^2}).\)</p>
+
+  <p>Finally, we can use the distance formula to find the distance between \(P\) and \(Q\):
+    \[
+    \begin{align}
+       d & = \sqrt{\left(\frac{A(Ax_1+By_1)}{A^2+B^2}-\frac{-AC}{A^2+B^2}\right)^2+\left(\frac{B(Ax_1+By_1)}{A^2+B^2}-\frac{-BC}{A^2+B^2}\right)^2} \\
+         & = \sqrt{\frac{(Ax_1+By_1+C)^2}{A^2+B^2}} \\
+         & = \frac{|Ax_1+By_1+C|}{\sqrt{A^2+B^2}}. 
+    \end{align}
+    \]</p>
+
+  <p>This has simplified nicely! If you look closely at the formula, the numerator is what you get from plugging \(x_1\) and \(y_1\) in for \(x\) and \(y\) in our original line equation! Don't forget the absolute value bars - that's what makes our expression a nonnegative value!</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Distance from a Point to a Line</h3></header>
+    <div class="w3-container">
+        <p>Given a point \(P(x_1,y_1)\) and a line \(l\) given by \(Ax+By+C=0\), the distance \(d\) from \(P\) to \(l\) is \[d=\frac{|Ax_1+By_1+C|}{\sqrt{A^2+B^2}}.\]</p>
+
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, March 6. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the distance from the given point \(P\) to the given line \(l\):
+          <ol type="a">
+            <li>\(P=(1,2)\) and \(l\) is \(2x+3y+5=0\)</li>
+            <li>\(P=(1,1)\) and \(l\) is \(x-y=0\)</li>
+            <li>\(P=(3,-2)\) and \(l\) is \(4x-2y+8=0\)</li>
+            <li>\(P=(3,-2)\) and \(l\) is \(y=-\frac{1}{3}x+5\)</li>
+            <li>\(P=(-2,-5)\) and \(l\) is \(y=5\)</li>
+          </ol>
+        </li>
+        <li>Suppose \(P=(1,1)\) and \(l\) is \(y=-x+5\).
+          <ol type="a">
+            <li>Find an equation of the line \(m\) perpendicular to \(l\) that goes through \(P\).</li>
+            <li>Find the coordinates of the intersection point \(Q\) of line \(m\) with line \(l\).</li>
+            <li>Use the distance formula to find the distance from point \(P\) to point \(Q\).</li>
+            <li>Use the distance from a point to a line formula to find the distance from point \(P\) to line \(l\).</li>
+            <li>Compare your answers in parts c and d.</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

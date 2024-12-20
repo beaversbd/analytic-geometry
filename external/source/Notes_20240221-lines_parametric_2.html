@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: General Parametric Equation</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>In the work above, we made sure that our parametric equation(s) started with the point \(A\) at \(t=0\) and went through \(B\) at \(t=1\). But what if we wanted to pass through those two points at different times? For example, what if we wanted to pass through point \(A(x_A,y_A)\) at \(t=t_A\) and pass through point \(B(x_B,y_B)\) at \(t=t_B\) where we could choose any number for \(t_A\) and \(t_B\) and any points \(A\) and \(B\)?</p>
+
+  <p>Before we work in full generalization, let's work from a specific example. Suppose we want to go through point \(A=(2,1)\) at \(t=3\) and through point \(B=(8,3)\) at \(t=7\). We need two formulas, one for the \(x\)-coordinates and one for the \(y\)-coordinates. Let's work on the \(x\)-coordinate first. We want a formula where we plug in \(t=3\) and get \(x=2\) and then when we plug in \(t=7\) we get \(x=8\).</p>
+  
+  <p>This is effectively the same problem as considering the plane to be made from a \(t\)-axis and an \(x\)-axis and finding an equation \(x=f(t)\) for a line whose inputs are \(t\)-values and whose outputs are \(x\)-values. In particular the line would contain the \((t,x)\)-points \((3,2)\) and \((7,8).\) The idea here that would correspond to slope in our regular \(xy\)-plane is that of a <em>change in \(x\) with respect to time</em>, calculated \(\frac{x_B-x_A}{t_B-t_A}.\) Then we could use two-point form, which in the \(tx\)-plane would look like \(x-x_A=\frac{x_B-x_A}{t_B-t_A}(t-t_A).\)</p>
+
+  <p>The meaning of the slope ratio here is how far we move in the \(x\) direction between point \(A\) and point \(B\) compared to how much time passes, \(t_B-t_A.\) It's really the same idea as <em>speed</em>: the ratio of distance traveled to the time needed to travel that distance. Let's write the change in \(x\)-value from \(A\) to \(B\) as \(\Delta x\), which we calculate as \(x_B-x_A\), and let's write the change in \(t\)-value as \(\Delta t\), which we calculate as \(t_B-t_A.\) Then the slope \(\frac{x_B-x_A}{t_B-t_A}\) can be expressed as \(\frac{\Delta x}{\Delta t}.\)</p>
+
+  <p>Now let's take our two point form \(x-x_A=\frac{x_B-x_A}{t_B-t_A}(t-t_A)\) and make two tweaks: (1) write the slope as \(\frac{\Delta x}{\Delta t}\) and (2) move \(x_A\) to the right hand side. After doing that, we get the following: \(x=x_A+\frac{\Delta x}{\Delta t}(t-t_A)\); this is our general formula to find the \(x\)-coordinate of our point from its \(t\)-value.</p>
+  
+  <p>Let's go back to the problem at hand. We ant to plug in \(3\) for \(t\) to get the \(x\)-value of \(2\), and we want to plug in the \(t\)-value of \(7\) to get the \(x\)-value of \(8\). An equation that does that is \(x=2+\frac{8-2}{7-3}(t-3),\), which simplifies to \(x=2+\frac{6}{4}(t-3),\) or can be simplified even further to \(x=\frac{3}{2}t-\frac{5}{2}.\) Thus instead of having a rate of change of \(6\) \(x\)-units per \(1\) \(t\)-unit, we need a rate of change of \(6\) \(x\)-units per \(4\) \(t\)-units. When we use either of these simplified equations, notice that \(x=2\) at \(t=3\) but also that \(x=8\) when \(t=7\). This formula does what we wanted!</p>
+
+  <p>We can also adjust the \(y\) formula in a similar way using \(y=y_A+\frac{\Delta y}{\Delta t}(t-t_A).\): we get \(y=1+\frac{2}{4}(t-3).\). In this formula, we get \(y=1\) when \(t=3\) and \(y=3\) when \(t=7\).Thus in the equation \((x,y)=(2+\frac{6}{4}(t-3),1+\frac{2}{4}(t-3))\), we get a line that passes through \((2,1)\) at \(t=3\) and through \((8,3)\) at \(t=7\), just as we had wanted!</p>
+  
+  <p>Notice that this is very similar to the formula we had last time. The main difference is that the coefficient of the \((t-t_A)\) factor, the <em>rate of change</em>, involves both \(x\) or \(y\) and \(t\). That's because last time we used \(t=0\) and \(t=1\) for our points, making \(\Delta t\) just \(1.\) Now we can have our two points at any time we want!</p>
+
+  <p>Since we already have \(\Delta x\) (run) and \(\Delta y\) (rise), we can use them to find the slope: \(m=\frac{\Delta y}{\Delta x}\), and once we have the slope, we can find the inclination. We can also use what we already know about parametric equations to find any \(x\)-intercepts and any \(y\)-intercepts.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>General Parametric Equation for a Line</h4>
+    </header>
+    <div class="w3-container"><p>Suppose \(A(x_A,y_A)\) and \(B(x_B,y_B)\) are two points on a line and we want parametric equations of this line where we get the point \(A\) at \(t=t_A\) and the point \(B\) at \(t=t_B\). The <em>run</em> \(\Delta x\) from \(A\) to \(B\) is \(x_B-x_A\), the <em>rise</em> \(\Delta y\) from \(A\) to \(B\) is \(y_B-y_A\), and the <em>time difference</em> \(\Delta t\) is \(t_B-t_A\).</p>
+    <p>We can express the line using the parameter \(t\) as follows:\[(x,y)=\left(x_A+\frac{\Delta x}{\Delta t}(t-t_A),y_A+\frac{\Delta y}{\Delta t}(t-t_A)\right).\]
+    </p>
+    <p>We can also write this using the pair of equations 
+      \[\begin{cases} x=x_A+\frac{\Delta x}{\Delta t}(t-t_A) \\ y=y_A+\frac{\Delta y}{\Delta t}(t-t_A) \end{cases}.\]</p>
+    
+    <p>
+      <ul>
+        <li>The slope of this line (if it exists) is \(m=\frac{\Delta y}{\Delta x}.\)</li>
+        <li>The inclination \(\theta\) satisfies the equation \(\tan\theta=\frac{\Delta y}{\Delta x}\).</li>
+        <li>We may find the \(x\)-intercept and \(y\)-intercept (if they exist) using standard parametric methods (set the \(x\) or \(y\) formula equal to zero, solve for the relevant \(t\)-value, and then substitute back into the other equation to get the other coordinate).</li>
+      </ul>
+    </p>
+    </div>
+  </div>
+
+  <p><strong><em>With our general parametric equation for lines, we can make our lines go through whatever point we want at whatever time we want, so long as we move through our line at a constant speed.</em></strong></p>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, February 23. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Give parametric equation(s) for the line which satisfies the given conditions. Simplify if you wish, but it is not necessary.
+          <ol type="a">
+            <li>Goes through the point \((1,1)\) at \(t=1\) and the point \((3,5)\) at \(t=5\).</li>
+            <li>Goes through the point \((1,1)\) at \(t=-3\) and the point \((3,5)\) at \(t=0\).</li>
+            <li>Goes through the point \((-1,2)\) at \(t=3\) and the point \((3,-1)\) at \(t=10\).</li>
+            <li>Goes through the point \((1,1)\) at \(t=-2\) and the point \((1,5)\) at \(t=2\).</li>
+            <li>Goes through the point \((1,1)\) at \(t=0\) and the point \((5,1)\) at \(t=8\).</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

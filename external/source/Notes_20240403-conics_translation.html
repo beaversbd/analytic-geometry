@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: Translation</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>So far we have centered all of our conic sections at \((0,0)\), but we don't want that to always be the case. We want to be able to have conic sections that are shifted away from the origin.</p>
+
+  <p>As a simple example, suppose we wanted to take the unit circle \(x^2+y^2=1\) and shift all the points one unit to the right. The point \((1,0)\) moves to \((2,0)\), the point \((-1,0)\) moves to \((0,0)\), the point \((0,1)\). In this scenario, a point \((x',y')\) is on the graph of the unit circle \((x')^2+(y')^2=1\) if and only if the point \((x'+1,y')=(x,y)\) is on the shifted graph. Thus \(y'=y\) and \(x-1=x'\). As a consequence, we get the equation \((x-1)^2+y^2=1\). So the point \((2,0)\) satisfies \((x-1)^2+y^2=1\), and it corresponds to the point \((1,0)\) on the unit circle \((x')^2+(y')^2=1\). In other words, to get a unit circle point from a shifted point, all we need do is subtract one from the \(x\)-coordinate of the point; this is what gives us the shifted equation \((x-1)^2+y^2=1\).</p>
+
+  <p><img src="img/shifted_circle.png" class="w3-image" /></p>
+
+  <p>A similar process allows us to shift in a vertical direction: replacing \(y\) in an equation by \(y-2\) shifts the points up two units. Thus the equation for the circle obtained by shifting the unit circle up \(2\) units is \(x^2+(y-2)^2=r^2\).</p>
+
+  <p><img src="img/shifted_circle2.png" class="w3-image" /></p>
+
+  <p>We can combine the shifts (right one and up two) to get yet another equation, \((x-1)^2+(y-2)^2=1\).</p>
+
+  <p><img src="img/shifted_circle3.png" class="w3-image" /></p>
+
+  <p>In general, we can shift the graph of an equation by \(h\) units right (left if \(h\) is negative) and \(k\) units up (down if \(k\) is negative) by replacing \(x\) with \(x-h\) and \(y\) by \(y-k\) in the equation.</p>
+
+  <p>For circles, shifting does not affect the radius, but it does move the center to \((h,k)\):</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Circle Centered at \((h,k)\)</h3></header>
+    <div class="w3-container">
+        <p>The standard form equation for a circle centered at \((h,k)\) is \[(x-h)^2+(y-k)^2=r^2.\]</p>
+        <p><strong>Key information:</strong>
+        <ul>
+          <li>center: \((h,k)\)</li>
+          <li>radius: \(r\)</li>
+        </ul></p>
+    </div>
+  </div>
+
+  <p>Let's see how shifting affects the key information of the rest of our conic sections.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for an Ellipse with Center \((h,k)\) and Horizontal Major Axis</h3></header>
+    <div class="w3-container">
+        <p>The standard form equation for an ellipse with center \((h,k)\) and horizontal major axis is \[\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(a^2=b^2+c^2\).</p>
+        <p><strong>Key information:</strong>
+          <ul>
+            <li>center: \((h,k)\)</li>
+            <li>vertices: \((h\pm a,k)\)</li>
+            <li>covertices: \((h,k\pm b)\)</li>
+            <li>foci: \((h\pm c,k)\)</li>
+            <li>major axis: \(y=k\)</li>
+            <li>minor axis: \(x=h\)</li>
+          </ul>
+        </p>
+    </div>
+  </div>
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for an Ellipse with Center \((h,k)\) and Vertical Major Axis</h3></header>
+    <div class="w3-container">
+        <p>The standard form equation for an ellipse with center \((h,k)\) and vertical major axis is \[\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(a^2=b^2+c^2\).</p>
+        <p><strong>Key information:</strong>
+          <ul>
+            <li>center: \((h,k)\)</li>
+            <li>vertices: \((h,k\pm a)\)</li>
+            <li>covertices: \((h\pm b,k)\)</li>
+            <li>foci: \((h,k\pm c)\)</li>
+            <li>major axis: \(x=h\)</li>
+            <li>minor axis: \(y=k\)</li>
+          </ul>
+        </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Parabola with Vertex \((h,k)\) Opening Upward</h3></header>
+    <div class="w3-container">
+        <p>The standard form equation for a parabola vertex \((h,k)\) opening upward is \[(x-h)^2=4c(y-k).\]</p>
+        <p><strong>Key information:</strong>
+          <ul>
+            <li>vertex: \((h,k)\)</li>
+            <li>focus: \((h,k+c)\)</li>
+            <li>directrix: \(y=k-c\)</li>
+            <li>axis of symmetry: \(x=h\)</li>
+          </ul></p>
+    </div>
+  </div>
+
+  <div class="w3-card-4">
+   <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Parabola with Vertex \((h,k)\) Opening Downward</h3></header>
+   <div class="w3-container">
+    <p>The standard form equation for a parabola vertex \((h,k)\) opening downward is \[(x-h)^2=-4c(y-k).\]</p>
+    <p><strong>Key information:</strong>
+      <ul>
+        <li>vertex: \((h,k)\)</li>
+        <li>focus: \((h,k-c)\)</li>
+        <li>directrix: \(y=k+c\)</li>
+        <li>axis of symmetry: \(x=h\)</li>
+      </ul></p>
+   </div>
+ </div>
+
+ <div class="w3-card-4">
+   <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Parabola with Vertex \((h,k)\) Opening Rightward</h3></header>
+   <div class="w3-container">
+    <p>The standard form equation for a parabola vertex \((h,k)\) opening rightward is \[(y-k)^2=4c(x-h).\]</p>
+    <p><strong>Key information:</strong>
+      <ul>
+        <li>vertex: \((h,k)\)</li>
+        <li>focus: \((h+c,k)\)</li>
+        <li>directrix: \(x=h-c\)</li>
+        <li>axis of symmetry: \(y=k\)</li>
+      </ul></p>
+   </div>
+ </div>
+
+ <div class="w3-card-4">
+   <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Parabola with Vertex \((h,k)\) Opening Leftward</h3></header>
+   <div class="w3-container">
+    <p>The standard form equation for a parabola vertex \((h,k)\) opening leftward is \[(y-k)^2=-4c(x-h).\]</p>
+    <p><strong>Key information:</strong>
+      <ul>
+        <li>vertex: \((h,k)\)</li>
+        <li>focus: \((h-c,k)\)</li>
+        <li>directrix: \(x=h+c\)</li>
+        <li>axis of symmetry: \(y=k\)</li>
+      </ul></p>
+   </div>
+ </div>
+
+ <div class="w3-card-4">
+  <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Hyperbola with Center \((h,k)\) and Horizontal Transverse Axis</h3></header>
+  <div class="w3-container">
+      <p>The standard form equation for a hyperbola with vertex \((h,k)\) and horizontal transverse axis is \[\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(c^2=a^2+b^2\).</p>
+      <p><strong>Key information:</strong>
+        <ul>
+          <li>center: \((h,k)\)</li>
+          <li>vertices: \((h\pm a,k)\)</li>
+          <li>foci: \((h\pm c,k)\)</li>
+          <li>transverse axis: \(y=k\)</li>
+          <li>conjugate axis: \(x=h\)</li>
+          <li>asymptotes: \(y-k=\pm\frac{b}{a}(x-h)\)</li>
+        </ul>
+      </p>
+  </div>
+</div>
+
+<div class="w3-card-4">
+  <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Hyperbola with Center \((h,k)\) and Vertical Transverse Axis</h3></header>
+  <div class="w3-container">
+    <p>The standard form equation for a hyperbola with vertex \((h,k)\) and vertical transverse axis is \[\frac{(y-k)^2}{a^2}-\frac{(x-h)^2}{b^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(c^2=a^2+b^2\).</p>
+    <p><strong>Key information:</strong>
+      <ul>
+        <li>center: \((h,k)\)</li>
+        <li>vertices: \((h,k\pm a)\)</li>
+        <li>foci: \((h,k\pm c)\)</li>
+        <li>transverse axis: \(x=h\)</li>
+        <li>conjugate axis: \(y=k\)</li>
+        <li>asymptotes: \(y-k=\pm\frac{a}{b}(x-h)\)</li>
+      </ul>
+    </p>
+  </div>
+</div>
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, April 5. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Graph the following shifted conic sections and identify the key information for each.
+          <ol type="a">
+            <li>\((x-2)^2+(y-3)^2=9\)</li>
+            <li>\((x+2)^2+(y-3)^2=16\)</li>
+            <li>\(x^2+(y+4)^2=16\)</li>
+            <li>\((x-2)^2=12(y-3)\)</li>
+            <li>\((x+2)^2=-4(y-3)\)</li>
+            <li>\((y-1)^2=-6x\)</li>
+            <li>\(\frac{(x-1)^2}{9}+\frac{(y-2)^2}{16}=1\)</li>
+            <li>\(\frac{(x+1)^2}{16}-\frac{y^2}{9}=1\)</li>
+            <li>\(\frac{(y-3)^2}{9}+\frac{x^2}{16}=1\)</li>
+            <li>\(\frac{(y+5)^2}{16}-\frac{(x+3)^2}{9}=1\)</li>
+            <li>\(\frac{(x-3)^2}{5}+\frac{(y+1)^2}{7}=1\)</li>
+          </ol>
+        </li>
+        <li>Give standard form equations for conics that satisfy the given information:
+          <ol type="a">
+            <li>a circle that has a diameter whose endpoints are \((3,4)\) and \((5,4)\)</li>
+            <li>a parabola with focus \((3,5)\) and directrix \(x=-1\)</li>
+            <li>an ellipse with vertices \((-1,8)\) and \((-1,-2)\) which contains the point \((1,0)\)</li>
+            <li>a hyperbola with vertices \((4,1)\) and \((0,1)\) and focus \((6,1)\)</li>
+            <li>a hyperbola with vertex \((6,-1)\) and asymptotes \(3x-2y-6\) and \(3x+2y-2=0\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Conics: Hyperbolas</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+   <h3>Hyperbolas</h3>
+ 
+   <p>The final conic sections we will consider are the <em>hyperbolas</em>. It is defined using a tweak on the the definition for ellipses. With ellipses, the sum of the distances from a point on the ellipse to the two foci is a constant \(2a\). For hyperbolas, we will have two foci, but a point will be on the hyperbola if the <em>(postive) difference</em> of the distances from the point to the foci is a constant \(2a\).</p>
+ 
+   <p>The end result is a shape divided into two <em>branches</em>, each of which contains a focus.</p>
+ 
+   <p><img src="./img/hyperbola.png" class="w3-image" /></p>
+ 
+   <p>We can use a similar derivation as with ellipses. Suppose the foci are at \((c,0)\) and \((-c,0)\), and that the constant difference of the distances is \(2a.\) Then,
+    \[
+    \begin{align}
+       \sqrt{(x-c)^2+y^2} - \sqrt{(x+c)^2+y^2} & = \pm 2a \\
+       \sqrt{(x-c)^2+y^2} & = \sqrt{(x+c)^2+y^2} \pm 2a \\
+       x^2-2cx+c^2+y^2 & = x^2+2cx+c^2+y^2 \pm 4a\sqrt{(x+c)^2+y^2}+4a^2 \\
+       \mp 4a\sqrt{(x+c)^2+y^2} & = 4a^2+4cx \\
+       \mp \sqrt{(x+c)^2+y^2} & = a+\frac{cx}{a} \\
+       x^2+2cx+c^2+y^2 & = a^2+2cx+\frac{c^2x^2}{a^2} \\
+       \frac{c^2-a^2}{a^2}x^2-y^2 & = c^2-a^2 \\
+       \frac{x^2}{a^2}-\frac{y^2}{c^2-a^2} & = 1.
+    \end{align}
+    \]</p>
+   </p>
+ 
+ <p>Finally, let \(b^2=c^2-a^2\) (we'll see how this relates to the graph in a little while)  to get \[\frac{x^2}{a^2}-\frac{y^2}{b^2}=1.\]</p>
+ 
+ <p>As with an ellipse, the points \((a,0)\) and \((-a,0)\) satisfy the equation. Thus, if we want a true hyperbola, \(c\) needs to be larger than \(a\). Thus \(c^2&gt;a^2\),and so \(c^2-a^2\) is positive. Thus \(b^2\) must also be positive. Since we defined \(b^2\) as \(c^2-a^2\), we can rearrange the equation \(c^2-a^2=b^2\) to get \(c^2=a^2+b^2\).</p>
+ 
+ <p>Now that we have an equation, let's review the key points on a hyperbola:</p>
+ 
+ <p><img src="./img/hyperbola2.png" class="w3-image"></p>
+ 
+ <p>We already have seen the <em>foci</em> \((c,0)\) and \((-c,0)\). We also have the points \((a,0)\) and \((-a,0)\) where the hyperbola crosses the \(x\)-axis; we call these points the <strong><em>vertices</em></strong> of the hyperbola. The \(x\)-axis, as the line that contains the vertices and foci, is called the <strong><em>transverse axis</em></strong> of the hyperbola. The <strong><em>center</em></strong> of the hyperbola (in this case, \((0,0)\)) is the midpoint between the foci on the transverse axis.</p>
+ 
+ <p>The \(y\)-axis, being perpendicular to the transverse axis, is called the <strong><em>conjugate axis</em></strong>. The center is also the point of intersection of the transverse axis with the conjugate axis.</p>
+ 
+ <p>For extremely large values of \(x\) and \(y\), the terms \(\frac{x^2}{a^2}\) and \(\frac{y^2}{b^2}\) are significantly larger than \(1\), so much so, in fact, that they are comparatively equal: \(\frac{x^2}{a^2}\approx\frac{y^2}{b^2}.\) Thus the further away from the origin we go, the closer the hyperbola begins to resemble the lines \(y=\frac{b}{a}x\) and \(y=\frac{b}{a}x\). We say that these two lines are the <strong><em>asymptotes</em></strong> of the hyperbola (dotted lines in the graph above).</p>
+ 
+ <p>To summarize, the important points and lines of a hyperbola are the following:
+   <ul>
+     <li>foci</li>
+     <li>transverse axis</li>
+     <li>center</li>
+     <li>vertices</li>
+     <li>conjugate axis</li>
+     <li>asymptotes</li>
+   </ul>
+ </p>
+ 
+ <p>Now we can summarize all this information:</p>
+ 
+ <div class="w3-card-4">
+   <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Hyperbola with Foci \((\pm c,0)\) on the \(x\)-axis</h3></header>
+   <div class="w3-container">
+       <p>The standard form equation for a hyperbola with foci \((\pm c,0)\) on the \(x\)-axis is \[\frac{x^2}{a^2}-\frac{y^2}{b^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(c^2=a^2+b^2\).</p>
+       <p><strong>Key information:</strong>
+         <ul>
+           <li>foci: \((\pm c,0)\)</li>
+           <li>transverse axis: \(y=0\)</li>
+           <li>center: \((0,0)\)</li>
+           <li>vertices: \((\pm a,0)\)</li>
+           <li>conjugate axis: \(x=0\)</li>
+           <li>asymptotes: \(y=\pm\frac{b}{a}x\)</li>
+         </ul>
+       </p>
+   </div>
+ </div>
+ 
+ <p>What if we had started with the foci on the \(y\)-axis instead? Then everything we just did still holds, except that we interchange the roles of \(x\)- and \(y\)-coordinates:</p>
+ 
+ <div class="w3-card-4">
+   <header class="w3-container w3-dark-gray"><h3>Standard Form Equation for a Hyperbola with Foci \((0,\pm c)\) on the \(y\)-axis</h3></header>
+   <div class="w3-container">
+       <p>The standard form equation for a hyperbola with foci \((0,\pm c)\) on the \(y\)-axis is \[\frac{y^2}{a^2}-\frac{x^2}{b^2}=1,\] where \(a\), \(b\), and \(c\) are positive numbers and \(c^2=a^2+b^2\).</p>
+       <p><strong>Key information:</strong>
+         <ul>
+           <li>foci: \((0,\pm c)\)</li>
+           <li>transverse axis: \(x=0\)</li>
+           <li>center: \((0,0)\)</li>
+           <li>vertices: \((0,\pm a)\)</li>
+           <li>conjugate axis: \(y=0\)</li>
+           <li>asymptotes: \(y=\pm\frac{a}{b}x\)</li>
+         </ul>
+       </p>
+   </div>
+ </div>
+ 
+ <p>The key to distinguishing between a "horizontal" hyperbola and a "vertical" hyperbola is which term is negative. As opposed to an ellipse where \(a^2\) is the larger denominator, in a hyperbola \(a^2\) is the denominator of the positive term. That is, \(a^2\) is always the denominator of the positive term, \(b^2\) is the denominator of the negative term, and \(c^2\) can be found from these by using the equation \(c^2=a^2+b^2\).</p>
+ 
+ <p>Sometimes a hyperbola is not given in standard form, and you will need to use algebra and manipulate the equation until it is in standard form before you can analyze and create a graph.</p>
+
+<hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Wednesday, April 3. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Graph the following hyperbolas. Identify all six pieces of key information for each.
+         <ol type="a">
+           <li>\(\frac{x^2}{9}-\frac{y^2}{16}=1\)</li>
+           <li>\(\frac{x^2}{16}-\frac{y^2}{9}=1\)</li>
+           <li>\(\frac{y^2}{9}-\frac{x^2}{16}=1\)</li>
+           <li>\(\frac{y^2}{16}-\frac{x^2}{9}=1\)</li>
+           <li>\(\frac{x^2}{5}-\frac{y^2}{7}=1\)</li>
+           <li>\(9x^2-16y^2-144=0\)</li>
+           <li>\(25y^2-9x^2-225=0\)</li>
+           <li>\(x^2-4y^2-4=0\)</li>
+           <li>\(\frac{y^2}{3}-2x^2-6=0\)</li>
+         </ol>
+       </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

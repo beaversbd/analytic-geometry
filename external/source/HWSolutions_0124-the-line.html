@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0124 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0124)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete the following homework problems for Wednesday, January 24. These should essentially be 
+      <ol type="1">
+        <li>Here is a number line with \(0\) and \(1\), and I chose the points \(2\), \(\pi\), and \(-e\):<img src="img/HW20240122_01.png" class="w3-image"/></li>
+        <li>The point corresponding to \(\frac{1}{2}\) is to the left of the point corresponding to \(\frac{\pi}{6}\) because \(\frac{1}{2}\lt\frac{\pi}{6}\). It's not obvious just looking at these two numbers, so looking at their decimal representations should help: we have \(0.5\) for \(\frac{1}{2}\) and approximately \(0.523598\) for \(\frac{\pi}{6}\).</li>
+        <li>The distance is \(11\). Here's the work: \(|8-(-3)|=|11|=11\).</li>
+        <li>We know that the distance is \(3\) between our unknown points \(x\) and our known point \(1\). Thus \(|x-1|=3\). Then \(x-1=3\) or \(x-1=-3\). Thus \(x=4\) or \(x=-2\). We can also do this by drawing a number line and finding the two points at a distance \(3\) to the left and right of \(1\).</li>
+        <li>The distance on a number line between the point whose coordinate is \(3\) and the point whose coordinate is \(-1\) is \(4\). Here's the work: \(|3-(-1)|=|4|=4\).</li>
+        <li>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.
+          <ol type="a">
+            <li>\(|x|=2\) has two solutions: \(x=2\) and \(x=-2\). Here's the graph: <img src="img/HW20240122_02.png" class="w3-image"/> </li>
+            <li>\(|x-1|=3\) is true if and only if \(x-1=3\) or \(x-1=-3\). Thus \(x=4\) or \(x=-2\). Here's the graph: <img src="img/HW20240122_03.png" class="w3-image"/></li>
+            <li>\(|1+x|=2\) is true if and only if \(1+x=2\) or \(1+x=-2\). Thus \(x=1\) or \(x=-3\). Here's the graph: <img src="img/HW20240122_04.png" class="w3-image"/></li>
+            <li>\(3|2+x|+1=2\) is true if and only if \(|2+x|=\frac{1}{3}\), which is true if and only if \(2+x=\frac{1}{3}\) or \(2+x=-\frac{1}{3}\). Thus \(x=-\frac{5}{3}\) or \(x=-\frac{7}{3}\). Here's the graph: <img src="img/HW20240122_05.png" class="w3-image"/></li>
+            <li>\(\left|\frac{x-1}{x+1}\right|=3\) is true if and only if \(\frac{x-1}{x+1}=3\) or \(\frac{x-1}{x+1}=-3\). First, 
+            \[\begin{align} 
+              \frac{x-1}{x+1}&=3 \\
+              (x-1)&=3(x+1) \\
+              x-1&=3x+3 \\ 
+              -4&=2x\\
+              x&=-2.
+            \end{align}\] Second,
+            \[\begin{align} 
+            \frac{x-1}{x+1}&=-3 \\
+            (x-1)&=-3(x+1) \\
+            x-1&=-3x-3 \\ 
+            4x&=-2\\
+            x&=-\frac{1}{2}.
+            \end{align}\] Here's the graph: <img src="img/HW20240122_06.png" class="w3-image"/></li>
+            <li> \[\begin{align} 
+              |x+3|+|x+4|&=9 \\
+              |x+3|&=9-|x+4|.
+            \end{align}\] Now \(x+3=9-|x+4|\) or \(x+3=-(9+|x+4|)\). First,
+            \[\begin{align} 
+            x+3&=9-|x+4| \\
+            |x+4|&=6-x.
+            \end{align}\] So we get two sub-cases: \(x+4=6-x\) and \(x+4=-(6-x)\). In the first sub-case, we get \(2x=2\), so \(x=1\). The second sub-case has no solution. Now back to \(x+3=-(9+|x+4|)\):
+            \[\begin{align} 
+            x+3&=-(9-|x+4|) \\
+            x+3&=-9+|x+4|\\
+            |x+4|&=x+12.
+            \end{align}\]
+            So we get two sub-cases: \(x+4=x+12\) and \(x+4=-(x+12)\). The first sub-case has no solution. In the second sub-case, we get \(2x=-16\), so \(x=-8\). So in the end, we have two solutions: \(x=1\) and \(x=-8\). Here's the graph: <img src="img/HW20240122_07.png" class="w3-image"/></li>
+          </ol>
+        </li>
+        <li>The coordinate of the midpoint between the point with coordinate \(4\) and the point with coordinate \(7\) is \(\frac{11}{2}\) or \(5.5\). Here's the work: \(\frac{4+7}{2}=\frac{11}{2}\).</li>
+        <li>The midpoint is \(\frac{1}{3}\) between a point with coordinate \(4\) and some other point \(x\). Thus we know that \(\frac{4+x}{2}=\frac{1}{3}\). Let's solve for \(x\). Multiplying both sides by 2, we get \(4+x=\frac{2}{3}\). Subtracting \(4\) from both sides, we get \(x=-\frac{10}{3}\), which is the answer.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

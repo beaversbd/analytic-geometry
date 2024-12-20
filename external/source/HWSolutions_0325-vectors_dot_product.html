@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Homework 0325 Solutions</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework (due 0325)</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, March 25. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Compute the following:
+          <ol type="a">
+            <li><p>\(\langle 2,3\rangle\cdot\langle -1,4\rangle=(2)(-1)+(3)(4)=10.\)</p></li>
+            <li><p>\(\langle 0,0\rangle\cdot\langle -1,4\rangle=(0)(-1)+(0)(4)=0.\)</p></li>
+            <li><p>\(\langle 2,3\rangle\cdot(\langle -1,4\rangle+\langle -2,-2\rangle)=\langle 2,3\rangle\cdot\langle -3,2\rangle=(2)(-3)+(3)(2)=0\)</p></li>
+            <li><p>\((3\langle 2,3\rangle)\cdot\langle -1,4\rangle=\langle 6,9\rangle\cdot\langle -1,4\rangle=(6)(-1)+(9)(4)=30.\)</p></li>
+          </ol>
+        </li>
+        <li>Let \(\overrightarrow{v}=\langle 1,-2\rangle\) and \(\overrightarrow{u}=\langle -4,5\rangle\). Compute the following:
+          <ol type="a">
+            <li><p>\(\overrightarrow{v}\cdot\overrightarrow{u}=(1)(-4)+(-2)(5)=-14.\)</p></li>
+            <li><p>\(0\overrightarrow{v}=0\cdot\langle 1,-2\rangle=\langle 0,0\rangle=\overrightarrow{0}.\)</p></li>
+            <li><p>\(\overrightarrow{0}\cdot\overrightarrow{v}=\langle 0,0\rangle\cdot\langle 1,-2\rangle=(0)(1)+(0)(-2)=0.\)</p></li>
+            <li><p>\((\overrightarrow{v}\cdot\overrightarrow{v})^2=\left((1)(1)+(-2)(-2)\right)^2=5^2=25.\)</p></li>
+            <li><p>\(2(\overrightarrow{v}+\overrightarrow{u})=2\langle1-4,-2+5\rangle=2\langle -3,3\rangle=\langle -6,6\rangle.\)</p></li>
+            <li><p>\(2(\overrightarrow{v}\cdot\overrightarrow{u})=2(-14)=-28.\)</p></li>
+          </ol>
+        </li>
+        <li>Find the (smallest positive) angle between each of the following pairs of vectors, rounded to the nearest degree if necessary:
+          <ol type="a">
+            <li><p>\(\overrightarrow{v}=\langle 1,2\rangle\) and \(\overrightarrow{u}=\langle -1,2\rangle\)</p>
+                <p>\(\cos^{-1}\left(\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\Vert\overrightarrow{u}\Vert\cdot\Vert\overrightarrow{v}\Vert}\right)=\cos^{-1}\left(\frac{(1)(-1)+(2)(2)}{\sqrt{(1)^2+(2)^2}\cdot\sqrt{(-1)^2+(2)^2}}\right)=\cos^{-1}\left(\frac{3}{5}\right)\approx 53^\circ.\) </p></li>
+            <li><p>\(\overrightarrow{v}=\langle 2,3\rangle\) and \(\overrightarrow{u}=\langle 3,2\rangle\)</p>
+              <p>\(\cos^{-1}\left(\frac{(2)(3)+(3)(2)}{\sqrt{(2)^2+(3)^2}\cdot\sqrt{(3)^2+(2)^2}}\right)=\cos^{-1}\left(\frac{12}{13}\right)\approx 23^\circ.\) </p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,2\rangle\) and \(\overrightarrow{u}=\langle 2,-1\rangle\)</p>
+              <p>\(\cos^{-1}\left(\frac{(1)(2)+(2)(-1)}{\sqrt{(1)^2+(2)^2}\cdot\sqrt{(2)^2+(-1)^2}}\right)=\cos^{-1}\left(\frac{0}{5}\right)=90^\circ.\) </p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,2\rangle\) and \(\overrightarrow{u}=\langle -1,-2\rangle\)</p>
+              <p>\(\cos^{-1}\left(\frac{(1)(-1)+(2)(-2)}{\sqrt{(1)^2+(2)^2}\cdot\sqrt{(-1)^2+(-2)^2}}\right)=\cos^{-1}\left(\frac{-5}{5}\right)=180^\circ.\) </p></li>
+            <li><p>\(\overrightarrow{v}=\langle 5,7\rangle\) and \(\overrightarrow{u}=\langle -1,-2\rangle\)</p>
+              <p>\(=\cos^{-1}\left(\frac{(5)(-1)+(7)(-2)}{\sqrt{(5)^2+(7)^2}\cdot\sqrt{(-1)^2+(-2)^2}}\right)=\cos^{-1}\left(\frac{-19}{\sqrt{74}\cdot\sqrt{5}}\right)\approx 171^\circ.\) </p></li>
+          </ol>
+        </li>
+        <li>Parallel, perpendicular, or neither?
+          <ol type="a">
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle 1,4\rangle\)</p>
+                <p>Since \(\overrightarrow{v}=1\cdot\overrightarrow{u}\), we know that one vector is a scalar multiple of the other. Thus these vectors are <strong><em>parallel.</em></strong></p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle 4,1\rangle\)</p>
+                <p>The angle between these two vectors is \(\cos^{-1}\left(\frac{8}{17}\right)\approx 62^\circ.\) Thus these two vectors are <strong><em>neither parallel nor perpendicular.</em></strong></p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle 4,-1\rangle\)</p>
+                <p>The dot product of these two vectors is equal to zero. Thus these vectors are <strong><em>perpendicular.</em></strong></p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle -4,1\rangle\)</p>
+              <p>The dot product of these two vectors is equal to zero. Thus these vectors are <strong><em>perpendicular.</em></strong></p></li> 
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle -1,-4\rangle\)</p>
+              <p>Since \(\overrightarrow{v}=-1\cdot\overrightarrow{u}\), we know that one vector is a scalar multiple of the other. Thus these vectors are <strong><em>parallel.</em></strong></p></li>
+            <li><p>\(\overrightarrow{v}=\langle 1,4\rangle\) and \(\overrightarrow{u}=\langle -4,-1\rangle\)</p>
+              <p>The angle between these two vectors is \(\cos^{-1}\left(\frac{-8}{17}\right)\approx 118^\circ.\) Thus these two vectors are <strong><em>neither parallel nor perpendicular.</em></strong></p></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

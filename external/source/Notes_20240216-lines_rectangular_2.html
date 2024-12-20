@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Rectangular Forms Part 2</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <h2>Slope-Intercept Form</h2>
+
+  <p>If we solve an equation of a nonvertical line for \(y\), we get <em>slope-intercept</em> form: \(y=mx+b\).</p>
+  
+  <p>For example, let's start with an equation of a line in point-slope form: \(y-y_1=m(x-x_1)\). Distribute the \(m\) to get \(y-y_1=mx-mx_1\). Add \(y_1\) to both sides to get \(y=mx+(-mx_1+y_1)\).</p>
+
+  <p>We will confirm that \((0,-mx_1+y_1)\) is the \(y\)-intercept of this line. To do this, we substitute \(0\) for \(x\) and \(-mx_1+y_1\) for \(y\) in the point slope form \(y-y_1=m(x-x_1)\). Then we get \((-mx_1+y_1)-y_1=m(0-x_1)\), which is equivalent to \(-mx_1=-mx_1\), which is true. Thus \((0,-mx_1+y_1)\) is indeed a \(y\)-intercept of this line.</p>
+
+  <p>To make things easier, we let \(b=-mx_1+y_1\). By making this substitution, we can get away from any random point \((x_1,y_1)\) and focus on a special point, the \(y\)-intercept \((0,b).\) We can see that \((0,b)\) is a \(y\)-intercept of the equation \(y=mx+b\), as when we substitute \(0\) for \(x\) and \(b\) for \(y\), we get \(b=m(0)+b\), which is just \(b=b\), which is true.</p>
+
+  <p>While it was useful to start with point-slope form to generate slope-intercept form, it is often more useful to think of slope-intercept form as its own thing. Each form has its own uses and its own advantages and disadvantages depending on the situation. If I have information about a line but want an equation for that line, often the point-slope form is easier to use to get that equation. However, if I want to have as simple and compact a way of describing a line as possible, it is easier to start with having the line in slope-intercept form and then getting a graph or point and slope information from the equation.</p>
+
+  <p>There are several important advantages to slope-intercept form:
+    <ul>
+      <li>While you can have equations of other forms that look different but still have the same graph, <em>the slope-intercept form of a nonvertical line is unique and distinguishes the line from other lines.</em></li>
+      <li>A line in slope-intercept form is also in a form expressing a function of \(x\): \(y=f(x)\), where \(f(x)=mx+b.\) This makes it easy to find points on the graph by substituting \(x\)-values to find corresponding \(y\)-values.</li>
+      <li>Slope-intercept form makes graphing particularly easy: we can immediately observe the point \((0,b)\) and the slope \(m\). Thus we can plot the \(y\)-intercept and then use the slope to get one or more other points to help make an accurate graph.</li>
+    </ul></p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Slope-Intercept Form for Nonvertical Lines</h3>
+    </header>
+    <div class="w3-container"><p>An equation of the form \[y=mx+b.\] is that of a nonvertical line with slope \(m\) and \(y\)-intercept \((0,b)\).</p>
+      <ul>
+        <li>An equation for a line is considered to be in slope-intercept form when it is solved for \(y\) and simplified (distributed) on the side with the \(x\).</li>
+        <li>Nonvertical lines have a unique equation in slope-intercept form.</li>
+      </ul></div>
+  </div>
+
+  <h2>General Form</h2>
+
+  <p>To get slope-intercept form, we solved for \(y\). We can also simplify our equation of a line by distributing and setting equal to zero. Doing so gives us an equation of the form \(Ax+By+C=0\), where \(A\), \(B\) and \(C\) are real numbers. Some of \(A\), \(B\), and \(C\) can be zero, but not <em>both</em> \(A\) and \(B.\) If an equation is in this form, then we say the equation is in <em>general form</em>.</p>
+  
+  <p>It is easy to find intercepts from a line in general form. To find the \(x\)-intercept, we set \(y\) to zero and get \(Ax+C=0\), which easily solves to \(x=-\frac{C}{A}\). Similarly, to find the \(y\)-intercept, we set the \(x\) to zero and get \(By+C=0\), which easily solves to \(y=-\frac{C}{B}\).</p>
+
+  <p>The slope is not immediately obvious, but we can get it by using algebra to transform the equation in general form to slope-intercept form: \(Ax+By+C=0\Rightarrow By=-Ax-C\Rightarrow y=-\frac{A}{B}x-\frac{C}{B}\). Here the slope is \(-\frac{A}{B}\) and the \(y\)-intercept is \((0,-\frac{C}{B})\).</p>
+
+  <p>Another advantage of general form is that vertical lines are also included. For example, the line \(x=3\) can be expressed as \(1x+0y-3=0\) in general form. General form is our first form so far that incorporates oblique, horizontal, and vertical lines all in the same form. It is badly not unique, however, as we can just multiply the equation through by a nonzero constant to get a different-looking equation for the same line.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>General Form for Equations of Lines</h3>
+    </header>
+    <div class="w3-container"><p>An equation of the form \[Ax+By+C=0,\] where \(A\), \(B\), and \(C\) are real numbers and where \(A\) and \(B\) are not both zero, is an equation of a line.</p>
+      
+    <p>Moreover, the following are true:
+      <ul>
+        <li>This line has slope \(-\frac{A}{B}\) when \(B\neq 0\).</li>
+        <li>This line has \(x\)-intercept \((-\frac{C}{A},0)\) when \(A\neq 0\).</li>
+        <li>This line has \(y\)-intercept \((0,-\frac{C}{B})\) when \(B\neq 0\).</li>
+        <li>When \(A=0\), this is the horizontal line \(y=-\frac{C}{B}\).</li>
+        <li>When \(B=0\), this is the vertical line \(x=-\frac{C}{A}\).</li>
+        <li>When neither \(A\) nor \(B\) is zero, this is the oblique line \(y=-\frac{A}{B}x-\frac{C}{B}\)</li>
+      </ul>
+    </p>
+    </div>
+  </div>
+
+  <h2>Intercept Form</h2>
+
+  <p>Our final rectangular form is called <em>intercept form</em>.</p>
+
+  <p>Let's start with the old general form of a line, \(Ax+By+C=0\). Notice that when \(C=0\), we can rearrange our equation to get \(y=-\frac{A}{B}x\). In this case, the graph goes through \((0,0)\). This is not very interesting as far as \(x\)-intercepts and \(y\)-intercepts go (since the origin is the only intercept here), so we'll not consider this further at this time.</p>
+  <p>On the other hand, let's suppose that \(C\) is not zero. Move the \(C\) to the right hand side to get \(Ax+By=-C\) and then divide both sides of the equation by \(-C\) to get \(-\frac{Ax}{C}-\frac{By}{C}=1\). With a little algebraic trickery, we can rearrange this to get \(\frac{x}{-\frac{C}{A}}+\frac{y}{-\frac{C}{B}}=1\) so long as \(A\) and \(B\) are not zero. Now we are working in the case where none of \(A\), \(B\), and \(C\) are zero, so we have an oblique line that does not go through the origin \((0,0)\).</p>
+  <p>Next, notice that the \(x\)-intercept of this line will be \((\frac{-C}{A},0)\) and the \(y\)-intercept of this line will be \((0,\frac{-C}{B})\). Let's let \(a=\frac{-C}{A}\) and let \(b=\frac{-C}{B}\) so that \((a,0)\) and \((0,b)\) are our intercepts. This lets us rewrite \(\frac{x}{-\frac{C}{A}}+\frac{y}{-\frac{C}{B}}=1\) as \(\frac{x}{a}+\frac{y}{b}=1\), which we will call <em>intercept form.</em></p>
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h3>Intercept Form of an Oblique Line Not Containing the Origin</h3>
+    </header>
+    <div class="w3-container">
+        <p>An equation of the form \[\frac{x}{a}+\frac{y}{b}=1,\] where \(a\) or \(b\) is not zero, is that of a line that does not contain the origin \((0,0)\).</p>
+        <p>Moreover, the following are true:
+          <ul>
+            <li>This line has slope \(-\frac{b}{a}\).</li>
+            <li>This line has \(x\)-intercept \((a,0)\).</li>
+            <li>This line has \(y\)-intercept \((0,b)\).</li>
+            <li>This form is unique for a given line.</li>
+          </ul></p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, February 19. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the slope, inclination (rounded to the nearest degree), and intercepts of the following lines and then graph.
+            <ol type="a">
+                <li>\(y=2x+1\)</li>
+                <li>\(y=3x-3\)</li>
+                <li>\(y=-\frac{1}{2}x+2\)</li>
+                <li>\(y=\frac{3}{4}x-\frac{1}{2}\)</li>
+            </ol>
+        </li>
+        <li>Find the slope, inclination (rounded to the nearest degree), and intercepts of the following lines and then graph.
+            <ol type="a">
+                <li>\(2x+3y-6=0\)</li>
+                <li>\(x-2y-3=0\)</li>
+                <li>\(-4x+2y+1=0\)</li>
+                <li>\(10x-12y+3=0\)</li>
+                <li>\(9x+16y-225=0\)</li>
+            </ol>
+        </li>
+        <li>Give equations in intercept form for the following lines. Then use intercept form to find the intercepts of the line.
+          <ol type="a">
+            <li>the line through \((2,1)\) and \((3,2)\)</li>
+            <li>the line through \((4,2)\) with slope \(3\)</li>
+            <li>the line \(y=3x+5\)</li>
+            <li>the line \(4x+9y=36\)</li>
+            <li>the line \(y-2=3(x+1)\)</li>
+          </ol>
+        </li>
+        <li>Convert the following intercept equations to the form requested:
+          <ol type="a">
+            <li>\(y=2x+3\) to general form</li>
+            <li>\(y=\frac{3}{4}x+\frac{5}{6}\) to general form</li>
+            <li>\(2x+3y+6=0\) to slope-intercept form</li>
+            <li>\(\frac{2}{5}x+\frac{3}{5}y+20=0\) to slope-intercept form</li>
+            <li>\(\frac{x}{2}+\frac{y}{3}=1\) to slope-intercept form</li>
+            <li>\(\frac{x}{4}+\frac{y}{-2}=1\) to slope-intercept form</li>
+            <li>\(\frac{x}{2}+\frac{y}{3}=1\) to general form</li>
+            <li>\(\frac{x}{-1/3}+\frac{y}{1/2}=1\) to general form</li>
+          </ol>
+        </li>
+        <li>Graph the following lines. Identify at least two points on the graph.
+          <ol type="a">
+            <li>\(3(x-5)+2(y+7)=6\)</li>
+            <li>\(y=2x+5\)</li>
+            <li>\(y=-1/3+6\)</li>
+            <li>\(\frac{x}{-1}+\frac{y}{3}=1\)</li>
+            <li>\(5x-7y+15=0\)</li>
+            <li>\(y-3=2(x-5)\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

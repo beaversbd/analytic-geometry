@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Angles Between Lines</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>We now know how to use slopes to determine whether two lines are parallel, perpendicular, or neither. What if two lines are neither parallel nor perpendicular? Could we use equations of our lines to measure the angles between them?</p>
+
+  <p>I say <em>angles</em> because when two lines intersect, four angles are formed. These four angles are divided into two pairs of congruent <em>vertical</em> angles. It is unfortunate, but now we have two meanings for the word <em>vertical</em>. The first meaning applies when we have a single line and that line has an inclination of \(90^\circ.\) The second meaning applies when we have two lines that meet at a single point and we divide the four angles created there into two pairs of congruent angles.</p>
+
+  <p><img src="img/0301_01.png" class="w3-image" /></p>
+
+  <p>Notice that adjacent angles add to \(180^\circ.\) When the lines aren't perpendicular, one vertical angle pair will be acute and the other pair will be obtuse, so there isn't just <em>one</em> angle between two lines. Throw in coterminal angles, and we actually have a <em>lot</em> of answers to the question "how big is the angle between two lines." In practice, we will focus on either the acute or obtuse angle between the lines. If we are just talking about "the" angle between the lines, often what we mean is the <em>smallest</em> angle between the two lines.</p>
+
+  <p>Remember how angles are not just an absolute amount of opening. We think of positive angles as counterclockwise rotations and negative angles as clockwise rotations. We can also think of getting to one line from another by rotating by the amount of angle between them. If we rotate counterclockwise, we get a positive angle, and if we rotate counterclockwise, we get a negative angle. So we will also talk about finding angles <em>from one line to another</em>.</p>
+
+  <p>Take two lines \(l_1\) and \(l_2\) that intersect in the same point. For this analysis, it is easier to focus on lines that have a slope. In other words, non-vertical lines (horizontal and oblique). Let \(\theta_1\) be the inclination of the first line and let \(\theta_2\) be the inclination of the second line. Let \(\alpha\) be the difference \(\theta_2-\theta_1,\) or in other words, the measure of the angle from \(l_1\) to \(l_2.\) Consider \(\tan(\alpha).\) The two lines and the three angles are showing in the following three pictures. First, we see angle \(\theta_1.\) Second, we see \(\theta_2.\) Third, we see angle \(\alpha\):</p>
+
+  <p><img src="img/0301_02.png" class="w3-image w3-border w3-padding" /><img src="img/0301_03.png" class="w3-image w3-border w3-padding" /><img src="img/0301_04.png" class="w3-image w3-border w3-padding" /></p>
+    
+  <p>Since \(\alpha\) is the difference of two angles, we can apply the tangent difference identity: \[\tan(\alpha)=\tan(\theta_2-\theta_1)=\frac{\tan\theta_2-\tan\theta_1}{1+\tan\theta_1\tan\theta_2}.\] The nice thing about this is that \(\tan\theta_1\) is the slope \(m_1\) of the first line and \(\tan\theta_2\) is the slope \(m_2\) of the second line. Thus the equation \[\tan\alpha=\frac{m_2-m_1}{1+m_1m_2}\] relates the angle \(\alpha\) from \(l_1\) to \(l_2\) to the slopes of the two lines! Note that signs matter here. When solving for \(\alpha,\) any negative solution will be a clockwise rotation any positive solution will be a counterclockwise rotation.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-dark-gray">
+      <h4>Angle From One Line to Another</h4>
+    </header>
+    <div class="w3-container"><p>If \(l_1\) and \(l_2\) are nonvertical, nonperpendicular lines with slopes \(m_1\) and \(m_2,\) respectively, and \(\alpha\) is the measure of the angle from \(l_1\) to \(l_2,\) then \[\tan\alpha=\frac{m_2-m_1}{1+m_1m_2}.\]</p>
+    </div>
+  </div>
+
+  <p>So what if one of our lines is vertical? Because vertical lines don't have a slope, we can't use this formula when one of the lines is vertical. In that case, use what you know about slopes and inclination to find the angle the nonvertical line makes with the vertical. In particular, use the fact that a vertical line has an inclination of \(90^\circ.\)</p>
+  
+  <p>We must also specify that the lines must be nonperpendicular because when they are perpendicular, the denominator \(1+m_1m_2\) is zero (opposite reciprocal cause the denominator to be zero). This should make sense because the tangent function is undefined at \(90^\circ\), that is, when the lines are perpendicular.</p>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Monday, March 4. Show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the angle from \(l_1\) to \(l_2\) with slopes \(m_1\) and \(m_2\), respectively:
+          <ol type="a">
+            <li>\(m_1=-2\) and \(m_2=3\)</li>
+            <li>\(m_1=1\) and \(m_2=4\)</li>
+            <li>\(m_1=-3\) and \(m_2=2\)</li>
+            <li>\(m_1=0\) and \(m_2=1\)</li>
+          </ol>
+        </li>
+        <li>Find the angle from \(l_1\) with slope \(m_1\) to the vertical:
+          <ol type="a">
+            <li>\(m_1=10\)</li>
+            <li>\(m_1=-2/3\)</li>
+          </ol>
+        </li>
+        <li>Find the interior angles of the triangle with vertices \((1,5)\), \((3,-1)\), and \((-1,1)\), rounded to the nearest degree.</li>
+        <li>Find the slope of line \(l_1\) where the angle from \(l_1\) to \(l_2\) is \(45^\circ\) and the slope of \(l_2\) is \(m_2=1/2\).</li>
+        <li>Use slopes and angles, not the length of sides, to show that \((-1,0)\), \((4,6)\), and \((10,1)\) are the vertices of an isosceles triangle. Hint: a triangle is defined to be isosceles when it has at least two congruent sides, but it is also true that a triangle is isosceles when it has at least two congruent angles.</li>
+        <li>Use slopes and angles to classify each of the following triangles as <em>acute</em>, <em>obtuse</em>, or <em>right</em>.
+          <ol type="a">
+            <li>\((-1,0)\), \((4,6)\), and \((10,1)\)</li>
+            <li>\((9,6)\), \((-5,4)\), and \((7,10)\)</li>
+            <li>\((-2,1)\), \((-1,-5)\), and \((2,-3)\)</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>

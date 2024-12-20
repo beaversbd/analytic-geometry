@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<style> 
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+  h2 {
+    font-family: 'Cascadia Code', sans-serif;
+  }
+</style>
+
+<title>Lines: Slope, Inclination, and Rectangular Forms Part 1</title>
+</head>
+
+<body>
+    
+<div class="w3-container">
+
+  <p>So far we have focused on two foundational concepts of analytic geometry: points and graphs of equations. We saw how to assign numbers to the points on a line and in a plane. In the plane, we had two ways to locate a point: rectangular coordinates and polar coordinates. We also saw three types of equations that we can graph: (1) equations in terms of variables representing rectangular coordinates \(x\) and \(y\), (2) equations where coordinates depend on a third variable \(t\) (called the <em>parameter</em> and usually associated with time) as the independent variable, and (3) equations in terms of variables representing polar coordinates \(r\) and \(\theta\).</p>
+
+  <p>Now we will focus on the most important geometric shape after points: lines!</p>
+
+  <h2>Fundamental Concepts of Lines</h2>
+
+  <p>Euclid, the founder of axiomatic geometry, postulated that whenever we have two distinct points there is a unique straight line that goes through those points. This is one of the foundational assumptions of geometry and we should explore its consequences.</p>
+
+  <p>We use the word <em>line</em> differently from Euclid. For us, when we say "line," we implicitly assume the line is <em>straight</em>. Euclid defined a line as "breadthless length." For Euclid a line could curl and bend as long as the shape had finite length and zero thickness. Euclid assumed lines terminated in two <em>endpoints</em>, but we consider a (straight) line to go on forever on both ends. Importantly, Euclid did recognize that a straight line could be extended indefinitely in the direction of each of its ends. So instead of the finite, potentially curled "lines" of Euclid, today we focus on infinite, straight "lines."</p>
+
+  <h3>Straightness</h3>
+
+  <p>We often describe a line as "straight," but what does that mean? Informally, as we walk along a line, we are continually going in the same direction, neither veering to the left or the right. So how can we describe this precisely using mathematical ideas? In other words, how do we measure "straightness"?</p>
+
+  <p>It is easier to explain what it means for a line to be "not straight" rather than straight. Let's start with the simplest example: start walking to the right along the \(x\)-axis from the origin. If I'm not going straight to the right - say I'm drifting upwards a bit - there will be a vertical component to my motion as well as a horizontal component. We can measure this by taking the ratio of how far up I go per amount of horizontal distance I travel. We call this ratio a <em>slope</em>.</p>
+  
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Slope Through Two Points Formula</h4>
+    </header>
+    <div class="w3-container"><p>If \(A(x_1,y_1)\) and \(B(x_2,y_2)\) are points, then the slope through those two points is  \[m=\frac{y_2-y_1}{x_2-x_1}.\]</p></div>
+  </div>
+
+  <p>If I'm moving purely horizontally, I have zero vertical motion, so the ratio of vertical motion to horizontal motion over a stretch of time will just be \(0\). However, if I'm moving a bit vertically, then the ratio will be nonzero. The more vertical component I have to my motion, the larger the slope will be on that stretch. Notice that if my path truly bends, the slope between two points can differ depending on what points I choose.</p>
+
+  <p>If we start off going at a specific angle rather than purely horizontally, then going "not straight" means we have to change our angle to bend away from a straight path. Thus by "straightness" we mean that at every point of the line, there is a fixed angle that the line makes with the horizontal. Since this angle could be expressed as a positive or negative, it would be nice to give a fixed unique answer for the angle of a straight line. We define the <strong><em>inclination</em></strong> of a line to be then angle in the interval \([0^\circ, 180^\circ)\) made by the line and the horizontal.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Definition of Inclination and Key Properties</h4>
+    </header>
+    <div class="w3-container"><p>The <strong><em>inclination</em></strong> of a line is the angle in the interval \([0^\circ, 180^\circ)\) that the line makes with the horizontal.</p>
+    <ul>
+      <li>Lines with positive slope have acute inclination.</li>
+      <li>Lines with negative slope have obtuse inclination.</li>
+      <li>Vertical lines have an inclination of \(90^\circ\).</li>
+      <li>Horizontal lines have an inclination of \(0^\circ\).</li>
+    </ul></div>
+  </div>
+
+  <p>Going back to the idea of slope, it is reasonable to say that a line is straight if the slope through any two points on that line is the same fixed slope \(m\). We do have one exception: pure vertical motion cannot be described by a slope because the amount of horizontal motion being \(0\) causes us to try to divide by zero and hence makes our slope undefined.</p>
+
+  <p>So we have two ways to describe straightness: a line is straight when it has a fixed <em>inclination</em> or a fixed <em>slope</em>.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Slope vs. Inclination For General Categories of Lines</h4>
+    </header>
+    <div class="w3-container">
+      <p><table class="w3-table w3-bordered w3-border">
+        <tr>
+          <th>Type of Line</th>
+          <th>Slope</th>
+          <th>Inclination</th>
+        </tr>
+        <tr>
+          <td>Rises to the right /</th>
+          <td>positive real number</th>
+          <td>acute angle</th>
+        </tr>     
+        <tr>
+          <td>Drops to the right \</th>
+          <td>negative real number</th>
+          <td>obtuse angle</th>
+        </tr>     
+        <tr>
+          <td>Horizontal</th>
+          <td>\(0\)</th>
+          <td>\(0^\circ\)</th>
+        </tr>     
+        <tr>
+          <td>Vertical</th>
+          <td>(does not exist)</th>
+          <td>\(90^\circ\)</th>
+        </tr>                
+      </table></p>
+    </div>
+  </div>
+
+  <p>Geometry gives us a natural relation between the inclination of a line and its slope. If we drop a perpendicular from any non-\(x\)-intercept point \((x,y)\) on the line to the \(x\)-axis, we can see that the slope is equal to \(\frac{y}{x}\), which is also the tangent of the inclination \(\theta\) (by the definition of the tangent function). Thus we can use this to relate the slope \(m\) to the inclination \(\theta\) as follows:
+    
+    <div class="w3-card-4">
+      <header class="w3-container w3-2019-princess-blue">
+        <h4>Relation Between Slope and Inclination</h4>
+      </header>
+      <div class="w3-container"><p>Given a line with defined slope \(m\) and inclination \(\theta\), \[\tan\theta=m.\] </p>
+      </div>
+    </div>
+
+  <hr />
+
+  <h2>Creating an Equation for Nonvertical Lines</h2>
+
+  <p>Suppose we have two points \(A(x_1,y_1)\) and \(B(x_2,y_2)\). Let's create an equation for the line \(l\) that goes through these two points. To do this, we must find an equation in terms of \(x\) and \(y\) such that the point \((a,b)\) is on the line if and only if the equation is true when we plug in \(a\) for \(x\) and \(b\) for \(y\).</p>
+ 
+  <p>In rectangular coordinates, the key to this is slope: a point \(P(x,y)\) is on this line if the slope through \(A\) and \(P\) is the same as the slope through \(A\) and \(B\). We have a problem if \(A\) and \(B\) produce a vertical line, so let's suppose \(A\) and \(B\) make a nonvertical line and consider the vertical line case later. Let us say that the slope is \(m\) through \(A\) and \(B\). Thus \(m\) is the slope through any two points on the line. Thus, \[\frac{y_2-y_1}{x_2-x_1}=m=\frac{y-y_1}{x-x_1.}\]</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Fundamental Equation for a Nonvertical Line</h4>
+    </header>
+    <div class="w3-container"><p>For a line \(l\), suppose we know the slope \(m\) and a point \((x_1,y_1)\). Then any point \((x,y)\) on the line will satisfy the equation \[m=\frac{y-y_1}{x-x_1.}\] </p>
+    </div>
+  </div>
+
+  <p>The above equation is an equation for the (nonvertical) line through \(A\) and \(B\). Any point \(P(x,y)\) on this line must satisfy this equation.</p>
+
+  <p>This equation is the source of all the other forms for equations of lines that we might be interested in. For example, if we multiply both sides by \(x-x_1\), we get \[y-y_1=m(x-x_1).\] This is what we call the <strong><em>point-slope form</em></strong> of an equation for a line; this is because if we know the slope and a point on the line, then we can plug directly into this form to get an equation for the line.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Point-Slope Form for an Equation of a Nonvertical Line</h4>
+    </header>
+    <div class="w3-container"><p>For a nonvertical line \(l\), suppose we know the slope \(m\) and a point \((x_1,y_1)\) on \(l\). Then \[y-y_1=m(x-x_1)\] is a equation for this line.</p>
+    </div>
+  </div>
+
+  <p>What if we know two points \(A(x_1,y_1)\) and \(B(x_2,y_2)\) but not the slope? We can find the slope \(m\) using the two points: \[m=\frac{y_2-y_1}{x_2-x_1}\] and then use that in our equation for the line: \[y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1).\] This form is called the <strong><em>two-point form</em></strong> for an equation of a line.</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Two-Point Form for an Equation of a Nonvertical Line</h4>
+    </header>
+    <div class="w3-container"><p>For a nonvertical line \(l\), suppose we know the coordinates two points \((x_1,y_1)\) and \((x_2,y_2)\) on \(l\). Then \[y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)\] is an equation for this line.</p>
+    </div>
+  </div>
+
+
+  <p>These two forms are particularly useful if we have information about the line, such as points and the slope, but don't have an equation. In other words, these forms are most useful for obtaining an equation when all we have is information about our line. Later we will see forms that are more useful to be given as equations for the purposes of graphing or obtaining information about the line. Before we go, let's talk a bit about vertical and horizontal lines.</p>
+
+  <hr />
+
+  <h2>Horizontal and Vertical Lines</h2>
+
+  <p>Horizontal lines have a slope of \(0\). This presents no problem for the equations we have already developed, but they are an interesting special case.</p>
+
+  <p>Taking the Point-Slope form, \(y-y_1=m(x-x_1)\), we can substitute \(0\) for \(m\) to get \(y-y_1=0\). Solving for \(y\), we get \(y=y_1\). It turns out that what determines a horizontal line is the specific \(y\)-coordinate that is common to all the points on the line:</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Standard Equation for a Horizontal Line</h4>
+    </header>
+    <div class="w3-container"><p>A horizontal line, all of whose points have a \(y\)-coordinate of \(b\), can be expressed by the equation \[y=b.\]</p>
+    </div>
+  </div>
+
+  <p>The trick comes in when we want to consider vertical lines. Vertical lines don't have a slope. Alternatively, we say the slope is <em>not defined</em> or <em>undefined</em>. We can still deal with this, though.</p>
+
+  <p>Similar to the case of horizontal lines, a vertical line contains all the points of the plane that have a certain fixed \(x\)-coordinate, say \(a\):</p>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-princess-blue">
+      <h4>Standard Equation for a Vertical Line</h4>
+    </header>
+    <div class="w3-container"><p>A vertical line, all of whose points have an \(x\)-coordinate of \(a\), can be expressed by the equation \[x=a.\]</p>
+    </div>
+  </div>
+
+  <p>Now we have a way to express any kind of line using an equation. We often distinguish three types of lines:
+    <ul>
+      <li><em><strong>vertical lines</strong></em>,</li>
+      <li><em><strong>horizontal lines</strong></em>, and </li>
+      <li><em><strong>oblique lines</strong></em>. Oblique lines are neither vertical nor horizontal, and fall into one of two categories, those with positive slope/acute inclination and those with negative slope/obtuse inclination.</li>
+    </ul>
+  </p>
+
+  <hr />
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-2019-galaxy-blue">
+      <h3>Homework</h3>
+    </header>
+      
+    <div class="w3-container">
+      <p>Complete these for Friday, February 16. Where appropriate, show work that justifies your answers for full credit.</p>
+      <ol type="1">
+        <li>Find the slope (if it exists) and inclination (rounded to nearest degree or tenth of a radian) of the line through the given points:
+            <ol type="a">
+                <li>\((2,3)\) and \((5,8)\)</li>
+                <li>\((-1,4)\) and \((4,2)\)</li>
+                <li>\((-4,2)\) and \((-4,5)\)</li>
+                <li>\((2,3)\) and \((-4,3)\)</li>
+            </ol>
+        </li>
+        <li>Find an equation of the line indicated and sketch the graph:
+            <ol type="a">
+                <li>contains \((2,-4)\) with slope \(m=-2\)</li>
+                <li>contains \((2,2)\) with slope \(m=1\)</li>
+                <li>contains \((5,3)\) with slope \(m=4\)</li>
+                <li>contains \((3,4)\) with slope \(m=0\)</li>
+                <li>contains \((-2,-3)\) and has no slope</li>
+                <li>contains \((1,4)\) and \((3,5)\)</li>
+                <li>contains \((-3,4)\) and \((3,-4)\)</li>
+                <li>contains \((2,-1)\) and \((-2,-1)\)</li>
+            </ol>
+        </li>
+        <li>The vertices of a triangle are \((2,3)\), \((-1,5)\), and \((-2,-3)\). Give equations for the lines that contain the sides of this triangle.</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr />
+
+</div>
+
+</body>
+</html>
