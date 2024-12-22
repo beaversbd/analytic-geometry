@@ -11,7 +11,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec11-the_line.ptx" />
-  <xi:include href="sec12-intervals.ptx" />
+  <xi:include href="sec-the_line.ptx" />
+  <xi:include href="sec-intervals.ptx" />
 
 </chapter>
