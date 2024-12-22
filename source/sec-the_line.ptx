@@ -87,7 +87,7 @@
     </statement>
     <solution>
       <p>
-        The point corresponding to <m>\frac{1}{2}</m> is to the left of the point corresponding to <m>\frac{\pi}{6}</m> because <m>\frac{1}{2}\lt\frac{\pi}{6}</m>. It's not obvious just looking at these two numbers, so looking at their decimal representations should help: we have <m>0.5</m> for <m>\frac{1}{2}</m> and approximately <m>0.523598</m> for <m>\frac{\pi}{6}</m>.
+        The point corresponding to <m>\frac{1}{2}</m> is to the left of the point corresponding to <m>\frac{\pi}{6}</m> because <m>\frac{1}{2}\lt\frac{\pi}{6}</m>. It's not obvious just looking at these two numbers, so looking at their decimal representations should help: we have <m>0.5</m> for <m>\frac{1}{2}</m> and approximately <m>0.523598</m> for <m>\frac{\pi}{6}</m>
       </p>
     </solution>
     </exercise>
