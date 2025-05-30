@@ -198,34 +198,41 @@
   </solution>
 </example>
 
-  <p>Homework</p>
+<p>Homework</p>
 
-  <p>Complete the following homework problems for Wednesday, January 24. These should essentially be review from previous courses. Where appropriate, show work that justifies your answers for full credit.</p>
+<p></p>
 
-  <p><ol>
-    <li>Draw a number line and label points with <m>0,</m> <m>1,</m> and three other points of your choosing.</li>
-    <li>Is the point on a number line corresponding to the real number <m>\frac{1}{2}</m> to the left of the point on the number line corresponding to the real number <m>\frac{\pi}{6}</m>? Explain why or why not.</li>
-    <li>Find the distance between the points associated with the real numbers <m>8</m> and <m>-3.</m></li>
-    <li>What real numbers correspond to points that are a distance of <m>3</m> units from the point that corresponds to <m>1</m>?</li>
-    <li>Find the distance on a number line between the point whose coordinate is <m>3</m> and the point whose coordinate is <m>-1.</m></li>
-    <li>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.</li>
-    <li>Find the coordinate of the midpoint between the point with coordinate <m>4</m> and the point with coordinate <m>7.</m></li>
-    <li>If the midpoint is <m>\frac{1}{3}</m> between a point with coordinate <m>4</m> and some other point, what is the coordinate of the other point?</li>
-  </ol></p>
-
-  <p>Complete the following homework problems for Friday, January 26. Where appropriate, show work that justifies your answers for full credit.</p>
-  
-  <p><ol>
-        <li>Solve. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions:
-          <ol>
-            <li><m>x&gt;2</m></li>
-            <li><m>x-3\leq 0</m></li>
-            <li><m>5-2x\lt; 0</m></li>
-            <li><m>3x-5\geq 6x+9</m></li>
-            <li><m>|2x-3|\geq 3</m></li>
-            <li><m>|3x+6|-5\lt 3</m></li>
-          </ol>
-        </li>
-      </ol></p>
+<exercises>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>x&gt;2</m></p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>x-3\leq 0</m></p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>x-3\leq 0</m></p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>3x-5\geq 6x+9</m></p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>|2x-3|\geq 3</m></p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve and express the solution in two ways: (1) in interval notation and (2)shade the region of the real line corresponds to the solutions: <m>|3x+6|-5\lt 3</m></p>
+    </statement>
+  </exercise>  
+</exercises>
 
 </section>
