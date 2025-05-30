@@ -3,17 +3,17 @@
 <section xml:id="sec-intervals" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Intervals</title>
 
-  <p>We often want to talk about all the points to the left of a given point, to the right of a given point, or in between two points. These are called <strong><em>intervals</em></strong>.</p>
+  <p>We often want to talk about all the points to the left of a given point, to the right of a given point, or in between two points. These are called <term>intervals</term>.</p>
 
   <p>For convenience, we will talk about the real numbers corresponding to the points of an interval rather than the points of the interval itself. Notice that it can get convoluted when we are precise by explicitly keeping the points and their corresponding real numbers separate in how we write and speak. It is common practice to just <em>identify</em> the point with its corresponding number and talk about the real number as if it were a point. So instead of talking about the point corresponding to the real number <m>x</m>, we will often just refer to the "point" <m>x</m> instead.</p>
 
   <p>There are two key distinguishing properties for intervals: (1) finite vs. infinite and (2) open vs. closed.</p>
 
-  <p>Our first type of intervals will be the <strong><em>infinite</em></strong> ones. These are the intervals that consist of all the points to the left or all the points to the right of a given point.  On the other hand, we can have range of values between two given values <m>x</m> and <m>y</m>; in that case we say we have a <strong><em>finite</em></strong> interval.</p>
+  <p>Our first type of intervals will be the <term>infinite</term> ones. These are the intervals that consist of all the points to the left or all the points to the right of a given point.  On the other hand, we can have range of values between two given values <m>x</m> and <m>y</m>; in that case we say we have a <term>finite</term> interval.</p>
   
-  <p>Should boundary values of our interval be included? It depends on the situation. If we want to include the boundary of our interval, then we use the word <em>closed</em>. If we want to exclude the boundaries of our interval, the we use the word <em>open</em>. If we include one but not the other of our boundary points, we say the interval is <strong><em>half-open/half-closed</em></strong>.</p>
+  <p>Should boundary values of our interval be included? It depends on the situation. If we want to include the boundary of our interval, then we use the word <em>closed</em>. If we want to exclude the boundaries of our interval, the we use the word <em>open</em>. If we include one but not the other of our boundary points, we say the interval is <term>half-open/half-closed</term>.</p>
 
-  <p>We described the different types of intervals above in words. We could also use inequalities (using <m>\leq</m> and <m>\geq</m> symbols) and what is called <em>set builder notation</em>. There is another notation that is simpler (but can be confusing when we get to two-dimensional spaces). We call this simpler notation <em><strong>interval notation</strong></em>, which uses just parentheses ( and ) and brackets [ and ]. Here are eight types of intervals and how they are expressed in the various kinds of notation, including interval notation:</p>
+  <p>We described the different types of intervals above in words. We could also use inequalities (using <m>\leq</m> and <m>\geq</m> symbols) and what is called <em>set builder notation</em>. There is another notation that is simpler (but can be confusing when we get to two-dimensional spaces). We call this simpler notation <term>interval notation</term>, which uses just parentheses ( and ) and brackets [ and ]. Here are eight types of intervals and how they are expressed in the various kinds of notation, including interval notation:</p>
 
   <table>
   <title>Interval Notation</title>
@@ -115,7 +115,7 @@
 <theorem>
     <title>Properties of Inequalities</title>
   <statement>
-      <p><strong>Addition Property of Inequalities:</strong>
+      <p>Addition Property of Inequalities
         <ul>
           <li>If <m>a&lt;b</m>, then <m>a+c&lt; b+c</m>.</li>
           <li>If <m>a\leq b</m>, then <m>a+c\leq b+c</m>.</li>
@@ -124,7 +124,7 @@
         </ul>
       In other words, if you add the same value to both sides of a true inequality, the inequality remains true.
       </p>
-      <p><strong>Multiplication Property of Inequalities:</strong>
+      <p>Multiplication Property of Inequalities
         <ul>
           <li>If <m>a&lt;b</m> and <m>c\gt 0</m>, then <m>a\cdot c&lt; b\cdot c</m>.</li>
           <li>If <m>a\leq b</m> and <m>c\gt 0</m>, then <m>a\cdot c\leq b\cdot c</m>.</li>
@@ -140,7 +140,7 @@
       </ul>
       In other words, if you multiply the same negative value to both sides of a true inequality, the inequality must be "reversed" to remain true.
       </p>
-      <p><strong>Absolute Value and Inequalities:</strong>
+      <p>Absolute Value and Inequalities:
         <ul>
           <li>If <m>|x|\lt a</m>, then <m>x\lt a</m> <em>and</em> <m>x\gt -a</m>, or in other words, <m>-a\lt x\lt a</m> or <m>x</m> can be any value in the interval <m>(-a,a)</m>.</li>
           <li>If <m>|x|\leq a</m>, then <m>x\leq a</m> <em>and</em> <m>x\geq -a</m>, or in other words, <m>-a\leq x\leq a</m> or <m>x</m> can be any value in the interval <m>[-a,a]</m>.</li>
@@ -155,7 +155,7 @@
 <example>
   <title>Solving a Linear Inequality</title>
   <statement>
-      Solve <m>5x-3\geq x+5</m>. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions.
+      <p>Solve <m>5x-3\geq x+5</m>. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions.</p>
   </statement>
   <solution>
       <p>Strategy: if we can get our equation to look like <m>x\lt a</m>, <m>x\leq a</m>, <m>x\gt a</m>, or <m>x\geq a</m>, then we are done! Let's use properties of inequalities to do that. It should remind you of how we usually solve <em>linear</em> equations.
@@ -169,14 +169,14 @@
       </md></p>
       <p>Thus our solution includes all real numbers greater than or equal to <m>2</m>. In interval notation, we would write <m>[2,\infty).</m></p>
       <p>We can graph the solution on a number line as follows. Since <m>2</m> is included, we used a filled circle for that boundary point.</p>
-      <p><image source="/img/0124_01.png"></image></p>
+      <image source="/img/0124_01.png"></image>
   </solution>
 </example>
 
 <example>
   <title>Solving an Inequality Involving Absolute Value</title>
   <statement>
-   Solve <m>|2x-1|\gt 2</m>. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions.
+   <p>Solve <m>|2x-1|\gt 2</m>. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions.</p>
   </statement>
   <solution>
       <p>Strategy: We will use what we know about absolute value and inequalities to get us going. We know that any <m>x</m> that solves <m>2x-1\gt 2</m> or that solves <m>2x-1\lt -2</m> will be a solution to our original problem.</p>
@@ -194,7 +194,7 @@
         </md></p>
       <p>Thus our solution includes all real numbers greater than or equal to <m>\frac{3}{2}</m> and all real numbers less than or equal to <m>-\frac{1}{2}</m>. In interval notation, we would write <m>\left(-\infty,-\frac{1}{2}\right)\cup\left(\frac{3}{2},\infty\right).</m></p>
       <p>We can graph the solution on a number line as follows. Since <m>-\frac{1}{2}</m> and <m>\frac{3}{2}</m> are not solutions, we use open circles at those boundary points.</p>
-      <p><image source="/img/0124_02.png"></image></p>
+      <image source="/img/0124_02.png"></image>
   </solution>
 </example>
 
@@ -213,10 +213,11 @@
     <li>If the midpoint is <m>\frac{1}{3}</m> between a point with coordinate <m>4</m> and some other point, what is the coordinate of the other point?</li>
   </ol></p>
 
-        <p>Complete the following homework problems for Friday, January 26. Where appropriate, show work that justifies your answers for full credit.</p>
-      <ol type="1">
+  <p>Complete the following homework problems for Friday, January 26. Where appropriate, show work that justifies your answers for full credit.</p>
+  
+  <p><ol>
         <li>Solve. Express the solutions of the following inequalities in interval notation and shade the region of a number line that corresponds to the solutions:
-          <ol type="a">
+          <ol>
             <li><m>x&gt;2</m></li>
             <li><m>x-3\leq 0</m></li>
             <li><m>5-2x\lt; 0</m></li>
@@ -225,6 +226,6 @@
             <li><m>|3x+6|-5\lt 3</m></li>
           </ol>
         </li>
-      </ol>
+      </ol></p>
 
 </section>

@@ -8,14 +8,14 @@
   <p>We model one-dimensional space as a single straight line as follows:</p>
 
   <axiom>
-
-    <p>Axioms for One-Dimensional Analytic Geometry ("The Line")</p>
-        
+    <title>Axioms for One-Dimensional Analytic Geometry ("The Line")</title>
+    <statement>
     <p><ol>
       <li>Each point on the line corresponds to a unique real number</li>
       <li>The distance between points corresponding to the real numbers <m>x</m> and <m>y</m> is <m>|x-y|.</m></li>
       <li>The point corresponding to the real number <m>x</m> is to the left of the point corresponding to the real number <m>y</m> if and only if <m>x\lt y.</m></li>
     </ol></p>
+  </statement>
   
   </axiom>
 
@@ -26,13 +26,13 @@
   <p>When we have two points on a line, we often want to find the <term>midpoint</term> between the two points:</p>
 
   <definition>
- 
+   <statement>
    <p>Definition of Midpoint (on "The Line")</p>
 
-   <p><strong>Geometric definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> between <m>x</m> and <m>y</m> such that the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m> Symbolically, the midpoint is the point with coordinate <m>z</m> such that <m>|x-z|=|y-z|.</m></p>
+   <p>Geometric definition: the <term>midpoint</term> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> between <m>x</m> and <m>y</m> such that the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m> Symbolically, the midpoint is the point with coordinate <m>z</m> such that <m>|x-z|=|y-z|.</m></p>
   
-   <p><strong>Algebraic definition:</strong> the <strong><em>midpoint</em></strong> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> with coordinate <m>\frac{x+y}{2}.</m></p>
-  
+   <p>Algebraic definition: the <term>midpoint</term> of two distinct points with coordinates <m>x</m> and <m>y</m> is a point <m>z</m> with coordinate <m>\frac{x+y}{2}.</m></p>
+   </statement>
   </definition>
 
   <p>Notice that I have given two definitions of midpoint! One is from a geometric perspective: it talks about distances between certain points being equal. The other is given by an algebraic formula involving the coordinates for the two points. This is often the case in analytic geometry! We are bridging the world where we think of things geometrically with the world where we think of things algebraically.</p>
@@ -41,10 +41,10 @@
 
   <theorem>
     <title>Equivalence of the definitions of midpoint</title>
-    <statement>Given two points <m>x</m> and <m>y</m> on a coordinate line, there is a point with coordinate <m>z</m> between <m>x</m> and <m>y</m> such that <m>|x-z|=|y-z|</m> if and only if <m>z=\frac{x+y}{2}.</m></statement>
+    <statement><p>Given two points <m>x</m> and <m>y</m> on a coordinate line, there is a point with coordinate <m>z</m> between <m>x</m> and <m>y</m> such that <m>|x-z|=|y-z|</m> if and only if <m>z=\frac{x+y}{2}.</m></p></statement>
       
     <proof>
-     <p>First, we must make sure that if there is a point <m>z</m> where <m>|x-z|=|y-z|,</m> then <m>z</m> is indeed the number we get from the formula <m>\frac{x+y}{2}.</m> Since the points corresponding to <m>x</m> and <m>y</m> are distinct, one of <m>x</m> and <m>y</m> must be greater than the other. Suppose <m>x\lt  y.</m> Since <m>z</m> is between <m>x</m> and <m>y,</m> we know that <m>x\lt  z\lt  y.</m> Let <m>d</m> be the distance between <m>x</m> and <m>z</m> (that is, let <m>d=|x-z|</m>) and between <m>y</m> and <m>z</m> (that is, let <m>d=|y-z|</m>), which we know to be equal. Then <m>z=x+d</m> and <m>y=x+2d.</m> Moreover, <m>\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.</m> A similar result occurs if we were to let <m>y</m> be less than <m>x.</m> Thus we have shown that <strong>if</strong> <m>z</m> is a point between the two points <m>x</m> and <m>y</m> with <m>|x-z|=|y-z|,</m> <strong>then</strong> <m>z=\frac{x+y}{2}.</m></p>
+     <p>First, we must make sure that if there is a point <m>z</m> where <m>|x-z|=|y-z|,</m> then <m>z</m> is indeed the number we get from the formula <m>\frac{x+y}{2}.</m> Since the points corresponding to <m>x</m> and <m>y</m> are distinct, one of <m>x</m> and <m>y</m> must be greater than the other. Suppose <m>x\lt  y.</m> Since <m>z</m> is between <m>x</m> and <m>y,</m> we know that <m>x\lt  z\lt  y.</m> Let <m>d</m> be the distance between <m>x</m> and <m>z</m> (that is, let <m>d=|x-z|</m>) and between <m>y</m> and <m>z</m> (that is, let <m>d=|y-z|</m>), which we know to be equal. Then <m>z=x+d</m> and <m>y=x+2d.</m> Moreover, <m>\frac{x+y}{2}=\frac{x+(x+2d)}{2}=\frac{2x+2d}{2}=x+d=z.</m> A similar result occurs if we were to let <m>y</m> be less than <m>x.</m> Thus we have shown that if <m>z</m> is a point between the two points <m>x</m> and <m>y</m> with <m>|x-z|=|y-z|,</m> then <m>z=\frac{x+y}{2}.</m></p>
 
       <p>Next, we must make sure that if <m>z=\frac{x+y}{2},</m> then <m>|x-z|=|y-z|.</m> Hence,
         <md>
@@ -57,7 +57,7 @@
           <mrow>\amp=\left|y-\frac{x+y}{2}\right| </mrow>
           <mrow>\amp=|y-z|.</mrow>
         </md>
-    Thus we have shown that <strong>if </strong> <m>z=\frac{x+y}{2},</m> <strong>then</strong> the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m></p>
+    Thus we have shown that if  <m>z=\frac{x+y}{2},</m> then the distance from <m>x</m> to <m>z</m> is the same as the distance from <m>y</m> to <m>z.</m></p>
 
     <p>We have checked both directions of this "if and only if" statement, so the statement is true.</p>
       
@@ -91,12 +91,12 @@
       </p>
     </solution>
     </exercise>
-    <exercise><statement>Find the distance between the points associated with the real numbers <m>8</m> and <m>-3.</m></statement></exercise>
-    <exercise><statement>What real numbers correspond to points that are a distance of <m>3</m> units from the point that corresponds to <m>1</m>?</statement></exercise>
-    <exercise><statement>Find the distance on a number line between the point whose coordinate is <m>3</m> and the point whose coordinate is <m>-1.</m></statement></exercise>
-    <exercise><statement>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.</statement></exercise>
-    <exercise><statement>Find the coordinate of the midpoint between the point with coordinate <m>4</m> and the point with coordinate <m>7.</m></statement></exercise>
-    <exercise><statement>If the midpoint is <m>\frac{1}{3}</m> between a point with coordinate <m>4</m> and some other point, what is the coordinate of the other point?</statement></exercise>
+    <exercise><statement><p>Find the distance between the points associated with the real numbers <m>8</m> and <m>-3.</m></p></statement></exercise>
+    <exercise><statement><p>What real numbers correspond to points that are a distance of <m>3</m> units from the point that corresponds to <m>1</m>?</p></statement></exercise>
+    <exercise><statement><p>Find the distance on a number line between the point whose coordinate is <m>3</m> and the point whose coordinate is <m>-1.</m></p></statement></exercise>
+    <exercise><statement><p>Plot the points on a number line whose coordinates satisfy the following equations using only exact values.</p></statement></exercise>
+    <exercise><statement><p>Find the coordinate of the midpoint between the point with coordinate <m>4</m> and the point with coordinate <m>7.</m></p></statement></exercise>
+    <exercise><statement><p>If the midpoint is <m>\frac{1}{3}</m> between a point with coordinate <m>4</m> and some other point, what is the coordinate of the other point?</p></statement></exercise>
   </exercises>
 
 </section>
